@@ -183,6 +183,32 @@ GLOBAL_LIST_EMPTY(objectives)
 
 /datum/objective/assassinate/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
+	
+/datum/objective/assassinate/once //eu espero que isso funcione, to cagando nas calças
+	name = "kill once"
+	var/won = FALSE
+
+/datum/objective/assassinate/once/update_explanation_text()
+	..()
+	if(target && target.current)
+		explanation_text = "Kill [target.name], the [!target_role_type ? target.assigned_role : target.special_role]. You only need to kill them once; if they come back, you've still succeeded."
+		START_PROCESSING(SSprocessing,src)
+	else
+		explanation_text = "Free Objective"
+
+/datum/objective/assassinate/once/check_completion()
+	return won || ..()
+
+/datum/objective/assassinate/once/process()
+	won = tick_check_completion()
+	if(won)
+		STOP_PROCESSING(SSprocessing,src)
+
+/datum/objective/assassinate/once/proc/tick_check_completion()
+	return won || !considered_alive(target)
+
+/datum/objective/assassinate/once/check_midround_completion()
+	return won
 
 /datum/objective/assassinate/internal
 	var/stolen = FALSE //Have we already eliminated this target?
