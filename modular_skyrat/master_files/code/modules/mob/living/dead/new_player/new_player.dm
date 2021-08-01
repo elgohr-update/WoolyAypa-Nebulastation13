@@ -127,9 +127,6 @@
 		return TRUE
 
 	if(href_list["lobby_ready"])
-		if(!client.prefs.check_flavor_text())
-			ready = PLAYER_NOT_READY
-			return
 
 		if(SSticker.current_state <= GAME_STATE_PREGAME)
 			client << output(null, "lobbybrowser:imgsrc")
@@ -170,8 +167,6 @@
 		return
 
 	if(href_list["lobby_join"])
-		if(!client.prefs.check_flavor_text())
-			return
 
 		if(!SSticker?.IsRoundInProgress())
 			to_chat(usr, "<span class='boldwarning'>The round is either not ready, or has already finished...</span>")
@@ -201,8 +196,6 @@
 
 
 	if(href_list["SelectedJob"])
-		if(!client.prefs.check_flavor_text())
-			return
 
 		if(!SSticker?.IsRoundInProgress())
 			to_chat(usr, "<span class='danger'>The round is either not ready, or has already finished...</span>")
