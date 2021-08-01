@@ -184,7 +184,7 @@ GLOBAL_LIST_EMPTY(objectives)
 /datum/objective/assassinate/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
 	
-/datum/objective/assassinate/once
+/datum/objective/assassinate/once //eu espero que isso funcione, to cagando nas calças
 	name = "kill once"
 	var/won = FALSE
 
@@ -205,10 +205,10 @@ GLOBAL_LIST_EMPTY(objectives)
 		STOP_PROCESSING(SSprocessing,src)
 
 /datum/objective/assassinate/once/proc/tick_check_completion()
-	return won || !considered_alive(target) //The target afking / logging off for a bit during the round doesn't complete it, but them being afk at roundend does.
+	return won || !considered_alive(target)
 
 /datum/objective/assassinate/once/check_midround_completion()
-	return won //If they cryoed, only keep it if we already won
+	return won
 
 /datum/objective/assassinate/internal
 	var/stolen = FALSE //Have we already eliminated this target?
