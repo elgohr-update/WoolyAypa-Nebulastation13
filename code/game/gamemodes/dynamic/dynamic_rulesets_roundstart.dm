@@ -14,7 +14,7 @@
 	protected_roles = list("Prisoner","Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Vanguard Operative")
 	restricted_roles = list("AI", "Cyborg")
 	required_candidates = 1
-	weight = 4
+	weight = 5
 	cost = 8 // Avoid raising traitor threat above 10, as it is the default low cost ruleset.
 	scaling_cost = 9
 	requirements = list(10,10,10,10,10,10,10,10,10,10)
@@ -96,7 +96,7 @@
 	protected_roles = list("Prisoner","Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Corrections Officer", "Vanguard Operative")
 	restricted_roles = list("Cyborg", "AI")
 	required_candidates = 2
-	weight = 3
+	weight = 4
 	cost = 15
 	scaling_cost = 15
 	requirements = list(40,30,30,20,20,15,15,15,10,10)
@@ -145,7 +145,7 @@
 	protected_roles = list("Prisoner","Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Corrections Officer", "Vanguard Operative")
 	restricted_roles = list("AI", "Cyborg")
 	required_candidates = 1
-	weight = 4
+	weight = 3
 	cost = 16
 	scaling_cost = 10
 	requirements = list(70,70,60,50,40,20,20,10,10,10)
