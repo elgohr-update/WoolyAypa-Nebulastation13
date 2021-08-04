@@ -193,10 +193,15 @@
 	id = "comp_mmi"
 	build_path = /obj/item/circuit_component/mmi
 
+/datum/design/component/router
+	name = "Router Component"
+	id = "comp_router"
+	build_path = /obj/item/circuit_component/router
+
 /datum/design/component/multiplexer
 	name = "Multiplexer Component"
 	id = "comp_multiplexer"
-	build_path = /obj/item/circuit_component/multiplexer
+	build_path = /obj/item/circuit_component/router/multiplexer
 
 /datum/design/component/get_column
 	name = "Get Column Component"
@@ -237,6 +242,16 @@
 	name = "Module Component"
 	id = "comp_module"
 	build_path = /obj/item/circuit_component/module
+
+/datum/design/component/list_literal
+	name = "List Literal Component"
+	id = "comp_list_literal"
+	build_path = /obj/item/circuit_component/list_literal
+
+/datum/design/component/typecast
+	name = "Typecast Component"
+	id = "comp_typecast"
+	build_path = /obj/item/circuit_component/typecast
 
 /datum/design/component/bci
 	category = list("Circuitry", "BCI Components")
