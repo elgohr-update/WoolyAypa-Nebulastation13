@@ -145,6 +145,7 @@
 /datum/sprite_accessory/tails/mammal/wagging/tajaran/catbig
 	name = "Cat, Big"
 	icon_state = "catbig"
+	color_src = USE_ONE_COLOR
 	general_type = "feline"
 
 /datum/sprite_accessory/tails/mammal/wagging/twocat
