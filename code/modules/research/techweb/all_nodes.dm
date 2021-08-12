@@ -319,8 +319,12 @@
 		"burn2medicell",
 		"toxin2medicell",
 		"oxy2medicell",
-		"deathalarmimplant"
 		//SKYRAT EDIT END  -
+
+		//Nebula v
+		"deathalarmimplant",
+		//Nebula ^
+
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 8500)
 	required_experiments = list(/datum/experiment/scanning/points/slime/easy)
