@@ -4682,4 +4682,5 @@
 #include "nebula_modular\code\modules\projectiles\guns\energy\kinetic_accelerator.dm"
 #include "nebula_modular\code\modules\objects\items\implants\implant_deathalarm.dm"
 #include "nebula_modular\code\modules\research\designs\nebula_designs.dm"
+#include "nebula_modular\code\modules\admin\smites\randomdismember.dm"
 // END_INCLUDE
