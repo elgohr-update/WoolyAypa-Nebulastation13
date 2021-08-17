@@ -9,7 +9,7 @@
 	selection_color = "#6969f8"
 	req_admin_notify = 1
 	minimal_player_age = 14
-	exp_requirements = 6000
+	exp_requirements = 6000000000
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_NANOTRASEN_FLEET_COMMAND
 	exp_granted_type = EXP_TYPE_CREW
