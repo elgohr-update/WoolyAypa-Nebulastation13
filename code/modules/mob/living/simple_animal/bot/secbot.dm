@@ -286,7 +286,7 @@ Auto Patrol: []"},
 	if(!C.handcuffed)
 		C.set_handcuffed(new /obj/item/restraints/handcuffs/cable/zipties/used(C))
 		C.update_handcuffed()
-		playsound(src, "law", 50, FALSE)
+		playsound(src, "gtaivbrlinesarrest", 50, FALSE)
 		back_to_idle()
 
 /mob/living/simple_animal/bot/secbot/proc/stun_attack(mob/living/carbon/C, harm = FALSE)
@@ -451,7 +451,7 @@ Auto Patrol: []"},
 			if(ranged)
 				playsound(src, pick('sound/voice/ed209_20sec.ogg', 'sound/voice/edplaceholder.ogg'), 50, FALSE)
 			else
-				playsound(src, pick('sound/voice/beepsky/criminal.ogg', 'sound/voice/beepsky/justice.ogg', 'sound/voice/beepsky/freeze.ogg', 'nebula_modular/sound/the_law.ogg'), 50, FALSE) //NEBULA EDIT Adds the_law.ogg
+				playsound(src, "gtaivbrlines", 50, FALSE) //NEBULA EDIT Adds the_law.ogg
 			visible_message("<b>[src]</b> points at [C.name]!")
 			mode = BOT_HUNT
 			INVOKE_ASYNC(src, .proc/handle_automated_action)
