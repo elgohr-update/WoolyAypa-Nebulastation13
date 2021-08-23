@@ -2,11 +2,10 @@
 /datum/round_event_control/sentient_disease
 	name = "Spawn Sentient Disease"
 	typepath = /datum/round_event/ghost_role/sentient_disease
-	weight = 7
+	weight = 0 //Não vai resolver, só deixar dificin de ser escolhida (temporário)
 	//max_occurrences = 1 //ORIGINAL
 	max_occurrences = 0 //SKYRAT EDIT CHANGE
 	min_players = 5
-
 
 /datum/round_event/ghost_role/sentient_disease
 	role_name = "sentient disease"
