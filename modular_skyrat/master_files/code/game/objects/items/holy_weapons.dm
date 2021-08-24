@@ -132,6 +132,8 @@
 	desc = "A set of prayer beads used by many of the more traditional religions in space"
 	icon = 'modular_skyrat/modules/chaplain/icons/obj/holy_weapons.dmi'
 	icon_state = "rosary"
+	worn_icon = 'nebula_modular/icons/clothing/rosary.dmi'
+	worn_icon_state = "rosary"
 	force = 4
 	throwforce = 0
 	attack_verb_simple = list("whipped", "repented", "lashed", "flagellated")
@@ -189,7 +191,7 @@
 		"<span class='info'>You kneel, starting to pray for [deity_name]'s holy punishment.</span>")
 	praying = TRUE
 	if(do_after(user, 300))
-		for(var/mob/living/profane in range(9, user))
+		for(var/mob/living/profane in range(5, user))
 			if(IS_CULTIST(profane) || IS_HERETIC(profane))
 				profane.adjust_fire_stacks(10)
 				profane.IgniteMob()
