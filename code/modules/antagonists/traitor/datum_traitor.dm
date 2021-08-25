@@ -60,11 +60,14 @@
 
 	traitor_flavor = strings(TRAITOR_FLAVOR_FILE, employer)
 
-
+	/*
+	SKYRAT EDIT START - AMBITIONS
 	if(give_uplink)
 		owner.give_uplink(silent = TRUE, antag_datum = src)
-	uplink = owner.find_syndicate_uplink()
 
+	uplink = owner.find_syndicate_uplink()
+	SKYRAT EDIT END - AMBITIONS
+	*/
 
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/tatoralert.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
@@ -99,19 +102,22 @@
 	objectives.Cut()
 
 	//SKYRAT EDIT ADDITION - AMBITIONS
-	//var/datum/objective/ambitions/objective = new
-	//objectives += objective
-
+	var/datum/objective/ambitions/objective = new
+	objectives += objective
+	/* SKYRAT EDIT REMOVAL
 	var/objective_count = 0
+
 	if ((GLOB.joined_player_list.len >= HIJACK_MIN_PLAYERS) && prob(HIJACK_PROB))
 		is_hijacker = TRUE
 		objective_count++
+
 	var/objective_limit = CONFIG_GET(number/traitor_objectives_amount)
+
 	// for(in...to) loops iterate inclusively, so to reach objective_limit we need to loop to objective_limit - 1
 	// This does not give them 1 fewer objectives than intended.
 	for(var/i in objective_count to objective_limit - 1)
 		objectives += forge_single_generic_objective()
-
+	*/
 
 
 /**
@@ -126,15 +132,19 @@
 		ending_objective = new /datum/objective/hijack
 		ending_objective.owner = owner
 		return
+
 	var/martyr_compatibility = TRUE
+
 	for(var/datum/objective/traitor_objective in objectives)
 		if(!traitor_objective.martyr_compatible)
 			martyr_compatibility = FALSE
 			break
+
 		ending_objective = new /datum/objective/martyr
 		ending_objective.owner = owner
 		objectives += ending_objective
 		return
+
 	ending_objective = new /datum/objective/escape
 	ending_objective.owner = owner
 	objectives += ending_objective

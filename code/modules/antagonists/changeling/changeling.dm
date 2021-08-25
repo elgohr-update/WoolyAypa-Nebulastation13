@@ -14,7 +14,7 @@
 	suicide_cry = "FOR THE HIVE!!"
 	var/you_are_greet = TRUE
 	var/give_objectives = TRUE
-	var/competitive_objectives = TRUE //Should we assign objectives in competition with other lings?
+	var/competitive_objectives = FALSE //Should we assign objectives in competition with other lings?
 
 	//Changeling Stuff
 
@@ -83,16 +83,16 @@
 	if(!cellular_emporium) // SKYRAT EDIT START- PREVENTS DUPLICATION ON AMBITION SUBMIT
 		cellular_emporium = new(src)
 	if(!emporium_action)
-		emporium_action = new(cellular_emporium) // SKYRAT EDIT END
+		emporium_action = new(cellular_emporium) // SKYRAT EDIT END 
 	emporium_action.Grant(owner.current)
 
 /datum/antagonist/changeling/on_gain()
 	//SKYRAT EDIT REMOVAL BEGIN - AMBITIONS
-
+	/*
 	create_actions()
 	reset_powers()
 	create_initial_profile()
-
+	*/
 	//SKYRAT EDIT REMOVAL END
 	if(give_objectives)
 		forge_objectives()
@@ -108,9 +108,9 @@
 			B.organ_flags |= ORGAN_VITAL
 			B.decoy_override = FALSE
 	//SKYRAT EDIT REMOVAL BEGIN - AMBITIONS
-
+	/*
 	remove_changeling_powers()
-
+	*/
 	//SKYRAT EDIT REMOVAL END
 	. = ..()
 
