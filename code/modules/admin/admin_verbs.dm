@@ -281,7 +281,7 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/toggle_combo_hud,
 	/client/proc/admin_open_event_spawners_menu, //SKYRAT EDIT ADDITION - EVENTS
 	/client/proc/spawn_pollution, // SKYRAT EDIT ADDITION
-	/client/proc/debug_huds,
+	/client/proc/debug_huds
 	))
 GLOBAL_PROTECT(admin_verbs_hideable)
 
