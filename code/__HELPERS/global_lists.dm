@@ -74,6 +74,7 @@
 	GLOB.emote_list = init_emote_list()
 
 	make_skyrat_datum_references() //SKYRAT EDIT ADDITION - CUSTOMIZATION
+	load_neboosters() //Now gimme money! - Nebula Addition
 	init_crafting_recipes(GLOB.crafting_recipes)
 
 	init_subtypes_w_path_keys(/obj/projectile, GLOB.proj_by_path_key)
