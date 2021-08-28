@@ -287,7 +287,7 @@
 	else if((brute_loss+fire_loss+tox_loss+oxy_loss+clone_loss) >= 20)
 		patient_status = "Lightly Injured"
 	if(pandemonium || user.hallucinating())
-		patient_status = pick("The only kiosk is kiosk, but is the only patient, patient?", "Breathing manually.","Constact NTOS site admin.","97% carbon, 3% natural flavoring","The ebb and flow wears us all in time.","It's Lupus. You have Lupus.","Undergoing monkey disease.")
+		patient_status = pick("The only kiosk is kiosk, but is the only patient, patient?", "Breathing manually.","Contact NTOS site admin.","97% carbon, 3% natural flavoring","The ebb and flow wears us all in time.","It's Lupus. You have Lupus.","Undergoing monkey disease.")
 
 	if((brain_loss) >= 100)   //Brain status checks.
 		brain_status = "Grave brain damage detected."
