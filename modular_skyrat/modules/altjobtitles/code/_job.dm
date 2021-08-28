@@ -12,7 +12,7 @@
 
 //Central Command
 /datum/job/admiral
-	alt_titles = list("Fleet Admiral", "Fleet Commander")
+	alt_titles = list("Fleet Admiral", "Fleet Commander", "Supreme Commander")
 
 /datum/job/nanotrasen_representative
 	alt_titles = list("Nanotrasen Diplomat", "Central Command Representative")
@@ -127,13 +127,13 @@
 	alt_titles = list("Security Squad Leader", "Security Task Force Leader", "Security Fireteam Leader", "Security Enforcer")
 
 /datum/job/security_medic
-	alt_titles = list("Field Medic", "Security Corpsman", "Brig Physician")
+	alt_titles = list("Field Medic", "Security Corpsman", "Brig Physician", "Sex Medic")
 
 /datum/job/junior_officer
 	alt_titles = list("Station Police", "Civil Protection Officer", "Parole Officer")
 
 /datum/job/brigoff
-    alt_titles = list("Brig Officer", "Prison Guard")
+    alt_titles = list("Brig Officer", "Prison Guard", "Sex Officer")
 
 //Civillian
 /datum/job/prisoner
