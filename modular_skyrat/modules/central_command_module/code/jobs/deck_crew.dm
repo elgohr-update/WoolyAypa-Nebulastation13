@@ -4,7 +4,7 @@
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
 	department_head = list("Fleetmaster", "Bridge Officer")
 	faction = FACTION_STATION
-	total_positions = 5
+	total_positions = 3
 	spawn_positions = 5
 	supervisors = "Fleetmaster"
 	selection_color = "#6969f8"
