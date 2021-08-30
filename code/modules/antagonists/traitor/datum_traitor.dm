@@ -145,7 +145,7 @@
 			maroon_objective.find_target()
 			return maroon_objective
 
-		var/datum/objective/assassinate/kill_objective = new
+		var/datum/objective/assassinate/once/kill_objective = new
 		kill_objective.owner = owner
 		kill_objective.find_target()
 		return kill_objective
