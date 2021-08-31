@@ -110,6 +110,8 @@
 
 	remove_changeling_powers()
 
+	. = ..()
+
 /datum/antagonist/changeling/proc/reset_properties()
 	changeling_speak = 0
 	chosen_sting = null
