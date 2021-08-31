@@ -4789,6 +4789,7 @@
 #include "nebula_modular\code\modules\admin\smites\tablewide.dm"
 #include "nebula_modular\code\modules\antagonists\gamemodes.dm"
 #include "nebula_modular\code\modules\clothing\clothing.dm"
+#include "nebula_modular\code\modules\customization\modules\client\loadout\neck.dm"
 #include "nebula_modular\code\modules\madness\marking.dm"
 #include "nebula_modular\code\modules\madness\mask.dm"
 #include "nebula_modular\code\modules\madness\weapons.dm"
