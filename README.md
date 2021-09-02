@@ -26,7 +26,7 @@ Infelizmente, nossa equipe de *Maintainers* não são capazes de serem atribuíd
 
 Na mesma nota, leia a mensagem fixada no canal de *#bug-reports* no [Discord do Servidor](https://discord.gg/bFEHtJ7KAp) para mais informações; é a única mensagem no canal. **Você pode acessá-la rapidamente [clicando aqui](https://discord.com/channels/803100599305895966/828692970445602826/880816735668830269)** ou leia a mesma mensagem abaixo, através de um *quote*:
 
-> **Nint (Head Admin):**
+> **Johonas (Head Admin):**
 > Não queremos burocratizar o reporte de bugs, e muito menos sobrecarregar quem não precisa ser sobrecarregado. Por isso, para que não precisemos criar mais um canal onde você precisa seguir um modelinho pra reportar alguma coisa, leia as linhas abaixo  (porque se não fosse assim esse canal provavelmente viraria uma bagunça; por exemplo, literalmente **todos** os canais que precisaram ser burocratizados porque tem muita gente que realmente não sabe como não ser macaco).
 > 
 > Não, nós **nunca** colocaremos data ou prazo pra determinado bug ser corrigido ou determinada atualização ser implementada. Jamais anunciaremos qualquer prazo pra atualização ou alteração feita no code desse servidor acontecer. Vai ser feita quando os Maintainers ou o Dante se dispuserem a fazer, de preferência, quando não estiverem sobrecarregados. **Perguntar** quando algo vai ser lançado no servidor é **ok**, mas cobrar constantemente a galera só vai colaborar com o seu mute.
