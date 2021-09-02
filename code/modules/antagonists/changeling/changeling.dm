@@ -452,16 +452,11 @@
 			kill_objective.owner = owner
 			kill_objective.find_target()
 			objectives += kill_objective
-		else
-			var/datum/objective/maroon/maroon_objective = new
-			maroon_objective.owner = owner
-			maroon_objective.find_target()
-			objectives += maroon_objective
 
 			if (!(locate(/datum/objective/escape) in objectives) && escape_objective_possible)
 				var/datum/objective/escape/escape_with_identity/identity_theft = new
 				identity_theft.owner = owner
-				identity_theft.target = maroon_objective.target
+				identity_theft.target = kill_objective.target
 				identity_theft.update_explanation_text()
 				objectives += identity_theft
 				escape_objective_possible = FALSE
