@@ -20,6 +20,28 @@ Estação Nebula 13 é um servidor de **Space Station 13** *MRP* (we didn't mean
 
 **ATENÇÃO:** Este é o *repositório* do servidor **Estação Nebula 13**, inicialmente baseado-se no código original do *Skyrat Roleplaying Community*; **Skyrat/tg/**. Este servi8dor contém suas próprias *features*, conteúdo e adições no código. 
 
+## REPORTANDO BUGS
+
+Infelizmente, nossa equipe de *Maintainers* não são capazes de serem atribuídos à correções de bugs vindos do código do *Skyrat/tg/*. Portanto, se você encontrar um bug, erro ou glitch, reporte-o à equipe do Skyrat. 
+
+Na mesma nota, leia a mensagem fixada no canal de *#bug-reports* no [Discord do Servidor](https://discord.gg/bFEHtJ7KAp) para mais informações; é a única mensagem no canal. **Você pode acessá-la rapidamente [clicando aqui](https://discord.com/channels/803100599305895966/828692970445602826/880816735668830269)** ou leia a mesma mensagem abaixo, através de um *quote*:
+
+> **Nint (Head Admin):**
+> Não queremos burocratizar o reporte de bugs, e muito menos sobrecarregar quem não precisa ser sobrecarregado. Por isso, para que não precisemos criar mais um canal onde você precisa seguir um modelinho pra reportar alguma coisa, leia as linhas abaixo  (porque se não fosse assim esse canal provavelmente viraria uma bagunça; por exemplo, literalmente **todos** os canais que precisaram ser burocratizados porque tem muita gente que realmente não sabe como não ser macaco).
+> 
+> Não, nós **nunca** colocaremos data ou prazo pra determinado bug ser corrigido ou determinada atualização ser implementada. Jamais anunciaremos qualquer prazo pra atualização ou alteração feita no code desse servidor acontecer. Vai ser feita quando os Maintainers ou o Dante se dispuserem a fazer, de preferência, quando não estiverem sobrecarregados. **Perguntar** quando algo vai ser lançado no servidor é **ok**, mas cobrar constantemente a galera só vai colaborar com o seu mute.
+> 
+> Visto que 75% das features exclusivas desse code foram desenvolvidas pela equipe e comunidade do **Skyrat**, bug reports devem ser enviados na página da Github **deles**: ``https://github.com/Skyrat-SS13/Skyrat-tg``.
+> 
+> Se foi uma feature **nossa** ou algo que, partindo do seu julgamento e senso básico, nós possamos corrigir, **não é pra ir no privado de ninguém reportar**. Deixe em mente que bugs reportados nos chats do Discord do servidor, no chat OOC in-game ou em qualquer outro lugar onde um administrador ou outro membro da staff possa ler **é sempre** repassado aos Maintainers, para o Dante ou para mim. Ou seja, pode-se dizer que qualquer bug **conhecido** pela comunidade também é conhecido pela Staff.
+> 
+> Se você não sabe diferenciar o que é de nossa autoria e o que não é, leia o canal de #changelog (que eu tenho muita preguiça de atualizar) e filtre os itens. Se você encontrar o sistema relacionado com o bug que você encontrou, então é nosso e você precisa seguir o parágrafo acima. Se você não conseguir encontrar mas ainda não tem certeza se foi feito por nós ou não, use o canal de #ajuda. Talvez alguém tenha a resposta pra sua dúvida. 
+> 
+> Se, durante a compilação, surgir algum bug que torne o jogo **injogável** por conta de um erro de compatibilidade do Skyrat com o nosso code, trabalharemos para corrigi-lo com uma solução provisória (até que a galera do Skyrat corrija ele por eles mesmos) o mais rápido possível. Você **não** precisa ir no privado de ninguém pra reportar um bug **óbvio** que tá impedindo todo mundo de jogar. Bugs assim normalmente são notados como água e com certeza já chegou no ouvido de alguém daqui de dentro. Se você encontrou um bug no code do **Skyrat**, não precisa perder tempo reportando pra gente, somente se o bug realmente torna o jogo injogável. Se **realmente** houver um bug que torne o jogo quase ou totalmente injogável, **você não será o único jogador reclamando dele**.
+> 
+> ~~(Parágrafo inútil)~~ Por mais que uma **minoria extremamente pequena** dessa comunidade tenha conhecimento ao menos mínimo em *coding* e *DM*, jogadores são extremamente encorajados a ajudarem no desenvolvimento do servidor com correções e contribuições; 
+> ``https://github.com/Nebula-13/Nebulastation13``.
+
 **Abaixo encontra-se o guia de como fazer o *download* e hospedar seu próprio servidor.** *P.S: O guia não é de nossa autoria; créditos à equipe do Skyrat*.
 
 ## DOWNLOADING
