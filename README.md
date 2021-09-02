@@ -1,30 +1,26 @@
-## Skyrat 13 (/tg/station Downstream)
+## Estação Nebula 13 (a Skyrat-tg downstream (which is a /tg/station downstream))
 
-[![CI Suite](https://github.com/Skyrat-SS13/Skyrat-tg/actions/workflows/ci_suite.yml/badge.svg)](https://github.com/Skyrat-SS13/Skyrat-tg/actions/workflows/ci_suite.yml)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/Skyrat-SS13/Skyrat-tg.svg)](https://isitmaintained.com/project/Skyrat-SS13/Skyrat-tg "Percentage of issues still open")
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/Skyrat-SS13/Skyrat-tg.svg)](https://isitmaintained.com/project/Skyrat-SS13/Skyrat-tg "Average time to resolve an issue")
-![Coverage](https://img.shields.io/codecov/c/github/Skyrat-SS13/Skyrat-tg)
+[![aqui tem tretas internas](http://svgur.com/i/_js.svg)](https://www.forthebadge.com) [![pelos melhores](https://svgur.com/i/_ij.svg)](https://www.forthebadge.com) [![huehueheurbrbrb](http://svgur.com/i/_kN.svg)](https://www.forthebadge.com) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a) 
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-resentment.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/contains-technical-debt.svg)](https://user-images.githubusercontent.com/8171642/50290880-ffef5500-043a-11e9-8270-a2e5b697c86c.png) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
+Estação Nebula 13 é um servidor de **Space Station 13** *MRP* (we didn't mean to steal Nebula13's name, we didn't know you guys were a thing!) que roda no código do [Skyrat/tg/](https://github.com/Skyrat-SS13/Skyrat-tg), que é uma *downstream* do código do [/tg/station 13](https://github.com/tgstation/tgstation). Fornecemos à nossa comunidade as nossas próprias modificações e conteúdo, que são postos sobre o código original do Skyrat/tg/.
 
-* **Git / GitHub cheatsheet:** https://www.notion.so/Git-GitHub-61bc81766b2e4c7d9a346db3078ce833
-* **Guide to Modularisation:** [./modular_skyrat/readme.md](./modular_skyrat/readme.md)
 * **Website:** https://www.tgstation13.org
-* **Code:** https://github.com/tgstation/tgstation
+* **Código:** https://github.com/tgstation/tgstation
 * **Wiki:** https://tgstation13.org/wiki/Main_Page
 * **Codedocs:** https://codedocs.tgstation13.org/
-* **Skyrat 13 Discord:** https://discord.com/invite/hGpZ4Z3
-* **Coderbus Discord:** https://discord.gg/Vh8TJp9
+* **Discord do /tg/station:** https://discord.com/invite/hGpZ4Z3
+* **Discord de desenvolvimento (*coderbus*):** https://discord.gg/Vh8TJp9
 * ~~**IRC:** irc://irc.rizon.net/coderbus~~ (dead)
 
-This is Skyrat's downstream fork of /tg/station created in byond.
+**Estação Nebula 13**
 
-Space Station 13 is a paranoia-laden round-based roleplaying game set against the backdrop of a nonsensical, metal death trap masquerading as a space station, with charming spritework designed to represent the sci-fi setting and its dangerous undertones. Have fun, and survive!
+* **Discord do Estação Nebula 13:** https://discord.gg/bFEHtJ7KAp
+* **Código:** https://github.com/Nebula-13/Nebulastation1
+* **Leia as regras do servidor:** [Estação Nebula 13 [set de regras]](https://docs.google.com/document/d/1Ece9htZmux2hpXwGB4aA8zGjJFYCJq0cV6T_ov56mq4/edit?usp=sharing)
 
-## DEVELOPMENT FLOWCHART
-![image](https://i.imgur.com/aJnE4WT.png)
+**ATENÇÃO:** Este é o *repositório* do servidor **Estação Nebula 13**, inicialmente baseado-se no código original do *Skyrat Roleplaying Community*; **Skyrat/tg/**. Este servi8dor contém suas próprias *features*, conteúdo e adições no código. 
 
-[Modularisation Guide](./modular_skyrat/readme.md)
+**Abaixo encontra-se o guia de como fazer o *download* e hospedar seu próprio servidor.** *P.S: O guia não é de nossa autoria; créditos à equipe do Skyrat*.
 
 ## DOWNLOADING
 [Downloading](.github/DOWNLOADING.md)
