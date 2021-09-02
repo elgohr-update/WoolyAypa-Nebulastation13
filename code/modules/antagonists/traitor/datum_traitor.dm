@@ -10,8 +10,6 @@
 #define KILL_PROB 50
 /// If a kill objective is rolled, chance that it is to destroy the AI.
 #define DESTROY_AI_PROB(denominator) (100 / denominator)
-/// If the destroy AI objective doesn't roll, chance that we'll get a maroon instead. If this prob fails, they will get a generic assassinate objective instead.
-#define MAROON_PROB 30
 /// If it's a steal objective, this is the chance that it'll be a download research notes objective. Science staff can't get this objective. It can only roll once. If any of these fail, they will get a generic steal objective instead.
 #define DOWNLOAD_PROB 15
 
@@ -138,12 +136,6 @@
 			destroy_objective.owner = owner
 			destroy_objective.find_target()
 			return destroy_objective
-
-		if(prob(MAROON_PROB))
-			var/datum/objective/maroon/maroon_objective = new
-			maroon_objective.owner = owner
-			maroon_objective.find_target()
-			return maroon_objective
 
 		var/datum/objective/assassinate/once/kill_objective = new
 		kill_objective.owner = owner
@@ -317,5 +309,4 @@
 #undef MARTYR_PROB
 #undef KILL_PROB
 #undef DESTROY_AI_PROB
-#undef MAROON_PROB
 #undef DOWNLOAD_PROB
