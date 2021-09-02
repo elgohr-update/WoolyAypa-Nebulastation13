@@ -1,4 +1,4 @@
-/// Chance that the traitor could roll hijack if the pop limit is met.
+/// Chance that the traitor could roll hijack if the pop limit is met. a
 #define HIJACK_PROB 10
 /// Hijack is unavailable as a random objective below this player count.
 #define HIJACK_MIN_PLAYERS 30
