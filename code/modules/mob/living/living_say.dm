@@ -331,7 +331,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	// NEBULA CHANGE START - FORCE WHISPER
 	if(HAS_TRAIT(src, TRAIT_FORCE_WHISPER))
 		if(!message_mods[WHISPER_MODE])
-			src.visible_message("tries to say something, but not a single sound comes out of them!")
+			src.visible_message("tries to say something, but not a single sound comes out of them!", visible_message_flags = EMOTE_MESSAGE)
 			return FALSE
 	// NEBULA CHANGE END
 	if(client) //client is so that ghosts don't have to listen to mice
