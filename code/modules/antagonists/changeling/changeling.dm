@@ -14,7 +14,7 @@
 	suicide_cry = "FOR THE HIVE!!"
 	var/you_are_greet = TRUE
 	var/give_objectives = TRUE
-	var/competitive_objectives = FALSE //Should we assign objectives in competition with other lings?
+	var/competitive_objectives = TRUE //Should we assign objectives in competition with other lings?
 
 	//Changeling Stuff
 
@@ -79,21 +79,21 @@
 	QDEL_NULL(emporium_action)
 	. = ..()
 
+
 /datum/antagonist/changeling/proc/create_actions()
-	if(!cellular_emporium) // SKYRAT EDIT START- PREVENTS DUPLICATION ON AMBITION SUBMIT
+	/*if(!cellular_emporium) // SKYRAT EDIT START- PREVENTS DUPLICATION ON AMBITION SUBMIT
 		cellular_emporium = new(src)
 	if(!emporium_action)
-		emporium_action = new(cellular_emporium) // SKYRAT EDIT END 
+		emporium_action = new(cellular_emporium) // SKYRAT EDIT END
 	emporium_action.Grant(owner.current)
+	*/
 
 /datum/antagonist/changeling/on_gain()
-	//SKYRAT EDIT REMOVAL BEGIN - AMBITIONS
-	/*
+
 	create_actions()
 	reset_powers()
 	create_initial_profile()
-	*/
-	//SKYRAT EDIT REMOVAL END
+
 	if(give_objectives)
 		forge_objectives()
 	owner.current.grant_all_languages(FALSE, FALSE, TRUE) //Grants omnitongue. We are able to transform our body after all.
@@ -107,11 +107,9 @@
 		if(B && (B.decoy_override != initial(B.decoy_override)))
 			B.organ_flags |= ORGAN_VITAL
 			B.decoy_override = FALSE
-	//SKYRAT EDIT REMOVAL BEGIN - AMBITIONS
-	/*
+
 	remove_changeling_powers()
-	*/
-	//SKYRAT EDIT REMOVAL END
+
 	. = ..()
 
 /datum/antagonist/changeling/proc/reset_properties()
@@ -415,14 +413,6 @@
 
 
 /datum/antagonist/changeling/proc/forge_objectives()
-	//OBJECTIVES - random traitor objectives. Unique objectives "steal brain" and "identity theft".
-	//No escape alone because changelings aren't suited for it and it'd probably just lead to rampant robusting
-	//If it seems like they'd be able to do it in play, add a 10% chance to have to escape alone
-
-
-	objectives += new /datum/objective/ambitions() //SKYRAT EDIT ADDITION - AMBITIONS
-	//SKYRAT EDIT REMOVAL BEGIN - AMBITIONS
-	/*
 	var/escape_objective_possible = TRUE
 
 	switch(competitive_objectives ? rand(1,3) : 1)
@@ -460,20 +450,15 @@
 		objectives += destroy_objective
 	else
 		if(prob(70))
-			var/datum/objective/assassinate/kill_objective = new
+			var/datum/objective/assassinate/once/kill_objective = new
 			kill_objective.owner = owner
 			kill_objective.find_target()
 			objectives += kill_objective
-		else
-			var/datum/objective/maroon/maroon_objective = new
-			maroon_objective.owner = owner
-			maroon_objective.find_target()
-			objectives += maroon_objective
 
 			if (!(locate(/datum/objective/escape) in objectives) && escape_objective_possible)
 				var/datum/objective/escape/escape_with_identity/identity_theft = new
 				identity_theft.owner = owner
-				identity_theft.target = maroon_objective.target
+				identity_theft.target = kill_objective.target
 				identity_theft.update_explanation_text()
 				objectives += identity_theft
 				escape_objective_possible = FALSE
@@ -489,9 +474,6 @@
 			identity_theft.find_target()
 			objectives += identity_theft
 		escape_objective_possible = FALSE
-	*/
-	//SKYRAT EDIT REMOVAL END
-
 
 /datum/antagonist/changeling/admin_add(datum/mind/new_owner,mob/admin)
 	. = ..()
@@ -716,10 +698,10 @@
 // Changelings spawned from non-changeling headslugs (IE, due to being transformed into a headslug as a non-ling). Weaker than a normal changeling.
 /datum/antagonist/changeling/headslug
 	name = "Headslug Changeling"
-	show_in_antagpanel = FALSE
-	give_objectives = FALSE
+	show_in_antagpanel = TRUE
+	give_objectives = TRUE
 	soft_antag = TRUE
-
+// WHY NOT??????
 	geneticpoints = 5
 	total_geneticspoints = 5
 	chem_charges = 10

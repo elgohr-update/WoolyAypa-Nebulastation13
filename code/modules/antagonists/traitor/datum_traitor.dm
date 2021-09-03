@@ -1,4 +1,4 @@
-/// Chance that the traitor could roll hijack if the pop limit is met.
+/// Chance that the traitor could roll hijack if the pop limit is met. a
 #define HIJACK_PROB 10
 /// Hijack is unavailable as a random objective below this player count.
 #define HIJACK_MIN_PLAYERS 30
@@ -10,8 +10,6 @@
 #define KILL_PROB 50
 /// If a kill objective is rolled, chance that it is to destroy the AI.
 #define DESTROY_AI_PROB(denominator) (100 / denominator)
-/// If the destroy AI objective doesn't roll, chance that we'll get a maroon instead. If this prob fails, they will get a generic assassinate objective instead.
-#define MAROON_PROB 30
 /// If it's a steal objective, this is the chance that it'll be a download research notes objective. Science staff can't get this objective. It can only roll once. If any of these fail, they will get a generic steal objective instead.
 #define DOWNLOAD_PROB 15
 
@@ -50,6 +48,12 @@
 
 /datum/antagonist/traitor/on_gain()
 	owner.special_role = job_rank
+
+	if(give_uplink)
+		owner.give_uplink(silent = TRUE, antag_datum = src)
+
+	uplink = owner.find_syndicate_uplink()
+
 	if(give_objectives)
 		forge_traitor_objectives()
 		forge_ending_objective()
@@ -60,14 +64,10 @@
 
 	traitor_flavor = strings(TRAITOR_FLAVOR_FILE, employer)
 
-	/*
-	SKYRAT EDIT START - AMBITIONS
 	if(give_uplink)
 		owner.give_uplink(silent = TRUE, antag_datum = src)
 
 	uplink = owner.find_syndicate_uplink()
-	SKYRAT EDIT END - AMBITIONS
-	*/
 
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/tatoralert.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
@@ -101,10 +101,6 @@
 /datum/antagonist/traitor/proc/forge_traitor_objectives()
 	objectives.Cut()
 
-	//SKYRAT EDIT ADDITION - AMBITIONS
-	var/datum/objective/ambitions/objective = new
-	objectives += objective
-	/* SKYRAT EDIT REMOVAL
 	var/objective_count = 0
 
 	if((GLOB.joined_player_list.len >= HIJACK_MIN_PLAYERS) && prob(HIJACK_PROB))
@@ -117,41 +113,8 @@
 	// This does not give them 1 fewer objectives than intended.
 	for(var/i in objective_count to objective_limit - 1)
 		objectives += forge_single_generic_objective()
-	*/
 
-
-/**
- * ## forge_ending_objective
- *
- * Forges the endgame objective and adds it to this datum's objective list.
- */
 /datum/antagonist/traitor/proc/forge_ending_objective()
-	return
-	/* SKYRAT EDIT  - AMBITIONS
-	if(is_hijacker)
-		ending_objective = new /datum/objective/hijack
-		ending_objective.owner = owner
-		return
-
-	var/martyr_compatibility = TRUE
-
-	for(var/datum/objective/traitor_objective in objectives)
-		if(!traitor_objective.martyr_compatible)
-			martyr_compatibility = FALSE
-			break
-
-		ending_objective = new /datum/objective/martyr
-		ending_objective.owner = owner
-		objectives += ending_objective
-		return
-
-	ending_objective = new /datum/objective/escape
-	ending_objective.owner = owner
-	objectives += ending_objective
-	*/
-
-/// Forges a single escape objective and adds it to this datum's objective list.
-/datum/antagonist/traitor/proc/forge_escape_objective()
 	var/is_martyr = prob(MARTYR_PROB)
 	var/martyr_compatibility = TRUE
 
@@ -180,13 +143,7 @@
 			destroy_objective.find_target()
 			return destroy_objective
 
-		if(prob(MAROON_PROB))
-			var/datum/objective/maroon/maroon_objective = new
-			maroon_objective.owner = owner
-			maroon_objective.find_target()
-			return maroon_objective
-
-		var/datum/objective/assassinate/kill_objective = new
+		var/datum/objective/assassinate/once/kill_objective = new
 		kill_objective.owner = owner
 		kill_objective.find_target()
 		return kill_objective
@@ -358,5 +315,4 @@
 #undef MARTYR_PROB
 #undef KILL_PROB
 #undef DESTROY_AI_PROB
-#undef MAROON_PROB
 #undef DOWNLOAD_PROB

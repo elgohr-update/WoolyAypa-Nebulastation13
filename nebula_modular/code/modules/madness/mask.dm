@@ -27,3 +27,20 @@
 	worn_icon = 'nebula_modular/icons/mob/clothing/masks_worn.dmi'
 	icon_state = "ATP"
 	clothing_flags = MASKINTERNALS
+
+/obj/item/clothing/mask/gas/mad_clown/fake
+	name = "clown's protective mask"
+	desc = "Just looking at it fills you with madness.it looks fake"
+	clothing_flags = MASKINTERNALS
+	icon = 'nebula_modular/icons/clothing/masks.dmi'
+	worn_icon = 'nebula_modular/icons/mob/clothing/masks_worn.dmi'
+	icon_state = "mad_clown"
+	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/head/helmet/deimos/fake
+	name = "Deimos's Visor"
+	desc = "You almost feel like a good leader, almost."
+	icon = 'nebula_modular/icons/clothing/hats.dmi'
+	worn_icon = 'nebula_modular/icons/mob/clothing/hats_worn.dmi'
+	icon_state = "visor"
+	resistance_flags = FIRE_PROOF
