@@ -328,6 +328,12 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 			if(HAS_TRAIT(mute, TRAIT_HANDS_BLOCKED) || HAS_TRAIT(mute, TRAIT_EMOTEMUTE))
 				to_chat(src, "<span class='warning'>You can't sign at the moment!</span.?>")
 				return FALSE
+	// NEBULA CHANGE START - FORCE WHISPER
+	if(HAS_TRAIT(src, TRAIT_FORCE_WHISPER))
+		if(!message_mods[WHISPER_MODE])
+			src.visible_message("tries to say something, but not a single sound comes out of them!")
+			return FALSE
+	// NEBULA CHANGE END
 	if(client) //client is so that ghosts don't have to listen to mice
 		for(var/mob/player_mob as anything in GLOB.player_list)
 			if(QDELETED(player_mob)) //Some times nulls and deleteds stay in this list. This is a workaround to prevent ic chat breaking for everyone when they do.
