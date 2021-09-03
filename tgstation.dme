@@ -4836,4 +4836,5 @@
 #include "nebula_modular\code\modules\research\designs\nebula_designs.dm"
 #include "nebula_modular\code\modules\servantipcbuild\ipcbuilding.dm"
 #include "nebula_modular\code\modules\vehicles\engiway.dm"
+#include "nebula_modular\code\modules\patreonload.dm"
 // END_INCLUDE
