@@ -1,3 +1,4 @@
+
 /obj/vehicle/ridden/secway/engiway
 	name = "engiway"
 	desc = "They see me rollin'"
@@ -7,7 +8,7 @@
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 60, FIRE = 60, ACID = 60)
 	key_type = /obj/item/screwdriver
 	integrity_failure = 0.5
-
+/*
 /datum/design/vehicles/engiway
 	name = "Engiway"
 	desc = "Engineering vehicle."
@@ -26,3 +27,4 @@
 		"sexway"
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
+*/

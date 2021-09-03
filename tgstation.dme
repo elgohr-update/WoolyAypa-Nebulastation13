@@ -4831,6 +4831,7 @@
 #include "nebula_modular\code\modules\mob\living\simple_animal\hostile\megafauna\blood_drunk_miner.dm"
 #include "nebula_modular\code\modules\objects\items\implants\implant_deathalarm.dm"
 #include "nebula_modular\code\modules\projectiles\guns\energy\kinetic_accelerator.dm"
+#include "nebula_modular\code\modules\quirks\negative.dm"
 #include "nebula_modular\code\modules\research\designs\nebula_designs.dm"
 #include "nebula_modular\code\modules\servantipcbuild\ipcbuilding.dm"
 #include "nebula_modular\code\modules\vehicles\engiway.dm"
