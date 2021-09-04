@@ -4833,6 +4833,7 @@
 #include "nebula_modular\code\modules\customization\modules\client\loadout\head.dm"
 #include "nebula_modular\code\modules\customization\modules\client\loadout\mask.dm"
 #include "nebula_modular\code\modules\customization\modules\client\loadout\neck.dm"
+#include "nebula_modular\code\modules\job_skillchips\medical.dm"
 #include "nebula_modular\code\modules\madness\marking.dm"
 #include "nebula_modular\code\modules\madness\mask.dm"
 #include "nebula_modular\code\modules\madness\weapons.dm"
