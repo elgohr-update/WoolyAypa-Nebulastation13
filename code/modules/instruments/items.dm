@@ -113,7 +113,7 @@
 	desc = "Flex your money, AND ignore what everyone else says, all at once!"
 	icon_state = "spacepods"
 	inhand_icon_state = "spacepods"
-	slot_flags = ITEM_SLOT_EARS
+	slot_flags = ITEM_SLOT_EARS | ITEM_SLOT_HEAD | ITEM_SLOT_NECK // NEBULA CHANGE - allows spacepods to be wore on head and neck
 	strip_delay = 100 //air pods don't fall out
 	instrument_range = 0 //you're paying for quality here
 	custom_premium_price = PAYCHECK_ASSISTANT * 36 //Save up 5 shifts worth of pay just to lose it down a drainpipe on the sidewalk
