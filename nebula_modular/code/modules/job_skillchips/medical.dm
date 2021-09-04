@@ -7,4 +7,4 @@
 	skill_icon = "spa"
 	activate_message = "<span class='notice'>You feel like you REALLY know your way around yourself.</span>"
 	deactivate_message = "<span class='notice'>Where's my appendix again...</span>"
-	custom_price = 1000
+	custom_price = 1600
