@@ -321,6 +321,8 @@
 		"burn2medicell",
 		"toxin2medicell",
 		"oxy2medicell",
+		"tempmedicell",
+		"clotmedicell",
 		//SKYRAT EDIT END  -
 
 		//Nebula v
