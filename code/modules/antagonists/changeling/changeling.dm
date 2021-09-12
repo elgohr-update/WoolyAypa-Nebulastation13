@@ -81,12 +81,12 @@
 
 
 /datum/antagonist/changeling/proc/create_actions()
-	/*if(!cellular_emporium) // SKYRAT EDIT START- PREVENTS DUPLICATION ON AMBITION SUBMIT
+	if(!cellular_emporium) // NEBULA CHANGE - Reverts SR removal.
 		cellular_emporium = new(src)
 	if(!emporium_action)
-		emporium_action = new(cellular_emporium) // SKYRAT EDIT END
+		emporium_action = new(cellular_emporium)
 	emporium_action.Grant(owner.current)
-	*/
+	
 
 /datum/antagonist/changeling/on_gain()
 
