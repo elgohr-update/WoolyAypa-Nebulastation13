@@ -1,4 +1,3 @@
-/* SKYRAT EDIT REMOVAL - MOVED TO MODULAR
 /**
  * Causes weather to occur on a z level in certain area types
  *
@@ -229,7 +228,7 @@
 		var/area/N = V
 		N.layer = overlay_layer
 		N.plane = overlay_plane
-		N.icon = 'modular_skyrat/modules/overmap/icons/weather_effects.dmi'
+		N.icon = 'icons/effects/weather_effects.dmi'
 		N.color = weather_color
 		switch(stage)
 			if(STARTUP_STAGE)
@@ -245,4 +244,3 @@
 				N.layer = initial(N.layer)
 				N.plane = initial(N.plane)
 				N.set_opacity(FALSE)
-*/

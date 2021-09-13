@@ -477,10 +477,7 @@
 				H.adjustOrganLoss(ORGAN_SLOT_BRAIN, 60, 80)
 			message_admins("[key_name_admin(holder)] made everybody brain damaged")
 		if("floorlava")
-			//SKYRAT EDIT CHANGE
-			var/datum/weather_controller/weather = STATION_WEATHER_CONTROLLER
-			weather.RunWeather(/datum/weather/floor_is_lava)
-			//SKYRAT EDIT END
+			SSweather.run_weather(/datum/weather/floor_is_lava)
 		if("anime")
 			if(!is_funmin)
 				return

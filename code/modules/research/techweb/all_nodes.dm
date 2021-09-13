@@ -594,10 +594,11 @@
 		"bluespace_pod",
 		"launchpad",
 		"launchpad_console",
+		"quantumpad",
 		"tele_hub",
 		"tele_station",
 		"teleconsole",
-	) //SKYRAT EDIT REMOVAL - REMOVED "quantumpad"
+	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 
 /datum/techweb_node/micro_bluespace
@@ -609,9 +610,11 @@
 		"bluespace_matter_bin",
 		"bluespacebodybag",
 		"femto_mani",
+		"quantum_keycard",
+		"swapper",
 		"triphasic_scanning",
 		"wormholeprojector",
-	)//SKYRAT EDIT REMOVAL - REMOVED "quantum_keycard" & "swapper"
+	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	discount_experiments = list(/datum/experiment/exploration_scan/random/condition)
 
@@ -1237,10 +1240,7 @@
 		"superresonator",
 		"triggermod",
 		"mecha_kineticgun",
-		"mining_drill",
-		"mining_brace",
-		"metal_density_scanner"
-	)//e a r l y    g a  m e) //SKYRAT EDIT ADDITION
+	)//e a r l y    g a  m e)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
 /datum/techweb_node/adv_mining
@@ -1253,9 +1253,9 @@
 		"hypermod",
 		"jackhammer",
 		"plasmacutter_adv",
+
 		//SKYRAT EDIT START - RESEARCH DESIGNS
-		"ripleyupgradef",
-		"adv_metal_density_scanner"
+		"ripleyupgradef"
 		//SKYRAT EDIT END - RESEARCH DESIGNS
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)

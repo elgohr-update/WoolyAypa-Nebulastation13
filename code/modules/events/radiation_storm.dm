@@ -17,7 +17,4 @@
 	//sound not longer matches the text, but an audible warning is probably good
 
 /datum/round_event/radiation_storm/start()
-	//SKYRAT EDIT ADDITION
-	var/datum/weather_controller/weather = STATION_WEATHER_CONTROLLER
-	weather.RunWeather(/datum/weather/rad_storm)
-	//SKYRAT EDIT END
+	SSweather.run_weather(/datum/weather/rad_storm)

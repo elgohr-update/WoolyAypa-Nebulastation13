@@ -1,4 +1,3 @@
-/* SKYRAT EDIT REMOVAL
 /datum/looping_sound/active_outside_ashstorm
 	mid_sounds = list(
 		'sound/weather/ashstorm/outside/active_mid1.ogg'=1,
@@ -9,7 +8,7 @@
 	start_sound = 'sound/weather/ashstorm/outside/active_start.ogg'
 	start_length = 130
 	end_sound = 'sound/weather/ashstorm/outside/active_end.ogg'
-	volume = 40 //SKYRAT EDIT CHANGE
+	volume = 80
 
 /datum/looping_sound/active_inside_ashstorm
 	mid_sounds = list(
@@ -21,7 +20,7 @@
 	start_sound = 'sound/weather/ashstorm/inside/active_start.ogg'
 	start_length = 130
 	end_sound = 'sound/weather/ashstorm/inside/active_end.ogg'
-	volume = 70 //SKYRAT EDIT CHANGE
+	volume = 60
 
 /datum/looping_sound/weak_outside_ashstorm
 	mid_sounds = list(
@@ -33,7 +32,7 @@
 	start_sound = 'sound/weather/ashstorm/outside/weak_start.ogg'
 	start_length = 130
 	end_sound = 'sound/weather/ashstorm/outside/weak_end.ogg'
-	volume = 20//SKYRAT EDIT CHANGE
+	volume = 50
 
 /datum/looping_sound/weak_inside_ashstorm
 	mid_sounds = list(
@@ -45,11 +44,10 @@
 	start_sound = 'sound/weather/ashstorm/inside/weak_start.ogg'
 	start_length = 130
 	end_sound = 'sound/weather/ashstorm/inside/weak_end.ogg'
-	volume = 40 //SKYRAT EDIT CHANGE
+	volume = 30
 
 /datum/looping_sound/void_loop
 	mid_sounds = list('sound/ambience/VoidsEmbrace.ogg'=1)
 	mid_length = 1669 // exact length of the music in ticks
 	volume = 100
 	extra_range = 30
-*/

@@ -1,5 +1,4 @@
 
-/* SKYRAT EDIT REMOVAL - MOVED TO MODULAR
 /datum/hud/proc/create_parallax(mob/viewmob)
 	var/mob/screenmob = viewmob || mymob
 	var/client/C = screenmob.client
@@ -313,4 +312,3 @@
 
 /atom/movable/screen/parallax_layer/planet/update_o()
 	return //Shit won't move
-*/

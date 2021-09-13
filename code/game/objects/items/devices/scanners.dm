@@ -660,8 +660,6 @@ GENE SCANNER
 		if(!T)
 			return
 
-		var/datum/weather_controller/weather_controller = SSmapping.GetLevelWeatherController(T.z) //SKYRAT EDIT ADDITION
-
 		playsound(src, 'sound/effects/pop.ogg', 100)
 		var/area/user_area = T.loc
 		var/datum/weather/ongoing_weather = null
@@ -669,14 +667,12 @@ GENE SCANNER
 		if(!user_area.outdoors)
 			to_chat(user, span_warning("[src]'s barometer function won't work indoors!"))
 			return
-		//SKYRAT EDIT CHANGE
-		if(weather_controller.current_weathers)
-			for(var/V in weather_controller.current_weathers)
-				var/datum/weather/W = V
-				if(W.barometer_predictable && (T.z in W.impacted_z_levels) && W.area_type == user_area.type && !(W.stage == END_STAGE))
-					ongoing_weather = W
-					break
-		//SKYRAT EDIT END
+
+		for(var/V in SSweather.processing)
+			var/datum/weather/W = V
+			if(W.barometer_predictable && (T.z in W.impacted_z_levels) && W.area_type == user_area.type && !(W.stage == END_STAGE))
+				ongoing_weather = W
+				break
 
 		if(ongoing_weather)
 			if((ongoing_weather.stage == MAIN_STAGE) || (ongoing_weather.stage == WIND_DOWN_STAGE))
@@ -687,7 +683,7 @@ GENE SCANNER
 			if(ongoing_weather.aesthetic)
 				to_chat(user, span_warning("[src]'s barometer function says that the next storm will breeze on by."))
 		else
-			var/next_hit = weather_controller.next_weather //SKYRAT EDIT CHANGE
+			var/next_hit = SSweather.next_hit_by_zlevel["[T.z]"]
 			var/fixed = next_hit ? timeleft(next_hit) : -1
 			if(fixed < 0)
 				to_chat(user, span_warning("[src]'s barometer function was unable to trace any weather patterns."))

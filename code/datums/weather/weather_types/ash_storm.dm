@@ -1,4 +1,3 @@
-/* SKYRAT EDIT REMOVAL - MOVED  TO MODULAR
 //Ash storms happen frequently on lavaland. They heavily obscure vision, and cause high fire damage to anyone caught outside.
 /datum/weather/ash_storm
 	name = "ash storm"
@@ -87,4 +86,3 @@
 	aesthetic = TRUE
 
 	probability = 10
-*/

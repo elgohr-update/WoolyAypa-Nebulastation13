@@ -164,7 +164,7 @@
 	// .. or if you cannot read
 	if(!user.can_read(src))
 		return UI_CLOSE
-	if(!isnull(loc)) //If we're not in nullspace, we're readable //SKYRAT EDIT CHANGE
+	if(in_contents_of(/obj/machinery/door/airlock) || in_contents_of(/obj/item/clipboard))
 		return UI_INTERACTIVE
 	return ..()
 

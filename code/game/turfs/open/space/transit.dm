@@ -1,4 +1,3 @@
-/* SKYRAT EDIT REMOVAL - MOVED TO MODULAR
 /turf/open/space/transit
 	name = "\proper hyperspace"
 	icon_state = "black"
@@ -116,4 +115,3 @@
 			. = 90
 		if(WEST)
 			. = -90
-*/

@@ -56,6 +56,3 @@
 
 /obj/structure/flora/biolumi/lamp/weaklight
 	light_power = 0.3
-
-/obj/structure/flora/ausbushes/goldenbush
-	icon_state = "goldenbush"

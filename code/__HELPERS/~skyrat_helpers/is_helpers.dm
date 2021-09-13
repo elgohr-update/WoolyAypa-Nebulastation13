@@ -25,5 +25,3 @@
 #define ishumanoid(A) (is_species(A,/datum/species/humanoid))
 #define ismammal(A) (is_species(A,/datum/species/mammal))
 #define isinsect(A) (is_species(A,/datum/species/insect))
-
-#define isopenspaceturf(A) (istype(A, /turf/open/openspace))
