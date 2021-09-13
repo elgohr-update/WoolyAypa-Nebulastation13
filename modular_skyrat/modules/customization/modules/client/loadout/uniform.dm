@@ -5,7 +5,7 @@
 /datum/loadout_item/uniform/gandalf
 	name = "Nostalgic Costume"
 	path = /obj/item/clothing/under/nostalgiacritic
-	ckeywhitelist = list("gandalf2k15")
+	ckeywhitelist = list("dantesousa")
 
 /datum/loadout_item/uniform/assistantformal
 	name = "Assistant's formal uniform"
