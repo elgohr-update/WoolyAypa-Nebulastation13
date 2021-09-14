@@ -472,7 +472,6 @@
 /datum/antagonist/changeling/admin_add(datum/mind/new_owner,mob/admin)
 	. = ..()
 	to_chat(new_owner.current, span_boldannounce("Our powers have awoken. A flash of memory returns to us...we are a changeling!"))
-	*/
 	//SKYRAT EDIT REMOVAL END
 /datum/antagonist/changeling/get_admin_commands()
 	. = ..()
