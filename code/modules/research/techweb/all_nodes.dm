@@ -1389,7 +1389,6 @@
 
 		//SKYRAT EDIT START - RESEARCH DESIGNS
 		"medigunspeed",
-		"nightstick_conversion"
 		//SKYRAT EDIT END - RESEARCH DESIGNS
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
