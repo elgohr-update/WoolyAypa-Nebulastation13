@@ -23,10 +23,10 @@
 	throwforce = 18
 	sharpness = SHARP_EDGED
 	icon = 'nebula_modular/icons/obj/weapons/Binary_Sword.dmi'
-	lefthand_file = 'nebula_modular/icons/mob/inhands/weapons/Binary_Sword_leftHand.dmi'
-	righthand_file = 'nebula_modular/icons/mob/inhands/weapons/Binary_Sword_RightHand.dmi'
 	icon_state = 'binary_sword'
 	worn_icon_state = 'binary_back'
+	lefthand_file = 'nebula_modular/icons/mob/inhands/weapons/Binary_Sword_leftHand.dmi'
+	righthand_file = 'nebula_modular/icons/mob/inhands/weapons/Binary_Sword_RightHand.dmi'
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_HUGE
