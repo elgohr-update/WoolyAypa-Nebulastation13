@@ -24,7 +24,8 @@
 	sharpness = SHARP_EDGED
 	icon = 'nebula_modular/icons/obj/weapons/binarysword.dmi'
 	worn_icon = 'nebula_modular/icons/mob/clothing/binarysword_back.dmi'
-	icon_state = "binarysword"
+	belt_icon_state = "binary_sword"
+	icon_state = "binary_sword"
 	worn_icon_state = "binary_sword"
 	inhand_icon_state = "binary_sword"
 	lefthand_file = 'nebula_modular/icons/mob/inhands/weapons/binarysword_lefthand.dmi'
