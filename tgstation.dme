@@ -4863,6 +4863,7 @@
 #include "nebula_modular\code\modules\customization\modules\client\loadout\neck.dm"
 #include "nebula_modular\code\modules\customization\modules\client\loadout\suit.dm"
 #include "nebula_modular\code\modules\customization\modules\client\loadout\uniform.dm"
+#include "nebula_modular\code\modules\customization\modules\mob\dead\new_player\sprite_accessories\horns.dm"
 #include "nebula_modular\code\modules\job_skillchips\medical.dm"
 #include "nebula_modular\code\modules\madness\marking.dm"
 #include "nebula_modular\code\modules\madness\mask.dm"
