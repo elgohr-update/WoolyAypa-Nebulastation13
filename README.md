@@ -46,11 +46,11 @@ Na mesma nota, leia a mensagem fixada no canal de *#bug-reports* no [Discord do 
 **Abaixo encontra-se o guia de como fazer o *download* e hospedar seu próprio servidor.** *P.S: O guia não é de nossa autoria; créditos à equipe do Skyrat*.
 
 ## DOWNLOADING
-[Downloading](.github/DOWNLOADING.md)
+[Downloading](.github/guides/DOWNLOADING.md)
 
-[Running on the server](.github/RUNNING_A_SERVER.md)
+[Running on the server](.github/guides/RUNNING_A_SERVER.md)
 
-[Maps and Away Missions](.github/MAPS_AND_AWAY_MISSIONS.md)
+[Maps and Away Missions](.github/guides/MAPS_AND_AWAY_MISSIONS.md)
 
 ## :exclamation: How to compile :exclamation:
 
@@ -64,14 +64,10 @@ After it finishes, you can then [setup the server](.github/RUNNING_A_SERVER.md) 
 
 **[How to compile in VSCode and other build options](tools/build/README.md).**
 
-## Requirements for contributors
-[Guidelines for Contributors](.github/CONTRIBUTING.md)
+## Contributors
+[Guides for Contributors](.github/CONTRIBUTING.md)
 
 [/tg/station HACKMD account](https://hackmd.io/@tgstation) - Design documentation here
-
-[Documenting your code](.github/AUTODOC_GUIDE.md)
-
-[Policy configuration system](.github/POLICYCONFIG.md)
 
 [Interested in some starting lore?](https://github.com/tgstation/common_core)
 
