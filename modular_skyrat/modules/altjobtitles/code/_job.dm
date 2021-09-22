@@ -84,7 +84,7 @@
 
 //Service
 /datum/job/bartender
-	alt_titles = list("Mixologist", "Barkeeper", "Inkeeper")
+	alt_titles = list("Mixologist", "Barkeeper", "Innkeeper")
 
 /datum/job/cook
 	alt_titles = list("Chef", "Butcher", "Culinary Artist", "Sous-Chef")
