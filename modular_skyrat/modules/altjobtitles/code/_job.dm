@@ -105,7 +105,7 @@
 	alt_titles = list("Priest", "Preacher")
 
 /datum/job/mime
-	alt_titles = list("Pantomimist")
+	alt_titles = list("Pantomimist", "Mimic")
 
 /datum/job/clown
 	alt_titles = list("Jester")
