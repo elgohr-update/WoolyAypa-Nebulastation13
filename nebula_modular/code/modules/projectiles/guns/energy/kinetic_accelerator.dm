@@ -70,4 +70,3 @@
 	cost = 30
 	denied_type = /obj/item/borg/upgrade/modkit/lifesteal/miner
 	maximum_of_type = 2
-	

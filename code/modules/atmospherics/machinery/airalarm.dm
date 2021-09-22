@@ -924,8 +924,7 @@
 	var/obj/machinery/airalarm/connected_alarm
 	var/list/options_map
 
-/obj/item/circuit_component/air_alarm/Initialize()
-	. = ..()
+/obj/item/circuit_component/air_alarm/populate_ports()
 	min_2 = add_input_port("Min 2", PORT_TYPE_NUMBER)
 	min_1 = add_input_port("Min 1", PORT_TYPE_NUMBER)
 	max_1 = add_input_port("Max 1", PORT_TYPE_NUMBER)
@@ -951,19 +950,17 @@
 	air_alarm_options = add_option_port("Air Alarm Options", component_options)
 	options_map = component_options
 
-/obj/item/circuit_component/air_alarm/register_usb_parent(atom/movable/parent)
+/obj/item/circuit_component/air_alarm/register_usb_parent(atom/movable/shell)
 	. = ..()
-	if(istype(parent, /obj/machinery/airalarm))
-		connected_alarm = parent
+	if(istype(shell, /obj/machinery/airalarm))
+		connected_alarm = shell
 
-/obj/item/circuit_component/air_alarm/unregister_usb_parent(atom/movable/parent)
+/obj/item/circuit_component/air_alarm/unregister_usb_parent(atom/movable/shell)
 	connected_alarm = null
 	return ..()
 
 /obj/item/circuit_component/air_alarm/input_received(datum/port/input/port)
-	. = ..()
-
-	if(. || !connected_alarm || connected_alarm.locked)
+	if(!connected_alarm || connected_alarm.locked)
 		return
 
 	var/current_option = air_alarm_options.value
