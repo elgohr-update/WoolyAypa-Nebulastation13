@@ -22,7 +22,7 @@
 
 //Command
 /datum/job/captain
-	alt_titles = list("Station Commander", "Commanding Officer", "Site Manager")
+	alt_titles = list("Station Commander", "Commanding Officer", "Site Manager", "Dictator")
 
 /datum/job/head_of_personnel
 	alt_titles = list("Executive Officer", "Employment Officer", "Crew Supervisor")
@@ -31,7 +31,7 @@
 	alt_titles = list("Security Commander", "Chief Constable", "Chief of Security", "Sheriff")
 
 /datum/job/chief_engineer
-	alt_titles = list("Engineering Foreman")
+	alt_titles = list("Engineering Foreman", "Arch-Mechanic")
 
 /datum/job/research_director
 	alt_titles = list("Silicon Administrator", "Lead Researcher", "Biorobotics Director", "Research Supervisor", "Chief Science Officer")
@@ -40,24 +40,24 @@
 	alt_titles = list("Deck Chief", "Cargo Foreman")
 
 /datum/job/chief_medical_officer
-	alt_titles = list("Medical Director")
+	alt_titles = list("Medical Director", "Arch-Doctor")
 
 //Engineering
 /datum/job/station_engineer
-	alt_titles = list("Emergency Damage Control Technician", "Electrician", "Engine Technician", "EVA Technician", "Engineer")
+	alt_titles = list("Emergency Damage Control Technician", "Electrician", "Engine Technician", "EVA Technician", "Engineer", "Mechanic", "Junior Engineer")
 
 /datum/job/atmospheric_technician
-	alt_titles = list("Life Support Technician", "Emergency Fire Technician")
+	alt_titles = list("Life Support Technician", "Emergency Fire Technician", "Firefighter")
 
 //Medical
 /datum/job/doctor
-	alt_titles = list("Surgeon", "Nurse")
+	alt_titles = list("Surgeon", "Nurse", "Coroner", "Junior Medical Doctor")
 
 /datum/job/paramedic
 	alt_titles = list("Emergency Medical Technician", "Search and Rescue Technician")
 
 /datum/job/virologist
-	alt_titles = list("Pathologist")
+	alt_titles = list("Pathologist", "Plague Researcher")
 
 /datum/job/chemist
 	alt_titles = list("Pharmacist", "Pharmacologist")
@@ -80,11 +80,11 @@
 	alt_titles = list("Deck Worker", "Mailman")
 
 /datum/job/shaft_miner
-	alt_titles = list("Excavator")
+	alt_titles = list("Excavator", "Pioneer", "Explorer")
 
 //Service
 /datum/job/bartender
-	alt_titles = list("Mixologist", "Barkeeper")
+	alt_titles = list("Mixologist", "Barkeeper", "Inkeeper")
 
 /datum/job/cook
 	alt_titles = list("Chef", "Butcher", "Culinary Artist", "Sous-Chef")
