@@ -46,12 +46,14 @@
 		if(M.client.get_remaining_days(minimum_required_age) > 0)
 			trimmed_list.Remove(M)
 			continue
-		if (!((antag_preference || antag_flag) in M.client.prefs.be_special))
-			trimmed_list.Remove(M)
-			continue
-		if (is_banned_from(M.ckey, list(antag_flag_override || antag_flag, ROLE_SYNDICATE)))
-			trimmed_list.Remove(M)
-			continue
+		if(antag_flag_override)
+			if(!(antag_flag_override in M.client.prefs.be_special) || is_banned_from(M.ckey, list(antag_flag_override, ROLE_SYNDICATE)))
+				trimmed_list.Remove(M)
+				continue
+		else
+			if(!(antag_flag in M.client.prefs.be_special) || is_banned_from(M.ckey, list(antag_flag, ROLE_SYNDICATE)))
+				trimmed_list.Remove(M)
+				continue
 		if (M.mind)
 			if (restrict_ghost_roles && (M.mind.assigned_role.title in GLOB.exp_specialmap[EXP_TYPE_SPECIAL])) // Are they playing a ghost role?
 				trimmed_list.Remove(M)
@@ -102,7 +104,7 @@
 	message_admins("Polling [possible_volunteers.len] players to apply for the [name] ruleset.")
 	log_game("DYNAMIC: Polling [possible_volunteers.len] players to apply for the [name] ruleset.")
 
-	candidates = pollGhostCandidates("The mode is looking for volunteers to become [antag_flag] for [name]", antag_flag_override, antag_flag || antag_flag_override, poll_time = 300)
+	candidates = pollGhostCandidates("The mode is looking for volunteers to become [antag_flag] for [name]", antag_flag, antag_flag_override ? antag_flag_override : antag_flag, poll_time = 300)
 
 	if(!candidates || candidates.len <= 0)
 		mode.dynamic_log("The ruleset [name] received no applications.")
@@ -182,8 +184,7 @@
 /datum/dynamic_ruleset/midround/autotraitor
 	name = "Syndicate Sleeper Agent"
 	antag_datum = /datum/antagonist/traitor
-	antag_flag = ROLE_SLEEPER_AGENT
-	antag_flag_override = ROLE_TRAITOR
+	antag_flag = ROLE_TRAITOR
 	protected_roles = list("Prisoner", "Blueshield", "Corrections Officer", "Security Officer", "Warden", "Detective", "Security Medic", "Security Sergeant", "Civil Disputes Officer", "Head of Security", "Captain", "Nanotrasen Representative", "Head of Personnel", "Chief Engineer", "Chief Medical Officer", "Research Director", "Quartermaster", "Vanguard Operative") //SKYRAT EDIT - SEC_HAUL
 	restricted_roles = list("Cyborg", "AI", "Positronic Brain")
 	required_candidates = 1
@@ -247,9 +248,7 @@
 /datum/dynamic_ruleset/midround/families
 	name = "Family Head Aspirants"
 	persistent = TRUE
-	antag_datum = /datum/antagonist/gang
-	antag_flag = ROLE_FAMILY_HEAD_ASPIRANT
-	antag_flag_override = ROLE_FAMILIES
+	antag_flag = ROLE_FAMILIES
 	protected_roles = list("Prisoner", "Head of Personnel")
 	restricted_roles = list("Cyborg", "AI", "Security Officer", "Warden", "Detective", "Head of Security", "Captain", "Corrections Officer", "Vanguard Operative", "Nanotrasen Representative", "Blueshield", "Civil Disputes Officer", "Security Sergeant") //SKYRAT EDIT - Sec_haul
 	required_candidates = 6 // gotta have 'em ALL
@@ -318,8 +317,7 @@
 /datum/dynamic_ruleset/midround/malf
 	name = "Malfunctioning AI"
 	antag_datum = /datum/antagonist/malf_ai
-	antag_flag = ROLE_MALF_MIDROUND
-	antag_flag_override = ROLE_MALF
+	antag_flag = ROLE_MALF
 	enemy_roles = list("Security Officer", "Warden","Detective","Head of Security", "Captain", "Scientist", "Chemist", "Research Director", "Chief Engineer", "Blueshield")
 	exclusive_roles = list("AI")
 	required_enemies = list(4,4,4,4,4,4,2,2,2,0)
@@ -369,8 +367,7 @@
 /datum/dynamic_ruleset/midround/from_ghosts/wizard
 	name = "Wizard"
 	antag_datum = /datum/antagonist/wizard
-	antag_flag = ROLE_WIZARD_MIDROUND
-	antag_flag_override = ROLE_WIZARD
+	antag_flag = ROLE_WIZARD
 	enemy_roles = list("Security Officer","Detective","Head of Security", "Captain")
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
@@ -400,8 +397,7 @@
 
 /datum/dynamic_ruleset/midround/from_ghosts/nuclear
 	name = "Nuclear Assault"
-	antag_flag = ROLE_OPERATIVE_MIDROUND
-	antag_flag_override = ROLE_OPERATIVE
+	antag_flag = ROLE_OPERATIVE
 	antag_datum = /datum/antagonist/nukeop
 	enemy_roles = list("AI", "Cyborg", "Security Officer", "Warden","Detective","Head of Security", "Captain")
 	required_enemies = list(3,3,3,3,3,2,1,1,0,0)
@@ -460,9 +456,8 @@
 /// Infects a random player, making them explode into a blob.
 /datum/dynamic_ruleset/midround/blob_infection
 	name = "Blob Infection"
-	antag_datum = /datum/antagonist/blob/infection
-	antag_flag = ROLE_BLOB_INFECTION
-	antag_flag_override = ROLE_BLOB
+	antag_datum = /datum/antagonist/blob
+	antag_flag = ROLE_BLOB
 	protected_roles = list("Prisoner", "Blueshield", "Corrections Officer", "Security Officer", "Warden", "Detective", "Security Medic", "Security Sergeant", "Civil Disputes Officer", "Head of Security", "Captain", "Nanotrasen Representative", "Head of Personnel", "Chief Engineer", "Chief Medical Officer", "Research Director", "Quartermaster", "Vanguard Operative") //SKYRAT EDIT - SEC_HAUL
 	restricted_roles = list("Cyborg", "AI", "Positronic Brain")
 	enemy_roles = list("Security Officer", "Detective", "Head of Security", "Captain")
@@ -638,8 +633,8 @@
 
 /datum/dynamic_ruleset/midround/from_ghosts/abductors
 	name = "Abductors"
-	antag_datum = /datum/antagonist/abductor
-	antag_flag = ROLE_ABDUCTOR
+	antag_flag = "Abductor"
+	antag_flag_override = ROLE_ABDUCTOR
 	enemy_roles = list("Security Officer", "Detective", "Head of Security", "Captain")
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 2
@@ -677,7 +672,8 @@
 /datum/dynamic_ruleset/midround/swarmers
 	name = "Swarmers"
 	antag_datum = /datum/antagonist/swarmer
-	antag_flag = ROLE_SWARMER
+	antag_flag = "Swarmer"
+	antag_flag_override = ROLE_ALIEN
 	required_type = /mob/dead/observer
 	enemy_roles = list("Security Officer", "Detective", "Head of Security", "Captain")
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
@@ -711,7 +707,8 @@
 /datum/dynamic_ruleset/midround/from_ghosts/space_ninja
 	name = "Space Ninja"
 	antag_datum = /datum/antagonist/ninja
-	antag_flag = ROLE_NINJA
+	antag_flag = "Space Ninja"
+	antag_flag_override = ROLE_NINJA
 	enemy_roles = list("Security Officer", "Detective", "Head of Security", "Captain")
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
@@ -750,7 +747,8 @@
 
 /datum/dynamic_ruleset/midround/spiders
 	name = "Spiders"
-	antag_flag = ROLE_SPIDER
+	antag_flag = "Spider"
+	antag_flag_override = ROLE_ALIEN
 	required_type = /mob/dead/observer
 	enemy_roles = list("Security Officer", "Detective", "Head of Security", "Captain")
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
@@ -769,7 +767,8 @@
 /datum/dynamic_ruleset/midround/from_ghosts/revenant
 	name = "Revenant"
 	antag_datum = /datum/antagonist/revenant
-	antag_flag = ROLE_REVENANT
+	antag_flag = "Revenant"
+	antag_flag_override = ROLE_REVENANT
 	enemy_roles = list("Security Officer", "Detective", "Head of Security", "Captain")
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
@@ -815,7 +814,8 @@
 /datum/dynamic_ruleset/midround/from_ghosts/sentient_disease
 	name = "Sentient Disease"
 	antag_datum = /datum/antagonist/disease
-	antag_flag = ROLE_SENTIENT_DISEASE
+	antag_flag = "Sentient Disease"
+	antag_flag_override = ROLE_ALIEN
 	required_candidates = 1
 	weight = 4
 	cost = 10

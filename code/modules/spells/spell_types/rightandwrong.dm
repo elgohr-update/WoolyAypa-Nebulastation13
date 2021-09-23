@@ -63,10 +63,9 @@ GLOBAL_LIST_INIT(summoned_magic, list(
 	/obj/item/book/granter/spell/barnyard,
 	/obj/item/book/granter/spell/charge,
 	/obj/item/book/granter/spell/summonitem,
-	/obj/item/gun/magic/wand/nothing,
+	/obj/item/gun/magic/wand/nothing,  //SKYEDIT EDIT - Removes wand of polymorph
 	/obj/item/gun/magic/wand/death,
 	/obj/item/gun/magic/wand/resurrection,
-	/obj/item/gun/magic/wand/polymorph,
 	/obj/item/gun/magic/wand/teleport,
 	/obj/item/gun/magic/wand/door,
 	/obj/item/gun/magic/wand/fireball,
@@ -78,8 +77,7 @@ GLOBAL_LIST_INIT(summoned_magic, list(
 	/obj/item/immortality_talisman,
 	/obj/item/melee/ghost_sword))
 
-GLOBAL_LIST_INIT(summoned_special_magic, list(
-	/obj/item/gun/magic/staff/change,
+GLOBAL_LIST_INIT(summoned_special_magic, list(  //SKYEDIT EDIT - Removes wand of polymorph
 	/obj/item/gun/magic/staff/animate,
 	/obj/item/storage/belt/wands/full,
 	/obj/item/antag_spawner/contract,
@@ -204,10 +202,9 @@ GLOBAL_LIST_INIT(summoned_magic_objectives, list(
 	UnregisterSignal(SSdcs, COMSIG_GLOB_CREWMEMBER_JOINED)
 
 ///signal proc to give magic to new crewmembers
-/datum/summon_magic_controller/proc/magic_up_new_crew(datum/source, mob/living/new_crewmember, rank)
+/proc/magic_up_new_crew(mob/living/carbon/human/new_crewmember, rank)
 	SIGNAL_HANDLER
-	if(ishuman(new_crewmember))
-		INVOKE_ASYNC(GLOB.summon_magic, .proc/give_magic, new_crewmember)
+	INVOKE_ASYNC(GLOB.summon_magic, .proc/give_magic, new_crewmember)
 
 /**
  * The guns controller handles the summon guns event.
@@ -233,8 +230,7 @@ GLOBAL_LIST_INIT(summoned_magic_objectives, list(
 	UnregisterSignal(SSdcs, COMSIG_GLOB_CREWMEMBER_JOINED)
 
 ///signal proc to give guns to new crewmembers
-/datum/summon_guns_controller/proc/arm_up_new_crew(datum/source, mob/living/new_crewmember, rank)
+/proc/arm_up_new_crew(mob/living/carbon/human/new_crewmember, rank)
 	SIGNAL_HANDLER
-	if(ishuman(new_crewmember))
-		INVOKE_ASYNC(GLOB.summon_guns, .proc/give_guns, new_crewmember)
+	INVOKE_ASYNC(GLOB.summon_guns, .proc/give_guns, new_crewmember)
 

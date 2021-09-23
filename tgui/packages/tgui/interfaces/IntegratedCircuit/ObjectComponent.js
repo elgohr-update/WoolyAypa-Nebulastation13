@@ -1,7 +1,7 @@
 import { useBackend } from '../../backend';
 import {
   Box,
-  Stack, Button,
+  Stack, Button, Dropdown,
 } from '../../components';
 import { Component } from 'inferno';
 import { shallowDiffers } from '../../../common/react';

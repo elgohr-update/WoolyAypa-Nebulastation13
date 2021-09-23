@@ -6273,6 +6273,7 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 10
 	},
+/obj/effect/landmark/start/bridge_officer,
 /turf/open/floor/iron/dark,
 /area/centcom/ncvtitan)
 "cvG" = (
@@ -6524,6 +6525,18 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/interlink)
+"dHt" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 8;
+	height = 7;
+	id = "supply_away";
+	name = "NCV Titan Dock 2";
+	roundstart_template = /datum/map_template/shuttle/cargo;
+	width = 20
+	},
+/turf/open/floor/plating,
+/area/centcom/ncvtitan)
 "dKt" = (
 /obj/structure/table/reinforced,
 /obj/item/flashlight/seclite,
@@ -6749,6 +6762,7 @@
 /obj/structure/chair/office/light{
 	dir = 1
 	},
+/obj/effect/landmark/start/deck_crew,
 /turf/open/floor/iron/textured,
 /area/centcom/ncvtitan)
 "eoq" = (
@@ -6819,6 +6833,7 @@
 /obj/structure/chair/office/light{
 	dir = 1
 	},
+/obj/effect/landmark/start/deck_crew,
 /turf/open/floor/iron/textured,
 /area/centcom/ncvtitan)
 "eLV" = (
@@ -7150,6 +7165,15 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/ncvtitan)
+"gkP" = (
+/obj/machinery/status_display/supply{
+	pixel_y = -32
+	},
+/obj/machinery/computer/cargo_control_console{
+	dir = 1
+	},
+/turf/open/floor/iron/smooth_large,
+/area/centcom/ncvtitan)
 "gmX" = (
 /obj/machinery/door/airlock/silver{
 	name = "Bathroom"
@@ -7160,6 +7184,7 @@
 /obj/structure/chair/office{
 	dir = 4
 	},
+/obj/effect/landmark/start/deck_crew,
 /turf/open/floor/iron/smooth,
 /area/centcom/ncvtitan)
 "gpK" = (
@@ -7646,6 +7671,16 @@
 /obj/structure/cable,
 /turf/open/floor/circuit/green,
 /area/centcom/ncvtitan)
+"ity" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/red{
+	dir = 8
+	},
+/obj/effect/landmark/start/bridge_officer,
+/turf/open/floor/iron/dark,
+/area/centcom/ncvtitan)
 "ivg" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -7846,7 +7881,12 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 9
 	},
+/obj/effect/landmark/start/bridge_officer,
 /turf/open/floor/iron/dark,
+/area/centcom/ncvtitan)
+"jwb" = (
+/obj/effect/landmark/start/deck_crew,
+/turf/open/floor/iron/cafeteria,
 /area/centcom/ncvtitan)
 "jwv" = (
 /obj/structure/toilet{
@@ -9584,6 +9624,7 @@
 /obj/structure/chair/office{
 	dir = 4
 	},
+/obj/effect/landmark/start/fleetmaster,
 /turf/open/floor/carpet/executive,
 /area/centcom/ncvtitan)
 "qei" = (
@@ -9694,6 +9735,11 @@
 	},
 /obj/machinery/recharger,
 /turf/open/floor/iron/smooth_large,
+/area/centcom/ncvtitan)
+"qua" = (
+/obj/effect/landmark/start/deck_crew,
+/obj/structure/cable,
+/turf/open/floor/iron/dark,
 /area/centcom/ncvtitan)
 "quD" = (
 /obj/structure/railing{
@@ -10402,6 +10448,10 @@
 /obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
 /area/centcom/ncvtitan)
+"tcX" = (
+/obj/effect/landmark/start/deck_crew,
+/turf/open/floor/iron/dark,
+/area/centcom/ncvtitan)
 "thU" = (
 /obj/machinery/door/poddoor/ert,
 /obj/effect/turf_decal/stripes/asteroid/line{
@@ -10630,6 +10680,10 @@
 /area/centcom/ncvtitan)
 "tQa" = (
 /obj/machinery/cryopod,
+/turf/open/floor/iron/dark,
+/area/centcom/ncvtitan)
+"tVf" = (
+/obj/machinery/computer/market_link,
 /turf/open/floor/iron/dark,
 /area/centcom/ncvtitan)
 "tWh" = (
@@ -11739,6 +11793,7 @@
 /turf/open/floor/carpet/orange,
 /area/centcom/interlink)
 "yao" = (
+/obj/effect/landmark/start/operations_inspector,
 /obj/structure/chair/office{
 	dir = 1
 	},
@@ -18566,7 +18621,7 @@ uQr
 gpK
 rKz
 pUv
-hhq
+qua
 dyB
 dyB
 ufa
@@ -19851,7 +19906,7 @@ uQr
 fBr
 rKz
 mZH
-dyB
+tcX
 dyB
 dyB
 xHl
@@ -22656,7 +22711,7 @@ leI
 rtY
 leI
 rKz
-dyB
+tVf
 gkq
 dyB
 dyB
@@ -22927,7 +22982,7 @@ uQr
 uQr
 uQr
 uQr
-uQr
+dHt
 uQr
 uQr
 uQr
@@ -23705,7 +23760,7 @@ okl
 okl
 okl
 xYo
-ijL
+gkP
 rKz
 hQR
 bxC
@@ -25999,7 +26054,7 @@ rKz
 rKz
 gTR
 bHP
-bHP
+jwb
 bHP
 bHP
 trq
@@ -29863,11 +29918,11 @@ dPq
 dPq
 rKz
 nap
-wtv
+ity
 uwL
 wtv
 uwL
-wtv
+ity
 mrJ
 rKz
 dPq

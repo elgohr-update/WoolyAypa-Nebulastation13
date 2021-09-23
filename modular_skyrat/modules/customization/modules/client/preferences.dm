@@ -1,4 +1,3 @@
-/*
 GLOBAL_LIST_EMPTY(preferences_datums)
 
 // i shall taint your pretty preferences file with bobcode
@@ -3567,4 +3566,3 @@ GLOBAL_LIST_INIT(food, list(
 	popup.set_window_options("can_close=0")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
-*/

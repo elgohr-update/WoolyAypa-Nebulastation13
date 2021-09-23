@@ -13,10 +13,8 @@
 	var/list/species_blacklist
 	/// Which languages does the job require, associative to LANGUAGE_UNDERSTOOD or LANGUAGE_SPOKEN
 	var/list/required_languages = list(/datum/language/common = LANGUAGE_SPOKEN)
-
-	///Is this job veteran only? If so, then this job requires the player to be in the veteran_players.txt
-	var/veteran_only = FALSE
-
+	//Alt titles
+	var/list/alt_titles = list()
 
 /datum/job/proc/has_banned_quirk(datum/preferences/pref)
 	if(!pref) //No preferences? We'll let you pass, this time (just a precautionary check,you dont wanna mess up gamemode setting logic)
@@ -28,9 +26,7 @@
 	return FALSE
 
 /datum/job/proc/has_banned_species(datum/preferences/pref)
-	var/species_type = pref.read_preference(/datum/preference/choiced/species)
-	var/datum/species/species = new species_type
-	var/my_id = species.id
+	var/my_id = pref.pref_species.id
 	if(species_whitelist && !species_whitelist[my_id])
 		return TRUE
 	else if(!GLOB.roundstart_races[my_id])
