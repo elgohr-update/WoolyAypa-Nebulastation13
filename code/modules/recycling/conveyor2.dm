@@ -374,7 +374,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	desc = "A conveyor control switch. It appears to only go in one direction."
 	oneway = TRUE
 
-/obj/machinery/conveyor_switch/oneway/Initialize(mapload)
+/obj/machinery/conveyor_switch/oneway/Initialize()
 	. = ..()
 	if((dir == NORTH) || (dir == WEST))
 		invert_icon = TRUE
@@ -387,7 +387,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 	w_class = WEIGHT_CLASS_BULKY
 	var/id = "" //inherited by the switch
 
-/obj/item/conveyor_switch_construct/Initialize(mapload)
+/obj/item/conveyor_switch_construct/Initialize()
 	. = ..()
 	id = "[rand()]" //this couldn't possibly go wrong
 

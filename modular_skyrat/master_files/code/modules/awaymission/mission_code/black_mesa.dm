@@ -323,18 +323,16 @@
 	)
 
 ///////////////////HECU SPAWNERS
-/obj/effect/spawner/random/hecu_smg
+/obj/effect/spawner/lootdrop/hecu_smg
 	name = "HECU SMG drops"
-	spawn_all_loot = TRUE
 	loot = list(/obj/item/gun/ballistic/automatic/c20r/unrestricted = 30,
 				/obj/item/clothing/mask/gas/hecu2 = 20,
 				/obj/item/clothing/head/helmet = 20,
 				/obj/item/clothing/suit/armor/vest = 15,
 				/obj/item/clothing/shoes/combat = 15)
 
-/obj/effect/spawner/random/hecu_deagle
+/obj/effect/spawner/lootdrop/hecu_deagle
 	name = "HECU Deagle drops"
-	spawn_all_loot = TRUE
 	loot = list(/obj/item/gun/ballistic/automatic/pistol/deagle = 30,
 				/obj/item/clothing/mask/gas/hecu2 = 20,
 				/obj/item/clothing/head/helmet = 20,
@@ -397,7 +395,7 @@
 	icon_living = "hecu_ranged"
 	casingtype = /obj/item/ammo_casing/a50ae
 	projectilesound = 'sound/weapons/gun/pistol/shot.ogg'
-	loot = list(/obj/effect/gibspawner/human, /obj/effect/spawner/random/hecu_deagle)
+	loot = list(/obj/effect/gibspawner/human, /obj/effect/spawner/lootdrop/hecu_deagle)
 	dodging = TRUE
 	rapid_melee = 1
 
@@ -407,7 +405,7 @@
 	icon_living = "hecu_ranged_smg"
 	casingtype = /obj/item/ammo_casing/c45
 	projectilesound = 'sound/weapons/gun/smg/shot.ogg'
-	loot = list(/obj/effect/gibspawner/human, /obj/effect/spawner/random/hecu_smg)
+	loot = list(/obj/effect/gibspawner/human, /obj/effect/spawner/lootdrop/hecu_smg)
 
 /mob/living/simple_animal/hostile/blackmesa/sec
 	name = "Security Guard"

@@ -50,7 +50,7 @@
 	dir = EAST
 	pixel_x = -32
 
-/obj/machinery/computer/auxiliary_base/Initialize(mapload)
+/obj/machinery/computer/auxiliary_base/Initialize()
 	. = ..()
 	AddComponent(/datum/component/gps, "NT_AUX")
 

@@ -65,10 +65,13 @@
 				mytray.visible_message(span_warning("Nothing happens..."))
 
 /datum/reagent/medicine/adminordrazine/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	M.adjustOxyLoss(-30 * REM * delta_time)
+	M.adjustBruteLoss(-30 * REM * delta_time)
+	M.adjustFireLoss(-30 * REM * delta_time)
+	M.adjustToxLoss(-30 * REM * delta_time)
+	M.adjustStaminaLoss(-30 * REM * delta_time)
+	M.adjustOrganLoss(-30 * REM * delta_time)
 	M.heal_bodypart_damage(5 * REM * delta_time, 5 * REM * delta_time)
-	M.adjustToxLoss(-5 * REM * delta_time, FALSE, TRUE)
-	M.setOxyLoss(0, 0)
-	M.setCloneLoss(0, 0)
 
 	M.set_blurriness(0)
 	M.set_blindness(0)
@@ -80,7 +83,6 @@
 	M.set_confusion(0)
 	M.SetSleeping(0)
 
-	M.silent = FALSE
 	M.dizziness = 0
 	M.disgust = 0
 	M.drowsyness = 0
@@ -89,11 +91,10 @@
 	M.jitteriness = 0
 	M.hallucination = 0
 	M.radiation = 0
-	REMOVE_TRAITS_NOT_IN(M, list(SPECIES_TRAIT, ROUNDSTART_TRAIT, ORGAN_TRAIT))
-	M.reagents.remove_all_type(/datum/reagent/toxin, 5 * REM * delta_time, FALSE, TRUE)
+
 	if(M.blood_volume < BLOOD_VOLUME_NORMAL)
 		M.blood_volume = BLOOD_VOLUME_NORMAL
-
+	M.reagents.remove_all_type(/datum/reagent/toxin, 5 * REM * delta_time, FALSE, TRUE)
 	M.cure_all_traumas(TRAUMA_RESILIENCE_MAGIC)
 	for(var/organ in M.internal_organs)
 		var/obj/item/organ/O = organ
@@ -102,7 +103,6 @@
 		var/datum/disease/D = thing
 		if(D.severity == DISEASE_SEVERITY_POSITIVE)
 			continue
-		D.cure()
 	..()
 	. = TRUE
 
@@ -110,6 +110,18 @@
 	name = "Quantum Medicine"
 	description = "Rare and experimental particles, that apparently swap the user's body with one from an alternate dimension where it's completely healthy."
 	taste_description = "science"
+
+/datum/reagent/medicine/adminordrazine/quantum_heal/on_mob_metabolize(mob/living/carbon/M)
+	..()
+	ADD_TRAIT(M, TRAIT_SLEEPIMMUNE, type)
+	ADD_TRAIT(M, TRAIT_STUNRESISTANCE, type)
+	to_chat(M, span_green("<i>You suddenly feel better in every aspect!</i>"))
+
+/datum/reagent/medicine/adminordrazine/quantum_heal/on_mob_end_metabolize(mob/living/carbon/M)
+	REMOVE_TRAIT(M, TRAIT_SLEEPIMMUNE, type)
+	REMOVE_TRAIT(M, TRAIT_STUNRESISTANCE, type)
+	to_chat(M, span_red("<i>Then you feel normal again.</i>"))
+	..()
 
 /datum/reagent/medicine/synaptizine
 	name = "Synaptizine"

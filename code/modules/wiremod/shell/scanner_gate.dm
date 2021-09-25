@@ -5,7 +5,7 @@
 	icon_state = "scangate_black"
 	var/locked = FALSE
 
-/obj/structure/scanner_gate_shell/Initialize(mapload)
+/obj/structure/scanner_gate_shell/Initialize()
 	. = ..()
 	set_scanline("passive")
 	var/static/list/loc_connections = list(

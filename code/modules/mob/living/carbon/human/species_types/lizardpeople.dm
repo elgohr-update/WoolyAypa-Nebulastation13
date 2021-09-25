@@ -3,7 +3,7 @@
 	name = "Lizardperson"
 	id = SPECIES_LIZARD
 	say_mod = "hisses"
-	default_color = COLOR_VIBRANT_LIME
+	default_color = "00FF00"
 	species_traits = list(MUTCOLORS, EYECOLOR, LIPS, HAS_FLESH, HAS_BONE)
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
@@ -16,7 +16,7 @@
 		/obj/item/organ/external/frills = "None",
 		/obj/item/organ/external/snout = "Round")
 	mutanttongue = /obj/item/organ/tongue/lizard
-	mutant_organs = list(/obj/item/organ/tail/lizard)
+	//mutant_organs = list(/obj/item/organ/tail/lizard) //SKYRAT EDIT REMOVAL - CUSTOMIZATION
 	coldmod = 1.5
 	heatmod = 0.67
 	payday_modifier = 0.75
@@ -29,7 +29,7 @@
 	skinned_type = /obj/item/stack/sheet/animalhide/lizard
 	exotic_bloodtype = "L"
 	disliked_food = GRAIN | DAIRY | CLOTH
-	liked_food = GROSS | MEAT | SEAFOOD
+	liked_food = GROSS | MEAT
 	inert_mutation = FIREBREATH
 	deathsound = 'sound/voice/lizard/deathsound.ogg'
 	wings_icons = list("Dragon")

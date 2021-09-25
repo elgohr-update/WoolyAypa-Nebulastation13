@@ -218,8 +218,8 @@
 					/obj/item/geiger_counter,
 					/obj/item/geiger_counter,
 					/obj/item/reagent_containers/food/drinks/bottle/vodka,
-					/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
-					/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass)
+					/obj/item/reagent_containers/food/drinks/shotglass,
+					/obj/item/reagent_containers/food/drinks/shotglass)
 	crate_name = "radiation protection crate"
 	crate_type = /obj/structure/closet/crate/radiation
 
@@ -2433,7 +2433,7 @@
 
 /datum/supply_pack/costumes_toys/mafia/fill(obj/structure/closet/crate/C)
 	for(var/i in 1 to 4)
-		new /obj/effect/spawner/random/clothing/mafia_outfit(C)
+		new /obj/effect/spawner/lootdrop/mafia_outfit(C)
 		new /obj/item/virgin_mary(C)
 		if(prob(30)) //Not all mafioso have mustaches, some people also find this item annoying.
 			new /obj/item/clothing/mask/fakemoustache/italian(C)

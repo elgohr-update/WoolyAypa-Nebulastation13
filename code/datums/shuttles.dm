@@ -111,6 +111,7 @@
 	suffix = "skyrat" //SKYRAT EDIT CHANGE
 	name = "Base Shuttle Template (Emergency)"
 
+/* //SKYRAT EDIT REMOVAL - MOVED TO MODULAR
 /datum/map_template/shuttle/cargo
 	port_id = "cargo"
 	name = "Base Shuttle Template (Cargo)"
@@ -119,6 +120,7 @@
 /datum/map_template/shuttle/ferry
 	port_id = "ferry"
 	name = "Base Shuttle Template (Ferry)"
+*/
 
 /datum/map_template/shuttle/whiteship
 	port_id = "whiteship"

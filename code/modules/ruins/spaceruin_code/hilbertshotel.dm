@@ -16,7 +16,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	//Lore Stuff
 	var/ruinSpawned = FALSE
 
-/obj/item/hilbertshotel/Initialize(mapload)
+/obj/item/hilbertshotel/Initialize()
 	. = ..()
 	//Load templates
 	INVOKE_ASYNC(src, .proc/prepare_rooms)
@@ -254,7 +254,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 	explosion_block = INFINITY
 	var/obj/item/hilbertshotel/parentSphere
 
-/turf/open/space/bluespace/Initialize(mapload)
+/turf/open/space/bluespace/Initialize()
 	. = ..()
 	update_icon_state()
 
@@ -511,7 +511,7 @@ GLOBAL_VAR_INIT(hhMysteryRoomNumber, rand(1, 999999))
 /obj/item/paper/crumpled/docslogs
 	name = "Research Logs"
 
-/obj/item/paper/crumpled/docslogs/Initialize(mapload)
+/obj/item/paper/crumpled/docslogs/Initialize()
 	. = ..()
 	info = {"<h4><center>Research Logs</center></h4>
 	I might just be onto something here!<br>

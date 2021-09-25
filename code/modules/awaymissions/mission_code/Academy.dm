@@ -64,7 +64,7 @@
 /obj/singularity/academy
 	move_self = FALSE
 
-/obj/singularity/academy/Initialize(mapload)
+/obj/singularity/academy/Initialize()
 	. = ..()
 
 	var/datum/component/singularity/singularity = singularity_component.resolve()

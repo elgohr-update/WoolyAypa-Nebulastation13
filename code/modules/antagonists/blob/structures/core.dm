@@ -20,7 +20,7 @@
 /obj/structure/blob/special/core/Initialize(mapload, client/new_overmind = null, placed = 0)
 	GLOB.blob_cores += src
 	START_PROCESSING(SSobj, src)
-	SSpoints_of_interest.make_point_of_interest(src)
+	AddElement(/datum/element/point_of_interest)
 	update_appearance() //so it atleast appears
 	if(!placed && !overmind)
 		return INITIALIZE_HINT_QDEL

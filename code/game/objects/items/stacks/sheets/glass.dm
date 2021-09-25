@@ -278,7 +278,7 @@ GLOBAL_LIST_INIT(plastitaniumglass_recipes, list(
 	return (BRUTELOSS)
 
 
-/obj/item/shard/Initialize(mapload)
+/obj/item/shard/Initialize()
 	. = ..()
 	AddComponent(/datum/component/caltrop, min_damage = force)
 	AddComponent(/datum/component/butchering, 150, 65)

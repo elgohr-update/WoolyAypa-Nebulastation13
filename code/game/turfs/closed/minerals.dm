@@ -28,7 +28,7 @@
 	// If true you can mine the mineral turf with your hands
 	var/weak_turf = FALSE
 
-/turf/closed/mineral/Initialize(mapload)
+/turf/closed/mineral/Initialize()
 	. = ..()
 	var/matrix/M = new
 	M.Translate(-4, -4)
@@ -183,7 +183,7 @@
 		//Currently, Adamantine won't spawn as it has no uses. -Durandan
 	var/mineralChance = 13
 
-/turf/closed/mineral/random/Initialize(mapload)
+/turf/closed/mineral/random/Initialize()
 	if(SSevents.holidays && SSevents.holidays[APRIL_FOOLS])
 		mineralSpawnChanceList[/obj/item/stack/ore/bananium] = 3
 
@@ -520,11 +520,6 @@
 	smooth_icon = 'icons/turf/walls/red_wall.dmi'
 	base_icon_state = "red_wall"
 
-/turf/closed/mineral/random/stationside/asteroid/porus
-	name = "porous iron rock"
-	desc = "This rock is filled with pockets of breathable air."
-	baseturfs = /turf/open/floor/plating/asteroid
-
 /turf/closed/mineral/asteroid/porous
 	name = "porous rock"
 	desc = "This rock is filled with pockets of breathable air."
@@ -541,7 +536,7 @@
 	var/activated_name = null
 	var/mutable_appearance/activated_overlay
 
-/turf/closed/mineral/gibtonite/Initialize(mapload)
+/turf/closed/mineral/gibtonite/Initialize()
 	det_time = rand(8,10) //So you don't know exactly when the hot potato will explode
 	. = ..()
 

@@ -43,7 +43,7 @@
 /obj/machinery/space_heater/get_cell()
 	return cell
 
-/obj/machinery/space_heater/Initialize(mapload)
+/obj/machinery/space_heater/Initialize()
 	. = ..()
 	if(ispath(cell))
 		cell = new cell(src)
@@ -182,8 +182,6 @@
 		return
 	on = !on
 	update_appearance()
-	if (on)
-		START_PROCESSING(SSmachines, src)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/machinery/space_heater/ui_interact(mob/user, datum/tgui/ui)
@@ -255,7 +253,7 @@
 /obj/machinery/space_heater/constructed
 	cell = null
 
-/obj/machinery/space_heater/constructed/Initialize(mapload)
+/obj/machinery/space_heater/constructed/Initialize()
 	. = ..()
 	panel_open = TRUE
 	update_appearance()

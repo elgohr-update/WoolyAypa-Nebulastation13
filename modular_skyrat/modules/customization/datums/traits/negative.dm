@@ -1,7 +1,7 @@
 /datum/quirk/mute
 	name = "Mute"
 	desc = "Due to some accident, medical condition, or simply by choice, you are completely unable to speak."
-	value = -2 //HALP MAINTS
+	value = -4 //NEBULA CHANGE - mute buff
 	gain_text = "<span class='danger'>You find yourself unable to speak!</span>"
 	lose_text = "<span class='notice'>You feel a growing strength in your vocal chords.</span>"
 	medical_record_text = "Functionally mute, patient is unable to use their voice in any capacity."

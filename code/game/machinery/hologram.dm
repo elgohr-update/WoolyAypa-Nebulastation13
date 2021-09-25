@@ -79,7 +79,7 @@ Possible to do for anyone motivated enough:
 	/// If we are currently calling another holopad
 	var/calling = FALSE
 
-/obj/machinery/holopad/Initialize(mapload)
+/obj/machinery/holopad/Initialize()
 	. = ..()
 	become_hearing_sensitive()
 
@@ -88,7 +88,7 @@ Possible to do for anyone motivated enough:
 	desc = "It's a floor-mounted device for projecting holographic images. This one will refuse to auto-connect incoming calls."
 	secure = TRUE
 
-/obj/machinery/holopad/secure/Initialize(mapload)
+/obj/machinery/holopad/secure/Initialize()
 	. = ..()
 	var/obj/item/circuitboard/machine/holopad/board = circuit
 	board.secure = TRUE
@@ -147,7 +147,7 @@ Possible to do for anyone motivated enough:
 	if(!replay_mode && (disk?.record))
 		replay_start()
 
-/obj/machinery/holopad/Initialize(mapload)
+/obj/machinery/holopad/Initialize()
 	. = ..()
 	if(on_network)
 		holopads += src
@@ -216,6 +216,15 @@ Possible to do for anyone motivated enough:
 				AI = null
 			else
 				aiPlayer = AI
+	if(aiPlayer)
+		if(aiPlayer.client)
+			if(length(aiPlayer.client.prefs.features["silicon_flavor_text"]))
+				var/message = aiPlayer.client.prefs.features["silicon_flavor_text"]
+				if(length_char(message) <= 40)
+					line = "<span class='notice'>[message]</span>"
+				else
+					line = "<span class='notice'>[copytext_char(message, 1, 37)]... <a href='?src=[REF(aiPlayer)];lookup_info=silicon_flavor_text'>More...</a></span>"
+			line += " <span class='notice'><a href='?src=[REF(aiPlayer)];lookup_info=ooc_prefs'>\[OOC\]</a></span>"
 	if(LAZYLEN(masters))
 		if(holo.Impersonation)
 			. += holo.Impersonation.examine(user)
@@ -501,7 +510,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	for(var/I in holo_calls)
 		var/datum/holocall/HC = I
 		if(HC.connected_holopad == src)
-			if(speaker == HC.hologram && HC.user.client?.prefs.read_preference(/datum/preference/toggle/enable_runechat))
+			if(speaker == HC.hologram && HC.user.client?.prefs.chat_on_map)
 				HC.user.create_chat_message(speaker, message_language, raw_message, spans)
 			else
 				HC.user.Hear(message, speaker, message_language, raw_message, radio_freq, spans, message_mods)

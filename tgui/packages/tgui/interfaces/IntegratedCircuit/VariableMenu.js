@@ -2,6 +2,7 @@ import { useLocalState } from '../../backend';
 import {
   Box,
   Stack,
+  Icon,
   Section,
   Button,
   Input,

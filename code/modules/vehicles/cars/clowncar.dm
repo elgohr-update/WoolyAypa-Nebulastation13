@@ -22,7 +22,7 @@
 	///Current status of the cannon, alternates between CLOWN_CANNON_INACTIVE, CLOWN_CANNON_BUSY and CLOWN_CANNON_READY
 	var/cannonmode = CLOWN_CANNON_INACTIVE
 
-/obj/vehicle/sealed/car/clowncar/Initialize(mapload)
+/obj/vehicle/sealed/car/clowncar/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj,src)
 

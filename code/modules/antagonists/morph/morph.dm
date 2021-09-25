@@ -42,7 +42,7 @@
 	/mob/living/simple_animal/hostile/morph,
 	/obj/effect))
 
-/mob/living/simple_animal/hostile/morph/Initialize(mapload)
+/mob/living/simple_animal/hostile/morph/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 

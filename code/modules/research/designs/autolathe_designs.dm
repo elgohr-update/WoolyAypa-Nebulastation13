@@ -444,7 +444,7 @@
 	id = "shot_glass"
 	build_type = AUTOLATHE | PROTOLATHE // SKYRAT EDIT - Original line: build_type = AUTOLATHE
 	materials = list(/datum/material/glass = 100)
-	build_path = /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass
+	build_path = /obj/item/reagent_containers/food/drinks/shotglass
 	category = list("initial", "Tool Designs", "Dinnerware") // SKYRAT EDIT - Original line: 	category = list("initial","Dinnerware")
 	departmental_flags = DEPARTMENTAL_FLAG_SERVICE //SKYRAT EDIT: added to service techfab
 
@@ -1228,12 +1228,3 @@
 	materials = list(/datum/material/iron = 100, /datum/material/glass = 50)
 	build_path = /obj/item/assembly/control
 	category = list("initial","Misc")
-
-/datum/design/razor
-	name = "Electric Razor"
-	id = "razor"
-	build_type = PROTOLATHE | AWAY_LATHE | AUTOLATHE
-	materials = list(/datum/material/iron = 75)
-	build_path = /obj/item/razor
-	category = list("initial","Medical")
-	departmental_flags = DEPARTMENTAL_FLAG_SERVICE

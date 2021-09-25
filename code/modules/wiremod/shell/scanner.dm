@@ -14,7 +14,7 @@
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
 	light_on = FALSE
 
-/obj/item/wiremod_scanner/Initialize(mapload)
+/obj/item/wiremod_scanner/Initialize()
 	. = ..()
 	AddComponent(/datum/component/shell, list(
 		new /obj/item/circuit_component/wiremod_scanner()

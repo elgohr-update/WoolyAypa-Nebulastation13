@@ -17,7 +17,7 @@
 	var/allow_clothing = FALSE
 	var/allow_living = FALSE
 
-/obj/machinery/harvester/Initialize(mapload)
+/obj/machinery/harvester/Initialize()
 	. = ..()
 	if(prob(1))
 		name = "auto-autopsy"

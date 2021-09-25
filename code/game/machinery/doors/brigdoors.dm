@@ -45,13 +45,13 @@
 	maptext_width = 32
 	maptext_y = -1
 
-/obj/machinery/door_timer/Initialize(mapload)
+/obj/machinery/door_timer/Initialize()
 	. = ..()
 
 	Radio = new/obj/item/radio(src)
 	Radio.listening = 0
 
-/obj/machinery/door_timer/Initialize(mapload)
+/obj/machinery/door_timer/Initialize()
 	. = ..()
 	if(id != null)
 		for(var/obj/machinery/door/window/brigdoor/M in urange(20, src))

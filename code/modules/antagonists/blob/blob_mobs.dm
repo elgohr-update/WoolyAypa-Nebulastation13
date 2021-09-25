@@ -28,7 +28,7 @@
 	else
 		remove_atom_colour(FIXED_COLOUR_PRIORITY)
 
-/mob/living/simple_animal/hostile/blob/Initialize(mapload)
+/mob/living/simple_animal/hostile/blob/Initialize()
 	. = ..()
 	if(!independent) //no pulling people deep into the blob
 		remove_verb(src, /mob/living/verb/pulled)
@@ -273,7 +273,7 @@
 	mob_size = MOB_SIZE_LARGE
 	hud_type = /datum/hud/living/blobbernaut
 
-/mob/living/simple_animal/hostile/blob/blobbernaut/Initialize(mapload)
+/mob/living/simple_animal/hostile/blob/blobbernaut/Initialize()
 	. = ..()
 	add_cell_sample()
 

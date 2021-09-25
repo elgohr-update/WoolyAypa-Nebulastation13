@@ -16,7 +16,7 @@
 	var/ignore_clothing = FALSE
 
 
-/obj/machinery/gibber/Initialize(mapload)
+/obj/machinery/gibber/Initialize()
 	. = ..()
 	add_overlay("grjam")
 

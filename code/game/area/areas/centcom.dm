@@ -57,7 +57,7 @@
 	base_lighting_alpha = 255
 	// SKYRAT EDIT END
 
-/area/centcom/supplypod/loading/Initialize(mapload)
+/area/centcom/supplypod/loading/Initialize()
 	. = ..()
 	if(!loading_id)
 		CRASH("[type] created without a loading_id")

@@ -24,7 +24,7 @@
 	blend_mode = BLEND_MULTIPLY
 	alpha = 255
 
-/atom/movable/screen/plane_master/openspace/Initialize(mapload)
+/atom/movable/screen/plane_master/openspace/Initialize()
 	. = ..()
 	add_filter("multiz_lighting_mask", 1, alpha_mask_filter(render_source = LIGHTING_RENDER_TARGET, flags = MASK_INVERSE))
 	add_filter("first_stage_openspace", 2, drop_shadow_filter(color = "#04080FAA", size = -10))
@@ -58,8 +58,7 @@
 	blend_mode = BLEND_OVERLAY
 
 /atom/movable/screen/plane_master/game_world/backdrop(mob/mymob)
-	remove_filter("AO")
-	if(istype(mymob) && mymob.client?.prefs?.read_preference(/datum/preference/toggle/ambient_occlusion))
+	if(istype(mymob) && mymob.client && mymob.client.prefs && mymob.client.prefs.ambientocclusion)
 		add_filter("AO", 1, drop_shadow_filter(x = 0, y = -2, size = 4, color = "#04080FAA"))
 
 
@@ -128,7 +127,7 @@
  * This is then used to alpha mask the lighting plane.
  */
 
-/atom/movable/screen/plane_master/lighting/Initialize(mapload)
+/atom/movable/screen/plane_master/lighting/Initialize()
 	. = ..()
 	add_filter("emissives", 1, alpha_mask_filter(render_source = EMISSIVE_RENDER_TARGET, flags = MASK_INVERSE))
 	add_filter("object_lighting", 2, alpha_mask_filter(render_source = O_LIGHTING_VISUAL_RENDER_TARGET, flags = MASK_INVERSE))
@@ -143,7 +142,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	render_target = EMISSIVE_RENDER_TARGET
 
-/atom/movable/screen/plane_master/emissive/Initialize(mapload)
+/atom/movable/screen/plane_master/emissive/Initialize()
 	. = ..()
 	add_filter("em_block_masking", 1, color_matrix_filter(GLOB.em_mask_matrix))
 
@@ -185,6 +184,6 @@
 	blend_mode = BLEND_OVERLAY
 
 /atom/movable/screen/plane_master/runechat/backdrop(mob/mymob)
-	remove_filter("AO")
-	if(istype(mymob) && mymob.client?.prefs?.read_preference(/datum/preference/toggle/ambient_occlusion))
+	filters = list()
+	if(istype(mymob) && mymob.client?.prefs?.ambientocclusion)
 		add_filter("AO", 1, drop_shadow_filter(x = 0, y = -2, size = 4, color = "#04080FAA"))

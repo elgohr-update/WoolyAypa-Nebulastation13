@@ -16,7 +16,7 @@
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/wrapping_paper
 
-/obj/item/stack/wrapping_paper/Initialize(mapload)
+/obj/item/stack/wrapping_paper/Initialize()
 	. = ..()
 	if(!greyscale_colors)
 		//Generate random valid colors for paper and ribbon

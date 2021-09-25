@@ -192,7 +192,7 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 		return
 	//SKYRAT EDIT END
 
-/obj/machinery/gateway/Initialize(mapload)
+/obj/machinery/gateway/Initialize()
 	generate_destination()
 	update_appearance()
 	portal_visuals = new
@@ -258,7 +258,7 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 	destination_type = /datum/gateway_destination/gateway/home
 	destination_name = "Home Gateway"
 
-/obj/machinery/gateway/centerstation/Initialize(mapload)
+/obj/machinery/gateway/centerstation/Initialize()
 	. = ..()
 	if(!GLOB.the_gateway)
 		GLOB.the_gateway = src

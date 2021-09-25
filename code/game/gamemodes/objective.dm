@@ -212,6 +212,29 @@ GLOBAL_LIST_EMPTY(objectives)
 /datum/objective/assassinate/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
 
+/datum/objective/assassinate/once
+	name = "kill once"
+	var/won = FALSE
+
+/datum/objective/assassinate/once/update_explanation_text()
+	..()
+	if(target && target.current)
+		explanation_text = "Kill [target.name], the [!target_role_type ? target.assigned_role.title : target.special_role]. ATTENTION: You only need to kill them once; if they come back, you've still succeeded."
+		START_PROCESSING(SSprocessing,src)
+	else
+		explanation_text = "Free Objective"
+
+/datum/objective/assassinate/once/check_completion()
+	return won || ..()
+
+/datum/objective/assassinate/once/process()
+	won = tick_check_completion()
+	if(won)
+		STOP_PROCESSING(SSprocessing,src)
+
+/datum/objective/assassinate/once/proc/tick_check_completion()
+	return won || !considered_alive(target) //The target afking / logging off for a bit during the round doesn't complete it, but them being afk at roundend does.
+
 /datum/objective/assassinate/internal
 	var/stolen = FALSE //Have we already eliminated this target?
 
@@ -970,7 +993,7 @@ GLOBAL_LIST_EMPTY(possible_items_special)
 	var/found = FALSE
 	while (!found)
 		var/area/dropoff_area = pick(GLOB.sortedAreas)
-		if(dropoff_area && (dropoff_area.type in GLOB.the_station_areas) && !dropoff_area.outdoors)
+		if(dropoff_area && is_station_level(dropoff_area.z) && !dropoff_area.outdoors)
 			dropoff = dropoff_area
 			found = TRUE
 

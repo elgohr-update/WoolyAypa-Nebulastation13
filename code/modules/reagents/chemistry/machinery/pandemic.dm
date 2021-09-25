@@ -18,7 +18,7 @@
 	var/datum/symptom/selected_symptom
 	var/obj/item/reagent_containers/beaker
 
-/obj/machinery/computer/pandemic/Initialize(mapload)
+/obj/machinery/computer/pandemic/Initialize()
 	. = ..()
 	update_appearance()
 

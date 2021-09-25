@@ -17,7 +17,7 @@
 	/// Role check, if any needed
 	var/required_role = /datum/antagonist/cult
 
-/obj/item/soulstone/Initialize(mapload)
+/obj/item/soulstone/Initialize()
 	. = ..()
 	if(theme != THEME_HOLY)
 		RegisterSignal(src, COMSIG_BIBLE_SMACKED, .proc/on_bible_smacked)

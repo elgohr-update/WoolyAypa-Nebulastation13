@@ -38,7 +38,7 @@
 
 	footstep_type = FOOTSTEP_MOB_SHOE
 
-/mob/living/simple_animal/hostile/wizard/Initialize(mapload)
+/mob/living/simple_animal/hostile/wizard/Initialize()
 	. = ..()
 	fireball = new /obj/effect/proc_holder/spell/aimed/fireball
 	fireball.clothes_req = 0

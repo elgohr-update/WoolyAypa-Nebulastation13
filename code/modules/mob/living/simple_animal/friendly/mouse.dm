@@ -32,7 +32,7 @@
 	held_state = "mouse_gray"
 	faction = list("rat")
 
-/mob/living/simple_animal/mouse/Initialize(mapload)
+/mob/living/simple_animal/mouse/Initialize()
 	. = ..()
 	if(body_color == null)
 		body_color = pick("brown","gray","white")
@@ -186,7 +186,7 @@
 	response_harm_simple = "splat"
 	gold_core_spawnable = NO_SPAWN
 
-/mob/living/simple_animal/mouse/brown/tom/Initialize(mapload)
+/mob/living/simple_animal/mouse/brown/tom/Initialize()
 	. = ..()
 	AddElement(/datum/element/pet_bonus, "squeaks happily!")
 	// Tom fears no cable.
@@ -205,7 +205,7 @@
 	decomp_req_handle = TRUE
 	decomp_type = /obj/item/food/deadmouse/moldy
 
-/obj/item/food/deadmouse/Initialize(mapload)
+/obj/item/food/deadmouse/Initialize()
 	. = ..()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOUSE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 10)
 

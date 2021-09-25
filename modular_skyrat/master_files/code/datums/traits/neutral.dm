@@ -9,7 +9,6 @@
 	medical_record_text = "Patient seems to get excited easily."
 	value = 0
 	mob_trait = TRAIT_EXCITABLE
-	icon = "laugh-beam"
 
 /datum/quirk/ironass
 	name = "Iron Ass"
@@ -19,7 +18,6 @@
 	medical_record_text = "Patient's ass seems incredibly solid."
 	value = 0
 	mob_trait = TRAIT_IRONASS
-	icon = "hand-paper"
 
 /datum/quirk/dnc
 	name = "Do Not Clone"
@@ -29,7 +27,6 @@
 	medical_record_text = "Patient's anatomy is incompatible with conventional cloning techniques."
 	value = 0
 	mob_trait = TRAIT_DNC
-	icon = "users-slash"
 
 /datum/quirk/dnr
 	name = "Do Not Revive"
@@ -39,7 +36,6 @@
 	medical_record_text = "Patient is a DNR, and cannot be revived in any way."
 	value = 0
 	mob_trait = TRAIT_DNR
-	icon = "skull-crossbones"
 
 //uncontrollable laughter
 /datum/quirk/item_quirk/joker
@@ -49,7 +45,6 @@
 	medical_record_text = "Patient suffers with sudden and uncontrollable bursts of laughter."
 	var/pcooldown = 0
 	var/pcooldown_time = 60 SECONDS
-	icon = "grin-squint-tears"
 
 /datum/quirk/item_quirk/joker/add_unique()
 	give_item_to_holder(/obj/item/paper/joker, list(LOCATION_BACKPACK = ITEM_SLOT_BACKPACK, LOCATION_HANDS = ITEM_SLOT_HANDS))
@@ -128,4 +123,3 @@
 	medical_record_text = "Patient seems to possess behavior much like a feline."
 	value = 0
 	mob_trait = TRAIT_FELINE
-	icon = "cat"

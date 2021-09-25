@@ -279,13 +279,12 @@
 
 	//GENERATE NEW LIMBS
 	var/list/new_limbs = list()
-	var/draw_features = !HAS_TRAIT(src, TRAIT_INVISIBLE_MAN)
 	for(var/X in bodyparts)
 		var/obj/item/bodypart/BP = X
 		if(is_taur && (BP.body_part == LEG_LEFT || BP.body_part == LEG_RIGHT))
 			continue
 
-		new_limbs += BP.get_limb_icon(draw_external_organs = draw_features)
+		new_limbs += BP.get_limb_icon()
 	if(new_limbs.len)
 		overlays_standing[BODYPARTS_LAYER] = new_limbs
 

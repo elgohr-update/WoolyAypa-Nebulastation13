@@ -1750,6 +1750,12 @@
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/awaymission/research/interior/maint)
+"ef" = (
+/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/lootdrop/maintenance,
+/obj/structure/closet/crate,
+/turf/open/floor/plating,
+/area/awaymission/research/interior/maint)
 "eg" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/machinery/light/small/directional/east,
@@ -1986,6 +1992,11 @@
 /area/awaymission/research/interior/maint)
 "eF" = (
 /obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plating,
+/area/awaymission/research/interior/maint)
+"eG" = (
+/obj/structure/closet/crate,
+/obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/awaymission/research/interior/maint)
 "eH" = (
@@ -3588,6 +3599,18 @@
 /mob/living/carbon/human/species/monkey,
 /turf/open/floor/iron,
 /area/awaymission/research/interior/genetics)
+"hX" = (
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating,
+/area/awaymission/research/interior/maint)
+"hY" = (
+/obj/structure/closet/crate{
+	icon_state = "crateopen"
+	},
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating,
+/area/awaymission/research/interior/maint)
 "hZ" = (
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
@@ -4732,7 +4755,7 @@
 /turf/open/floor/iron,
 /area/awaymission/research/interior/dorm)
 "kU" = (
-/obj/structure/chair/stool/directional/north,
+/obj/structure/chair/stool/directional/west,
 /turf/open/floor/iron,
 /area/awaymission/research/interior/dorm)
 "kV" = (
@@ -5193,6 +5216,15 @@
 /obj/effect/landmark/awaystart,
 /turf/open/floor/wood,
 /area/awaymission/research/interior/dorm)
+"lU" = (
+/obj/effect/spawner/randomarcade{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/yellow{
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/awaymission/research/interior/dorm)
 "lW" = (
 /obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable,
@@ -5262,6 +5294,14 @@
 /area/awaymission/research/interior/escapepods)
 "mj" = (
 /obj/structure/table,
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/awaymission/research/interior/escapepods)
+"mk" = (
+/obj/effect/spawner/randomarcade,
 /obj/effect/turf_decal/tile/green,
 /obj/effect/turf_decal/tile/green{
 	dir = 8
@@ -5627,13 +5667,6 @@
 "nf" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/awaymission/research/interior/engineering)
-"ni" = (
-/obj/structure/closet/crate{
-	icon_state = "crateopen"
-	},
-/obj/effect/spawner/random/maintenance,
-/turf/open/floor/plating,
-/area/awaymission/research/interior/maint)
 "pt" = (
 /obj/machinery/door/airlock/external{
 	name = "Escape Pod Three"
@@ -5643,10 +5676,6 @@
 	},
 /turf/open/floor/plating,
 /area/awaymission/research/interior/escapepods)
-"qo" = (
-/obj/structure/chair/stool/directional/east,
-/turf/open/floor/iron,
-/area/awaymission/research/interior/dorm)
 "qS" = (
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
@@ -5685,20 +5714,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior)
-"ux" = (
-/obj/structure/chair/stool/directional/south,
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/red,
-/obj/effect/turf_decal/tile/red{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/awaymission/research/interior/security)
 "va" = (
 /obj/machinery/door/airlock/research{
 	name = "Cryogenetics Research";
@@ -5713,10 +5728,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior)
-"wa" = (
-/obj/structure/chair/stool/directional/west,
-/turf/open/floor/iron,
-/area/awaymission/research/interior/dorm)
 "wM" = (
 /obj/machinery/door/airlock/medical{
 	name = "Medical"
@@ -5730,6 +5741,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior)
+"wO" = (
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/iron,
+/area/awaymission/research/interior/dorm)
 "xG" = (
 /obj/machinery/door/airlock/external{
 	name = "Escape Pod Two"
@@ -5739,15 +5754,6 @@
 	},
 /turf/open/floor/plating,
 /area/awaymission/research/interior/escapepods)
-"xQ" = (
-/obj/effect/spawner/random/entertainment/arcade{
-	dir = 8
-	},
-/obj/effect/turf_decal/siding/yellow{
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/awaymission/research/interior/dorm)
 "zn" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_access_txt = "12"
@@ -5758,10 +5764,6 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/awaymission/research/interior/maint)
-"zs" = (
-/obj/structure/chair/stool/directional/south,
-/turf/open/floor/iron,
-/area/awaymission/research/interior/dorm)
 "Bx" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engine Room";
@@ -5785,9 +5787,27 @@
 	},
 /turf/open/floor/plating,
 /area/awaymission/research/interior/maint)
+"Ip" = (
+/obj/structure/chair/stool/directional/south,
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/awaymission/research/interior/security)
 "IO" = (
 /obj/structure/table/wood,
 /obj/effect/turf_decal/siding/yellow,
+/turf/open/floor/iron,
+/area/awaymission/research/interior/dorm)
+"IP" = (
+/obj/structure/chair/stool/directional/north,
 /turf/open/floor/iron,
 /area/awaymission/research/interior/dorm)
 "Jc" = (
@@ -5812,6 +5832,10 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior)
+"Nz" = (
+/obj/structure/chair/stool/directional/south,
+/turf/open/floor/iron,
+/area/awaymission/research/interior/dorm)
 "Qd" = (
 /obj/machinery/door/airlock/medical{
 	name = "Medical"
@@ -5844,17 +5868,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior)
-"QR" = (
-/obj/structure/rack,
-/obj/effect/spawner/random/maintenance,
-/turf/open/floor/plating,
-/area/awaymission/research/interior/maint)
-"Tk" = (
-/obj/effect/spawner/random/maintenance,
-/obj/effect/spawner/random/maintenance,
-/obj/structure/closet/crate,
-/turf/open/floor/plating,
-/area/awaymission/research/interior/maint)
 "TD" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engine Room";
@@ -5921,11 +5934,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior)
-"Xr" = (
-/obj/structure/closet/crate,
-/obj/effect/spawner/random/maintenance,
-/turf/open/floor/plating,
-/area/awaymission/research/interior/maint)
 "XE" = (
 /obj/machinery/door/airlock/external{
 	name = "Escape Airlock"
@@ -5934,14 +5942,6 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/awaymission/research/interior/escapepods)
-"YY" = (
-/obj/effect/spawner/random/entertainment/arcade,
-/obj/effect/turf_decal/tile/green,
-/obj/effect/turf_decal/tile/green{
-	dir = 8
-	},
-/turf/open/floor/iron/white,
 /area/awaymission/research/interior/escapepods)
 
 (1,1,1) = {"
@@ -39241,7 +39241,7 @@ iX
 jn
 kS
 kR
-zs
+Nz
 kc
 iX
 lP
@@ -39753,7 +39753,7 @@ jC
 jV
 iX
 jn
-qo
+wO
 jF
 jF
 kc
@@ -41040,7 +41040,7 @@ ks
 jn
 jF
 jF
-zs
+Nz
 kc
 lM
 jk
@@ -41295,7 +41295,7 @@ jk
 jY
 iX
 jn
-kU
+IP
 kR
 jF
 kc
@@ -41537,7 +41537,7 @@ gV
 cp
 bD
 eF
-QR
+hX
 id
 ip
 iA
@@ -41563,7 +41563,7 @@ iX
 iX
 bD
 mb
-YY
+mk
 mn
 mn
 mE
@@ -42042,8 +42042,8 @@ ad
 aH
 aH
 bD
-Tk
-Xr
+ef
+eG
 cp
 fL
 gA
@@ -42051,7 +42051,7 @@ gV
 cp
 bD
 aO
-ni
+hY
 id
 id
 iA
@@ -42068,7 +42068,7 @@ kt
 kE
 jF
 jF
-qo
+wO
 jF
 jF
 jF
@@ -42328,8 +42328,8 @@ jF
 jF
 jF
 jF
-wa
-wa
+kU
+kU
 kc
 iX
 hD
@@ -42585,8 +42585,8 @@ lc
 lp
 lp
 lN
-xQ
-xQ
+lU
+lU
 lY
 aP
 bD
@@ -47696,7 +47696,7 @@ aO
 do
 dF
 dT
-ux
+Ip
 hF
 fr
 fW
@@ -48724,7 +48724,7 @@ aO
 do
 dF
 dT
-ux
+Ip
 hF
 fr
 fY

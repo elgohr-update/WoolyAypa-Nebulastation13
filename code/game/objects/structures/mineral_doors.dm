@@ -26,7 +26,7 @@
 	var/sheetType = /obj/item/stack/sheet/iron //what we're made of
 	var/sheetAmount = 7 //how much we drop when deconstructed
 
-/obj/structure/mineral_door/Initialize(mapload)
+/obj/structure/mineral_door/Initialize()
 	. = ..()
 	air_update_turf(TRUE, TRUE)
 
@@ -318,7 +318,7 @@
 	resistance_flags = FLAMMABLE
 	max_integrity = 20
 
-/obj/structure/mineral_door/paperframe/Initialize(mapload)
+/obj/structure/mineral_door/paperframe/Initialize()
 	. = ..()
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)

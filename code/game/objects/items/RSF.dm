@@ -50,7 +50,7 @@ RSF
 	///How long should the minimum period between this RSF's item dispensings be?
 	var/cooldowndelay = 0 SECONDS
 
-/obj/item/rsf/Initialize(mapload)
+/obj/item/rsf/Initialize()
 	. = ..()
 	to_dispense = cost_by_item[1]
 	dispense_cost = cost_by_item[to_dispense]

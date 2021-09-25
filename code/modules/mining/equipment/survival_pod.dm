@@ -302,7 +302,7 @@
 						/obj/item/phylactery,
 						/obj/item/banhammer)
 
-/obj/item/fakeartefact/Initialize(mapload)
+/obj/item/fakeartefact/Initialize()
 	. = ..()
 	var/obj/item/I = pick(possible)
 	name = initial(I.name)

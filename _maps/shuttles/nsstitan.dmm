@@ -220,6 +220,16 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/glass,
 /area/centcom/ncvtitan)
+"gd" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/red{
+	dir = 8
+	},
+/obj/effect/landmark/start/bridge_officer,
+/turf/open/floor/iron/dark,
+/area/centcom/ncvtitan)
 "gf" = (
 /obj/structure/dresser,
 /turf/open/floor/carpet/cyan,
@@ -358,7 +368,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/effect/spawner/random/vending/snackvend,
+/obj/effect/spawner/randomsnackvend,
 /turf/open/floor/iron/dark,
 /area/centcom/ncvtitan)
 "ib" = (
@@ -673,6 +683,7 @@
 /obj/structure/chair/office{
 	dir = 4
 	},
+/obj/effect/landmark/start/fleetmaster,
 /turf/open/floor/carpet/executive,
 /area/centcom/ncvtitan)
 "oe" = (
@@ -831,6 +842,7 @@
 /obj/structure/chair/office/light{
 	dir = 1
 	},
+/obj/effect/landmark/start/deck_crew,
 /turf/open/floor/iron/textured,
 /area/centcom/ncvtitan)
 "rP" = (
@@ -1115,7 +1127,7 @@
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 1
 	},
-/obj/effect/spawner/random/vending/snackvend,
+/obj/effect/spawner/randomsnackvend,
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/textured,
 /area/centcom/ncvtitan)
@@ -1179,6 +1191,7 @@
 /obj/structure/chair/office{
 	dir = 4
 	},
+/obj/effect/landmark/start/deck_crew,
 /turf/open/floor/iron/smooth,
 /area/centcom/ncvtitan)
 "yP" = (
@@ -1510,6 +1523,7 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 10
 	},
+/obj/effect/landmark/start/bridge_officer,
 /turf/open/floor/iron/dark,
 /area/centcom/ncvtitan)
 "Fu" = (
@@ -1676,6 +1690,10 @@
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/open/floor/iron/dark/textured_large,
+/area/centcom/ncvtitan)
+"Ij" = (
+/obj/effect/landmark/start/deck_crew,
+/turf/open/floor/iron/cafeteria,
 /area/centcom/ncvtitan)
 "Is" = (
 /turf/open/floor/wood,
@@ -1944,6 +1962,7 @@
 /turf/open/floor/plating/airless,
 /area/centcom/ncvtitan)
 "NQ" = (
+/obj/effect/landmark/start/operations_inspector,
 /obj/structure/chair/office{
 	dir = 1
 	},
@@ -1988,6 +2007,10 @@
 	},
 /turf/open/floor/iron/smooth_large,
 /area/centcom/ncvtitan)
+"PA" = (
+/obj/effect/landmark/start/deck_crew,
+/turf/open/floor/iron/dark,
+/area/centcom/ncvtitan)
 "PK" = (
 /obj/machinery/light/directional/north,
 /obj/structure/table/reinforced,
@@ -2001,6 +2024,7 @@
 /obj/structure/chair/office/light{
 	dir = 1
 	},
+/obj/effect/landmark/start/deck_crew,
 /turf/open/floor/iron/textured,
 /area/centcom/ncvtitan)
 "Qp" = (
@@ -2548,6 +2572,7 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 9
 	},
+/obj/effect/landmark/start/bridge_officer,
 /turf/open/floor/iron/dark,
 /area/centcom/ncvtitan)
 "Yy" = (
@@ -3952,7 +3977,7 @@ xI
 NE
 uD
 fd
-vQ
+PA
 vQ
 vQ
 Mb
@@ -4147,7 +4172,7 @@ xI
 nT
 uD
 vQ
-vQ
+PA
 vQ
 vQ
 kJ
@@ -4595,7 +4620,7 @@ uD
 uD
 Qz
 us
-us
+Ij
 us
 us
 bC
@@ -5189,11 +5214,11 @@ tJ
 tJ
 uD
 Dr
-Iz
+gd
 ll
 Iz
 ll
-Iz
+gd
 aY
 uD
 tJ

@@ -17,7 +17,7 @@
 	tiled_dirt = FALSE
 
 
-/turf/open/floor/mineral/Initialize(mapload)
+/turf/open/floor/mineral/Initialize()
 	. = ..()
 	icons = typelist("icons", icons)
 
@@ -302,7 +302,7 @@
 	baseturfs = /turf/open/floor/plating/abductor2
 	custom_materials = list(/datum/material/alloy/alien = 500)
 
-/turf/open/floor/mineral/abductor/Initialize(mapload)
+/turf/open/floor/mineral/abductor/Initialize()
 	. = ..()
 	icon_state = "alienpod[rand(1,9)]"
 

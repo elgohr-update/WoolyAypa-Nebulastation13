@@ -30,7 +30,8 @@
 
 	var/list/vines = list()
 
-/obj/structure/alien/resin/flower_bud/Initialize(mapload)
+
+/obj/structure/alien/resin/flower_bud/Initialize()
 	. = ..()
 	countdown = new(src)
 	var/list/anchors = list()

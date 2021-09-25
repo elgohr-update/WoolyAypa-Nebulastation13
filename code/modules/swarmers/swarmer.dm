@@ -75,7 +75,7 @@
 	var/swarmer_flags = NONE
 
 
-/mob/living/simple_animal/hostile/swarmer/Initialize(mapload)
+/mob/living/simple_animal/hostile/swarmer/Initialize()
 	. = ..()
 	remove_verb(src, /mob/living/verb/pulled)
 	for(var/datum/atom_hud/data/diagnostic/diag_hud in GLOB.huds)

@@ -104,7 +104,7 @@
 	var/obj/effect/hallucination/simple/bluespace_stream/linked_to
 	var/mob/living/carbon/seer
 
-/obj/effect/hallucination/simple/bluespace_stream/Initialize(mapload)
+/obj/effect/hallucination/simple/bluespace_stream/Initialize()
 	. = ..()
 	QDEL_IN(src, 300)
 
@@ -378,7 +378,7 @@
 	image_state = "secbot-c"
 	var/victim
 
-/obj/effect/hallucination/simple/securitron/Initialize(mapload)
+/obj/effect/hallucination/simple/securitron/Initialize()
 	. = ..()
 	name = pick("officer Beepsky", "officer Johnson", "officer Pingsky")
 	START_PROCESSING(SSfastprocess, src)

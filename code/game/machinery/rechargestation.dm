@@ -16,7 +16,7 @@
 	var/repairs
 
 
-/obj/machinery/recharge_station/Initialize(mapload)
+/obj/machinery/recharge_station/Initialize()
 	. = ..()
 	update_appearance()
 	if(is_operational)

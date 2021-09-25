@@ -13,7 +13,7 @@
 	var/obj/item/stock_parts/cell/cell
 	var/recharging = FALSE
 
-/obj/item/inducer/Initialize(mapload)
+/obj/item/inducer/Initialize()
 	. = ..()
 	if(!cell && cell_type)
 		cell = new cell_type
@@ -179,7 +179,7 @@
 	powertransfer = 500
 	opened = TRUE
 
-/obj/item/inducer/sci/Initialize(mapload)
+/obj/item/inducer/sci/Initialize()
 	. = ..()
 	update_appearance()
 

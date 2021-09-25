@@ -73,7 +73,7 @@
 			icon_state = "[base_state]-broken"
 			desc = "A broken [name]."
 
-/obj/item/light/Initialize(mapload)
+/obj/item/light/Initialize()
 	. = ..()
 	create_reagents(LIGHT_REAGENT_CAPACITY, INJECTABLE | DRAINABLE)
 	AddComponent(/datum/component/caltrop, min_damage = force)

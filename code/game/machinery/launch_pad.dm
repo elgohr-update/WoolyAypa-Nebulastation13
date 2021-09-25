@@ -26,7 +26,7 @@
 	range = initial(range)
 	range *= E
 
-/obj/machinery/launchpad/Initialize(mapload)
+/obj/machinery/launchpad/Initialize()
 	. = ..()
 	prepare_huds()
 	for(var/datum/atom_hud/data/diagnostic/diag_hud in GLOB.huds)
@@ -265,7 +265,7 @@
 /obj/item/storage/briefcase/launchpad
 	var/obj/machinery/launchpad/briefcase/pad
 
-/obj/item/storage/briefcase/launchpad/Initialize(mapload)
+/obj/item/storage/briefcase/launchpad/Initialize()
 	pad = new(null, src) //spawns pad in nullspace to hide it from briefcase contents
 	. = ..()
 

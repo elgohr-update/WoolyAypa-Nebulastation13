@@ -17,7 +17,7 @@
 	bot_core_type = /obj/machinery/bot_core/secbot
 	window_id = "autosec"
 	window_name = "Automatic Security Unit v1.6"
-	allow_pai = 0
+	allow_pai = TRUE
 	data_hud_type = DATA_HUD_SECURITY_ADVANCED
 	path_image_color = "#FF0000"
 
@@ -56,7 +56,7 @@
 	desc = "It's Commander Beep O'sky's smaller, just-as aggressive cousin, Pipsqueak."
 	commissioned = FALSE
 
-/mob/living/simple_animal/bot/secbot/beepsky/jr/Initialize(mapload)
+/mob/living/simple_animal/bot/secbot/beepsky/jr/Initialize()
 	. = ..()
 	resize = 0.8
 	update_transform()
@@ -65,7 +65,7 @@
 /mob/living/simple_animal/bot/secbot/beepsky/explode()
 	var/atom/Tsec = drop_location()
 	new /obj/item/stock_parts/cell/potato(Tsec)
-	var/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass/S = new(Tsec)
+	var/obj/item/reagent_containers/food/drinks/shotglass/S = new(Tsec)
 	S.reagents.add_reagent(/datum/reagent/consumable/ethanol/whiskey, 15)
 	..()
 
@@ -74,7 +74,7 @@
 	desc = "It's Officer Pingsky! Delegated to satellite guard duty for harbouring anti-human sentiment."
 	radio_channel = RADIO_CHANNEL_AI_PRIVATE
 
-/mob/living/simple_animal/bot/secbot/Initialize(mapload)
+/mob/living/simple_animal/bot/secbot/Initialize()
 	. = ..()
 	weapon = new baton_type()
 	update_appearance(UPDATE_ICON)
@@ -451,7 +451,7 @@ Auto Patrol: []"},
 			if(ranged)
 				playsound(src, pick('sound/voice/ed209_20sec.ogg', 'sound/voice/edplaceholder.ogg'), 50, FALSE)
 			else
-				playsound(src, pick('sound/voice/beepsky/criminal.ogg', 'sound/voice/beepsky/justice.ogg', 'sound/voice/beepsky/freeze.ogg'), 50, FALSE)
+				playsound(src, pick('sound/voice/beepsky/criminal.ogg', 'sound/voice/beepsky/justice.ogg', 'sound/voice/beepsky/freeze.ogg', 'nebula_modular/sound/the_law.ogg'), 50, FALSE) //NEBULA EDIT Adds the_law.ogg
 			visible_message("<b>[src]</b> points at [C.name]!")
 			mode = BOT_HUNT
 			INVOKE_ASYNC(src, .proc/handle_automated_action)

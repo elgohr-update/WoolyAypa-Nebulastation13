@@ -32,7 +32,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	var/storage_type = "crewmembers"
 	var/storage_name = "Cryogenic Oversight Control"
 
-/obj/machinery/computer/cryopod/Initialize(mapload)
+/obj/machinery/computer/cryopod/Initialize()
 	. = ..()
 	GLOB.cryopod_computers += src
 
@@ -141,7 +141,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 	var/datum/weakref/control_computer_weakref
 	COOLDOWN_DECLARE(last_no_computer_message)
 
-/obj/machinery/cryopod/Initialize(mapload)
+/obj/machinery/cryopod/Initialize()
 	..()
 	return INITIALIZE_HINT_LATELOAD //Gotta populate the cryopod computer GLOB first
 

@@ -12,7 +12,7 @@
 	light_system = MOVABLE_LIGHT
 	light_on = FALSE
 
-/obj/structure/bot/Initialize(mapload)
+/obj/structure/bot/Initialize()
 	. = ..()
 	AddComponent( \
 		/datum/component/shell, \

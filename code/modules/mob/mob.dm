@@ -277,18 +277,16 @@
 
 ///Returns the client runechat visible messages preference according to the message type.
 /atom/proc/runechat_prefs_check(mob/target, visible_message_flags = NONE)
-	if(!target.client?.prefs.read_preference(/datum/preference/toggle/enable_runechat))
+	if(!target.client?.prefs.chat_on_map || !target.client.prefs.see_chat_non_mob)
 		return FALSE
-	if (!target.client?.prefs.read_preference(/datum/preference/toggle/enable_runechat_non_mobs))
-		return FALSE
-	if(visible_message_flags & EMOTE_MESSAGE && !target.client.prefs.read_preference(/datum/preference/toggle/see_rc_emotes))
+	if(visible_message_flags & EMOTE_MESSAGE && !target.client.prefs.see_rc_emotes)
 		return FALSE
 	return TRUE
 
 /mob/runechat_prefs_check(mob/target, visible_message_flags = NONE)
-	if(!target.client?.prefs.read_preference(/datum/preference/toggle/enable_runechat))
+	if(!target.client?.prefs.chat_on_map)
 		return FALSE
-	if(visible_message_flags & EMOTE_MESSAGE && !target.client.prefs.read_preference(/datum/preference/toggle/see_rc_emotes))
+	if(visible_message_flags & EMOTE_MESSAGE && !target.client.prefs.see_rc_emotes)
 		return FALSE
 	return TRUE
 
@@ -483,14 +481,7 @@
 	else
 		result = examinify.examine(src) // if a tree is examined but no client is there to see it, did the tree ever really exist?
 
-	//SKYRAT EDIT ADDITION
-	if(result.len)
-		for(var/i = 1, i <= result.len, i++)
-			if(!findtext(result[i], "<hr>"))
-				result[i] += "\n"
-	//SKYRAT EDIT END
-
-	to_chat(src, "<div class='examine_block'><span class='infoplain'>[result.Join()]</span></div>") //SKYRAT EDIT CHANGE
+	to_chat(src, "<span class='infoplain'>[result.Join("\n")]</span>")
 	SEND_SIGNAL(src, COMSIG_MOB_EXAMINATE, examinify)
 
 
@@ -693,28 +684,27 @@
 		to_chat(usr, span_boldnotice("You must be dead to use this!"))
 		return
 
-	//SKYRAT EDIT ADDITION
 	if(ckey)
 		if(is_banned_from(ckey, BAN_RESPAWN))
 			to_chat(usr, "<span class='boldnotice'>You are respawn banned, you can't respawn!</span>")
 			return
-	//SKYRAT EDIT END
-	log_game("[key_name(usr)] used the respawn button.")
+
+	log_game("[key_name(usr)] used abandon mob.")
 
 	to_chat(usr, span_boldnotice("Please roleplay correctly!"))
 
 	if(!client)
-		log_game("[key_name(usr)] respawn failed due to disconnect.")
+		log_game("[key_name(usr)] AM failed due to disconnect.")
 		return
 	client.screen.Cut()
 	client.screen += client.void
 	if(!client)
-		log_game("[key_name(usr)] respawn failed due to disconnect.")
+		log_game("[key_name(usr)] AM failed due to disconnect.")
 		return
 
 	var/mob/dead/new_player/M = new /mob/dead/new_player()
 	if(!client)
-		log_game("[key_name(usr)] respawn failed due to disconnect.")
+		log_game("[key_name(usr)] AM failed due to disconnect.")
 		qdel(M)
 		return
 

@@ -219,7 +219,7 @@
 	var/node_range = NODERANGE
 
 
-/obj/structure/alien/weeds/node/Initialize(mapload)
+/obj/structure/alien/weeds/node/Initialize()
 	. = ..()
 	set_light(lon_range)
 	var/obj/structure/alien/weeds/W = locate(/obj/structure/alien/weeds) in loc

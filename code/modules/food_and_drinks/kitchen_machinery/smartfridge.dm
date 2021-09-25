@@ -23,7 +23,7 @@
 	/// If the machine shows an approximate number of its contents on its sprite
 	var/visible_contents = TRUE
 
-/obj/machinery/smartfridge/Initialize(mapload)
+/obj/machinery/smartfridge/Initialize()
 	. = ..()
 	create_reagents(100, NO_REACT)
 
@@ -271,7 +271,7 @@
 	base_build_path = /obj/machinery/smartfridge/drying_rack //should really be seeing this without admin fuckery.
 	var/drying = FALSE
 
-/obj/machinery/smartfridge/drying_rack/Initialize(mapload)
+/obj/machinery/smartfridge/drying_rack/Initialize()
 	. = ..()
 
 	// Cache the old_parts first, we'll delete it after we've changed component_parts to a new list.

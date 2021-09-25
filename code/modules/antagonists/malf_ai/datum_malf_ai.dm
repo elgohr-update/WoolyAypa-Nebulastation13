@@ -55,7 +55,7 @@
 	// for(in...to) loops iterate inclusively, so to reach objective_limit we need to loop to objective_limit - 1
 	// This does not give them 1 fewer objectives than intended.
 	for(var/i in objective_count to objective_limit - 1)
-		var/datum/objective/assassinate/kill_objective = new
+		var/datum/objective/assassinate/once/kill_objective = new
 		kill_objective.owner = owner
 		kill_objective.find_target()
 		objectives += kill_objective
@@ -186,15 +186,5 @@
 		SEND_SOUND(owner.current, 'sound/ambience/ambifailure.ogg')
 
 	return result.Join("<br>")
-
-/datum/antagonist/malf_ai/get_preview_icon()
-	var/icon/malf_ai_icon = icon('icons/mob/ai.dmi', "ai-red")
-
-	// Crop out the borders of the AI, just the face
-	malf_ai_icon.Crop(5, 27, 28, 6)
-
-	malf_ai_icon.Scale(ANTAGONIST_PREVIEW_ICON_SIZE, ANTAGONIST_PREVIEW_ICON_SIZE)
-
-	return malf_ai_icon
 
 #undef PROB_SPECIAL

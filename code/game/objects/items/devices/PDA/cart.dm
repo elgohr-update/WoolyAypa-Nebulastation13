@@ -32,7 +32,7 @@
 	var/mob/living/simple_animal/bot/active_bot
 	var/list/botlist = list()
 
-/obj/item/cartridge/Initialize(mapload)
+/obj/item/cartridge/Initialize()
 	. = ..()
 	var/obj/item/pda/pda = loc
 	if(istype(pda))
@@ -108,7 +108,7 @@
 	icon_state = "cart-ord"
 	access = CART_REAGENT_SCANNER | CART_ATMOS
 
-/obj/item/cartridge/signal/Initialize(mapload)
+/obj/item/cartridge/signal/Initialize()
 	. = ..()
 	radio = new(src)
 
@@ -157,7 +157,7 @@
 	access = CART_MANIFEST | CART_STATUS_DISPLAY | CART_REAGENT_SCANNER | CART_ATMOS | CART_DRONEPHONE
 	bot_access_flags = FLOOR_BOT | CLEAN_BOT | MED_BOT | FIRE_BOT | VIBE_BOT
 
-/obj/item/cartridge/rd/Initialize(mapload)
+/obj/item/cartridge/rd/Initialize()
 	. = ..()
 	radio = new(src)
 
@@ -169,7 +169,7 @@
 	bot_access_flags = SEC_BOT | MULE_BOT | FLOOR_BOT | CLEAN_BOT | MED_BOT | FIRE_BOT | VIBE_BOT
 	spam_enabled = 1
 
-/obj/item/cartridge/captain/Initialize(mapload)
+/obj/item/cartridge/captain/Initialize()
 	. = ..()
 	radio = new(src)
 

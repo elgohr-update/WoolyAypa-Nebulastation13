@@ -10,7 +10,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	rat_heal = 35
 
-/obj/item/food/cheese/wheel/Initialize(mapload)
+/obj/item/food/cheese/wheel/Initialize()
 	. = ..()
 	AddComponent(/datum/component/food_storage)
 
@@ -37,7 +37,7 @@
 	/// used to determine how much health rats/regal rats recover when they eat it.
 	var/rat_heal = 10
 
-/obj/item/food/cheese/Initialize(mapload)
+/obj/item/food/cheese/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_RAT_INTERACT, .proc/on_rat_eat)
 
@@ -94,10 +94,6 @@
 	foodtypes = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/food/hugemushroomslice/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_WALKING_MUSHROOM, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
-
 /obj/item/food/popcorn
 	name = "popcorn"
 	desc = "Now let's find some cinema."
@@ -130,7 +126,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	venue_value = FOOD_PRICE_CHEAP
 
-/obj/item/food/fries/Initialize(mapload)
+/obj/item/food/fries/Initialize()
 	. = ..()
 	AddElement(/datum/element/dunkable, 10)
 
@@ -144,7 +140,7 @@
 	food_flags = FOOD_FINGER_FOOD
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/food/tatortot/Initialize(mapload)
+/obj/item/food/tatortot/Initialize()
 	. = ..()
 	AddElement(/datum/element/dunkable, 10)
 
@@ -169,7 +165,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	venue_value = FOOD_PRICE_CHEAP
 
-/obj/item/food/cheesyfries/Initialize(mapload)
+/obj/item/food/cheesyfries/Initialize()
 	. = ..()
 	AddElement(/datum/element/dunkable, 10)
 
@@ -183,7 +179,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	venue_value = FOOD_PRICE_CHEAP
 
-/obj/item/food/poutine/Initialize(mapload)
+/obj/item/food/poutine/Initialize()
 	. = ..()
 	AddElement(/datum/element/dunkable, 10)
 
@@ -196,7 +192,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	preserved_food = TRUE //Can't decompose any more than this
 
-/obj/item/food/badrecipe/Initialize(mapload)
+/obj/item/food/badrecipe/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_ITEM_GRILLED, .proc/OnGrill)
 
@@ -209,7 +205,7 @@
 	name = "bacteria rich moldy mess"
 	desc = "Not only is this rancid lump of disgusting bile crawling with insect life, but it is also teeming with various microscopic cultures. <i>It moves when you're not looking.</i>"
 
-/obj/item/food/badrecipe/moldy/bacteria/Initialize(mapload)
+/obj/item/food/badrecipe/moldy/bacteria/Initialize()
 	. = ..()
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOLD, CELL_VIRUS_TABLE_GENERIC, rand(2,4), 25)
 
@@ -228,7 +224,7 @@
 	foodtypes = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/food/carrotfries/Initialize(mapload)
+/obj/item/food/carrotfries/Initialize()
 	. = ..()
 	AddElement(/datum/element/dunkable, 10)
 
@@ -281,7 +277,7 @@
 	food_flags = FOOD_FINGER_FOOD
 	slot_flags = ITEM_SLOT_MASK
 
-/obj/item/food/spiderlollipop/Initialize(mapload)
+/obj/item/food/spiderlollipop/Initialize()
 	. = ..()
 	AddElement(/datum/element/chewable)
 
@@ -408,7 +404,7 @@
 	slot_flags = ITEM_SLOT_MASK
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/food/lollipop/Initialize(mapload)
+/obj/item/food/lollipop/Initialize()
 	. = ..()
 	head = mutable_appearance('icons/obj/lollipop.dmi', "lollipop_head")
 	change_head_color(rgb(rand(0, 255), rand(0, 255), rand(0, 255)))
@@ -443,7 +439,7 @@
 	/// The amount to metabolize per second
 	var/metabolization_amount = REAGENTS_METABOLISM / 2
 
-/obj/item/food/bubblegum/Initialize(mapload)
+/obj/item/food/bubblegum/Initialize()
 	. = ..()
 	AddElement(/datum/element/chewable, metabolization_amount = metabolization_amount)
 
@@ -514,7 +510,7 @@
 	slot_flags = ITEM_SLOT_MASK
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/food/gumball/Initialize(mapload)
+/obj/item/food/gumball/Initialize()
 	. = ..()
 	color = rgb(rand(0, 255), rand(0, 255), rand(0, 255))
 	AddElement(/datum/element/chewable)

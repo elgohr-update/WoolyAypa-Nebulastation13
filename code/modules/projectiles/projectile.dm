@@ -169,7 +169,7 @@
 		COMSIG_ATOM_ENTERED = .proc/on_entered,
 	)
 
-/obj/projectile/Initialize(mapload)
+/obj/projectile/Initialize()
 	. = ..()
 	decayedRange = range
 	if(embedding)

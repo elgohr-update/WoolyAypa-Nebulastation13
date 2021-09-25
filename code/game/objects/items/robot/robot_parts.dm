@@ -32,11 +32,11 @@
 	/// If the cyborg's cover panel starts locked
 	var/panel_locked = TRUE
 
-/obj/item/robot_suit/Initialize(mapload)
+/obj/item/robot_suit/Initialize()
 	. = ..()
 	update_appearance()
 
-/obj/item/robot_suit/prebuilt/Initialize(mapload)
+/obj/item/robot_suit/prebuilt/Initialize()
 	. = ..()
 	l_arm = new(src)
 	r_arm = new(src)

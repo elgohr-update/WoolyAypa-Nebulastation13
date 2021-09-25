@@ -1,6 +1,6 @@
 import { multiline } from 'common/string';
-import { useBackend, useSharedState } from '../backend';
-import { Box, Button, Dimmer, Dropdown, Section, Stack } from '../components';
+import { useBackend, useLocalState, useSharedState } from '../backend';
+import { BlockQuote, Box, Button, Dimmer, Dropdown, Modal, Section, Stack } from '../components';
 import { Window } from '../layouts';
 
 const hivestyle = {
@@ -106,15 +106,15 @@ const AbilitiesSection = (props, context) => {
             <Stack.Item basis={0} textColor="label" grow>
               Your
               <span style={absorbstyle}>
-                &ensp;Absorb DNA
+                &ensp;Absorb
               </span> ability
-              allows you to steal the DNA and memories of a victim.
-              Your
+              allows you to steal the DNA and memories of a victim. The
               <span style={absorbstyle}>
-                &ensp;Extract DNA Sting
+                &ensp;Transform Sting
               </span> ability
-              also steals the DNA of a victim, and is undetectable, but
-              does not grant you their memories or speech patterns.
+              does the same instantly and quietly, but doesn&apos;t
+              count for objectives, kill them, or
+              include their memories and speech patterns.
             </Stack.Item>
             <Stack.Divider />
             <Stack.Item basis={0} textColor="label" grow>

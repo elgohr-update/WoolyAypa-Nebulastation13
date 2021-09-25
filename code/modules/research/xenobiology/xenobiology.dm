@@ -36,7 +36,7 @@
 		qdel(O)
 	..()
 
-/obj/item/slime_extract/Initialize(mapload)
+/obj/item/slime_extract/Initialize()
 	. = ..()
 	create_reagents(100, INJECTABLE | DRAWABLE)
 

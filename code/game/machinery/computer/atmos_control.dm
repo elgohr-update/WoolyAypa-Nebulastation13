@@ -119,7 +119,7 @@
 	frequency = new_frequency
 	radio_connection = SSradio.add_object(src, frequency, RADIO_ATMOSIA)
 
-/obj/machinery/air_sensor/Initialize(mapload)
+/obj/machinery/air_sensor/Initialize()
 	. = ..()
 	SSair.start_processing_machine(src)
 	set_frequency(frequency)
@@ -174,7 +174,7 @@ GLOBAL_LIST_EMPTY(atmos_air_controllers)
 	var/datum/radio_frequency/radio_connection
 
 
-/obj/machinery/computer/atmos_control/Initialize(mapload)
+/obj/machinery/computer/atmos_control/Initialize()
 	. = ..()
 	GLOB.atmos_air_controllers += src
 	set_frequency(frequency)

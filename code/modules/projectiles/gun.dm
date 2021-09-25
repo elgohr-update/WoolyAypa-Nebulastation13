@@ -79,7 +79,7 @@
 	var/datum/action/toggle_scope_zoom/azoom
 	var/pb_knockback = 0
 
-/obj/item/gun/Initialize(mapload)
+/obj/item/gun/Initialize()
 	. = ..()
 	if(pin)
 		pin = new pin(src)
