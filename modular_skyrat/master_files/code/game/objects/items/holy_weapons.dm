@@ -132,8 +132,6 @@
 	desc = "A set of prayer beads used by many of the more traditional religions in space"
 	icon = 'modular_skyrat/modules/chaplain/icons/obj/holy_weapons.dmi'
 	icon_state = "rosary"
-	worn_icon = 'nebula_modular/icons/clothing/rosary.dmi'
-	worn_icon_state = "rosary"
 	force = 4
 	throwforce = 0
 	attack_verb_simple = list("whipped", "repented", "lashed", "flagellated")
@@ -148,10 +146,7 @@
 		deity_name = GLOB.deity
 
 /obj/item/nullrod/rosary/attack(mob/living/M, mob/living/user, params)
-	if(!user.mind || user.mind.assigned_role.title != "Chaplain")
-		to_chat(user, "<span class='notice'>You are not close enough with [deity_name] to use [src].</span>")
-		return
-	if(IS_HERETIC(user) || IS_CULTIST(user))
+	if(!user.mind || user.mind.assigned_role != "Chaplain")
 		to_chat(user, "<span class='notice'>You are not close enough with [deity_name] to use [src].</span>")
 		return
 	if(user.combat_mode)
@@ -171,34 +166,6 @@
 		M.adjustOxyLoss(-5)
 		M.adjustBruteLoss(-5)
 		M.adjustFireLoss(-5)
-		praying = FALSE
-	else
-		to_chat(user, "<span class='notice'>Your prayer to [deity_name] was interrupted.</span>")
-		praying = FALSE
-
-/obj/item/nullrod/rosary/attack_self(mob/user)
-	if(IS_HERETIC(user) || IS_CULTIST(user))
-		to_chat(user, "<span class='notice'>You are not close enough with [deity_name] to use [src].</span>")
-		return
-	if(!user.mind || user.mind.assigned_role.title != "Chaplain")
-		to_chat(user, "<span class='notice'>You are not close enough with [deity_name] to use [src].</span>")
-		return
-	if(praying)
-		to_chat(user, "<span class='notice'>You are already using [src].</span>")
-		return
-	user.say("In the name of [deity_name], I banish those who are impure in my sight, exposing from skin to flesh...")
-	user.visible_message("<span class='info'>[user] kneels and begins to mutter in another language.</span>", \
-		"<span class='info'>You kneel, starting to pray for [deity_name]'s holy punishment.</span>")
-	praying = TRUE
-	if(do_after(user, 300))
-		for(var/mob/living/profane in range(5, user))
-			if(IS_CULTIST(profane) || IS_HERETIC(profane))
-				profane.adjust_fire_stacks(10)
-				profane.IgniteMob()
-				profane.adjustFireLoss(30)
-				to_chat(profane, "<span class='colossus'>BURN, PROFANE.</span>")
-		user.say("AND FLESH TO BONES!!")
-		playsound(src, 'sound/effects/pray_chaplain.ogg', 40, TRUE)
 		praying = FALSE
 	else
 		to_chat(user, "<span class='notice'>Your prayer to [deity_name] was interrupted.</span>")

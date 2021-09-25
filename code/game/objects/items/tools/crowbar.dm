@@ -73,7 +73,7 @@
 	toolspeed = 0.7
 	force_opens = TRUE
 
-/obj/item/crowbar/power/Initialize()
+/obj/item/crowbar/power/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/transforming, \
 		force_on = force, \
@@ -98,11 +98,6 @@
 
 /obj/item/crowbar/power/syndicate
 	name = "Syndicate jaws of life"
-	// NEBULA CHANGE START
-	icon = 'icons/obj/tools.dmi'
-	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
-	//NEBULA CHANGE END
 	desc = "A re-engineered copy of Nanotrasen's standard jaws of life. Can be used to force open airlocks in its crowbar configuration."
 	icon_state = "jaws_syndie"
 	toolspeed = 0.5

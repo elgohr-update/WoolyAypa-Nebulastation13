@@ -14,14 +14,14 @@
 	exp_granted_type = EXP_TYPE_CREW
 
 	paycheck = PAYCHECK_HARD
-	paycheck_department = ACCOUNT_CCM
+	paycheck_department = ACCOUNT_CMD
 
 	outfit = /datum/outfit/job/blueshield
 	plasmaman_outfit = /datum/outfit/plasmaman/blueshield
 	display_order = JOB_DISPLAY_ORDER_BLUESHIELD
 	bounty_types = CIV_JOB_SEC
 	departments_list = list(
-		/datum/job_department/nanotrasen_fleet_command,
+		/datum/job_department/central_command,
 		/datum/job_department/command,
 	)
 	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM)
@@ -40,7 +40,6 @@
 
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS
 
-	var/datum/martial_art/cqc/style
 /datum/outfit/job/blueshield
 	name = "Blueshield"
 	jobtype = /datum/job/blueshield
@@ -79,8 +78,4 @@
 	new /obj/item/ammo_box/magazine/multi_sprite/cfa_lynx(src)
 	new /obj/item/ammo_box/magazine/multi_sprite/cfa_lynx(src)
 	new /obj/item/ammo_box/magazine/multi_sprite/cfa_lynx(src)
-
-/datum/job/blueshield/after_spawn(mob/living/carbon/user)
-	. = ..()
-	style = new
-	style.teach(user, make_temporary = TRUE)
+	new /obj/item/ammo_box/magazine/multi_sprite/cfa_lynx(src)

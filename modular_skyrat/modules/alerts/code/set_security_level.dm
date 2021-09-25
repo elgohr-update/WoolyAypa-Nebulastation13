@@ -136,19 +136,14 @@ GLOBAL_VAR_INIT(sec_level_cooldown, FALSE)
 				minor_announce(CONFIG_GET(string/alert_amber_downto), "Attention! Alert level set to amber:", sound = 'modular_skyrat/modules/alerts/sound/misc/voyalert.ogg', override_volume = TRUE)
 		if(SEC_LEVEL_RED)
 			if(SSsecurity_level.current_level < SEC_LEVEL_RED)
-				//nebula change - OLHA O MACAAAAAACO
-				if(prob(15))
-					minor_announce(CONFIG_GET(string/alert_red_upto), "Attention! Code red!", TRUE, sound = 'nebula_modular/sound/MACACO.ogg')
-					return
-				//nebula end
 				minor_announce(CONFIG_GET(string/alert_red_upto), "Attention! Code red!", TRUE, sound = 'modular_skyrat/modules/alerts/sound/misc/red.ogg')
 			else
 				minor_announce(CONFIG_GET(string/alert_red_downto), "Attention! Code red!", sound = 'modular_skyrat/modules/alerts/sound/misc/downtoRED.ogg')
 		if(SEC_LEVEL_DELTA)
 			if(SSsecurity_level.current_level < SEC_LEVEL_DELTA)
-				minor_announce(CONFIG_GET(string/alert_delta_upto), "Attention! Delta Alert level reached!", TRUE, sound = 'modular_skyrat/modules/alerts/sound/misc/deltaklaxon.ogg', override_volume = TRUE)
+				minor_announce(CONFIG_GET(string/alert_delta_upto), "Attention! Delta Alert level reached!", TRUE, sound = 'modular_skyrat/modules/alerts/sound/misc/delta.ogg', override_volume = TRUE)
 			else
-				minor_announce(CONFIG_GET(string/alert_delta_downto), "Attention! Delta Alert level reached!", TRUE, sound = 'modular_skyrat/modules/alerts/sound/misc/deltaklaxon.ogg', override_volume = TRUE)
+				minor_announce(CONFIG_GET(string/alert_delta_downto), "Attention! Delta Alert level reached!", TRUE, sound = 'modular_skyrat/modules/alerts/sound/misc/delta.ogg', override_volume = TRUE)
 			SSsecurity_level.current_level = level //Snowflake shit to make sue they actually loop.
 			delta_alarm()
 		if(SEC_LEVEL_GAMMA)
@@ -180,9 +175,9 @@ GLOBAL_VAR_INIT(sec_level_cooldown, FALSE)
 				else
 					var/area/A = get_area(M)
 					if(is_type_in_typecache(A, quiet_areas)) //These areas don't hear it as loudly
-						M.playsound_local(get_turf(M), S, min(10, M.client.prefs.announcement_volume), FALSE)
+						M.playsound_local(get_turf(M), S, 10, FALSE)
 					else
-						M.playsound_local(get_turf(M), S, M.client.prefs.announcement_volume, FALSE)
+						M.playsound_local(get_turf(M), S, 70, FALSE)
 
 #undef GAMMA_LOOP_LENGTH
 #undef SET_SEC_LEVEL_COOLDOWN

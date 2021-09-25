@@ -144,7 +144,7 @@
 
 /obj/machinery/door/poddoor/Bumped(atom/movable/AM)
 	if(density)
-		return FALSE
+		return 0
 	else
 		return ..()
 

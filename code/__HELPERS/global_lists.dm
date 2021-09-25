@@ -30,7 +30,6 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/spines, GLOB.spines_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/spines_animated, GLOB.animated_spines_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/legs, GLOB.legs_list)
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/wings, GLOB.r_wings_list,roundstart = TRUE)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/caps, GLOB.caps_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_wings, GLOB.moth_wings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_antennae, GLOB.moth_antennae_list)
@@ -74,7 +73,6 @@
 	GLOB.emote_list = init_emote_list()
 
 	make_skyrat_datum_references() //SKYRAT EDIT ADDITION - CUSTOMIZATION
-	load_neboosters() //Now gimme money! - Nebula Addition
 	init_crafting_recipes(GLOB.crafting_recipes)
 
 	init_subtypes_w_path_keys(/obj/projectile, GLOB.proj_by_path_key)
