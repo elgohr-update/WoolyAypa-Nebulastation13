@@ -96,7 +96,6 @@ export class ObjectComponent extends Component {
       index,
       color = 'blue',
       removable,
-      ui_buttons,
       locations,
       onPortUpdated,
       onPortLoaded,
@@ -141,19 +140,6 @@ export class ObjectComponent extends Component {
             <Stack.Item grow={1} unselectable="on">
               {name}
             </Stack.Item>
-            {!!ui_buttons && Object.keys(ui_buttons).map(icon => (
-              <Stack.Item key={icon}>
-                <Button
-                  icon={icon}
-                  color="transparent"
-                  compact
-                  onClick={() => act('perform_action', {
-                    component_id: index,
-                    action_name: ui_buttons[icon],
-                  })}
-                />
-              </Stack.Item>
-            ))}
             <Stack.Item>
               <Button
                 color="transparent"
