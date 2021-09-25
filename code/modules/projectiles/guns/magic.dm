@@ -50,7 +50,7 @@
 		charges--//... drain a charge
 		recharge_newshot()
 
-/obj/item/gun/magic/Initialize(mapload)
+/obj/item/gun/magic/Initialize()
 	. = ..()
 	charges = max_charges
 	if(ammo_type)

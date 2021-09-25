@@ -22,7 +22,7 @@
 
 	req_one_access = list(ACCESS_ENGINE, ACCESS_ROBOTICS)
 
-/obj/machinery/navbeacon/Initialize(mapload)
+/obj/machinery/navbeacon/Initialize()
 	. = ..()
 
 	if(wayfinding)

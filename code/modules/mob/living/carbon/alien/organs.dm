@@ -3,7 +3,7 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/toxin/acid = 10)
 	var/list/alien_powers = list()
 
-/obj/item/organ/alien/Initialize(mapload)
+/obj/item/organ/alien/Initialize()
 	. = ..()
 	for(var/A in alien_powers)
 		if(ispath(A))

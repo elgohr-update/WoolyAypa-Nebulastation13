@@ -89,7 +89,7 @@
 	if(instant || (roundstart && (mapload || (SSticker && SSticker.current_state > GAME_STATE_SETTING_UP))))
 		INVOKE_ASYNC(src, .proc/create)
 	else if(ghost_usable)
-		SSpoints_of_interest.make_point_of_interest(src)
+		AddElement(/datum/element/point_of_interest)
 		LAZYADD(GLOB.mob_spawners[name], src)
 
 /obj/effect/mob_spawn/Destroy()
@@ -315,7 +315,7 @@
 	return H
 //SKYRAT EDIT ADDITION END
 
-/obj/effect/mob_spawn/human/Initialize(mapload)
+/obj/effect/mob_spawn/human/Initialize()
 	if(ispath(outfit))
 		outfit = new outfit()
 	if(!outfit)

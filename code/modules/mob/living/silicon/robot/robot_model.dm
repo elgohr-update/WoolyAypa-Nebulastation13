@@ -2,7 +2,7 @@
  * # robot_model
  *
  * Definition of /obj/item/robot_model, which defines behavior for each model.
- * Further expanded on in [robot_modules.dm][/obj/item/robot_model/Initialize(mapload)].
+ * Further expanded on in [robot_modules.dm][/obj/item/robot_model/Initialize()].
  *
  ***************************************************************************************/
 /obj/item/robot_model

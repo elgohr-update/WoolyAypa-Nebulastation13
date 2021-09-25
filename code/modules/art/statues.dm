@@ -17,7 +17,7 @@
 	/// Abstract root type
 	var/abstract_type = /obj/structure/statue
 
-/obj/structure/statue/Initialize(mapload)
+/obj/structure/statue/Initialize()
 	. = ..()
 	AddElement(art_type, impressiveness)
 	AddElement(/datum/element/beauty, impressiveness * 75)
@@ -327,7 +327,7 @@
 	/// Currently sculpting
 	var/sculpting = FALSE
 
-/obj/item/chisel/Initialize(mapload)
+/obj/item/chisel/Initialize()
 	. = ..()
 	AddElement(/datum/element/eyestab)
 	AddElement(/datum/element/wall_engraver)

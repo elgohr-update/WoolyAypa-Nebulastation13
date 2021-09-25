@@ -43,7 +43,7 @@
 	/// Distance the demon will teleport from the target
 	var/teleport_distance = 3
 
-/mob/living/simple_animal/hostile/asteroid/ice_demon/Initialize(mapload)
+/mob/living/simple_animal/hostile/asteroid/ice_demon/Initialize()
 	. = ..()
 	AddElement(/datum/element/simple_flying)
 

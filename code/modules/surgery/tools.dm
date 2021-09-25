@@ -75,7 +75,7 @@
 	light_range = 1
 	light_color = COLOR_SOFT_RED
 
-/obj/item/cautery/advanced/Initialize(mapload)
+/obj/item/cautery/advanced/Initialize()
 	. = ..()
 	AddComponent(/datum/component/transforming, \
 		force_on = force, \
@@ -123,7 +123,7 @@
 	wound_bonus = 10
 	bare_wound_bonus = 10
 
-/obj/item/surgicaldrill/Initialize(mapload)
+/obj/item/surgicaldrill/Initialize()
 	. = ..()
 	AddElement(/datum/element/eyestab)
 
@@ -166,7 +166,7 @@
 	wound_bonus = 10
 	bare_wound_bonus = 15
 
-/obj/item/scalpel/Initialize(mapload)
+/obj/item/scalpel/Initialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 80 * toolspeed, 100, 0)
 	AddElement(/datum/element/eyestab)
@@ -205,7 +205,7 @@
 	wound_bonus = 15
 	bare_wound_bonus = 10
 
-/obj/item/circular_saw/Initialize(mapload)
+/obj/item/circular_saw/Initialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 40 * toolspeed, 100, 5, 'sound/weapons/circsawhit.ogg') //saws are very accurate and fast at butchering
 
@@ -271,7 +271,7 @@
 	light_color = LIGHT_COLOR_GREEN
 	sharpness = SHARP_EDGED
 
-/obj/item/scalpel/advanced/Initialize(mapload)
+/obj/item/scalpel/advanced/Initialize()
 	. = ..()
 	AddComponent(/datum/component/transforming, \
 		force_on = force + 1, \
@@ -313,7 +313,7 @@
 	icon_state = "adv_retractor"
 	toolspeed = 0.7
 
-/obj/item/retractor/advanced/Initialize(mapload)
+/obj/item/retractor/advanced/Initialize()
 	. = ..()
 	AddComponent(/datum/component/transforming, \
 		force_on = force, \

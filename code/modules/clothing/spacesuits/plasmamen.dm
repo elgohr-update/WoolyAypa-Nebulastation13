@@ -61,7 +61,7 @@
 	flags_cover = HEADCOVERSMOUTH|HEADCOVERSEYES|PEPPERPROOF
 	visor_flags_inv = HIDEEYES|HIDEFACE
 
-/obj/item/clothing/head/helmet/space/plasmaman/Initialize(mapload)
+/obj/item/clothing/head/helmet/space/plasmaman/Initialize()
 	. = ..()
 	visor_toggling()
 	update_appearance()

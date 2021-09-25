@@ -31,7 +31,7 @@
 	///Stores the total amount of moles needed for the current recipe
 	var/total_recipe_moles = 0
 
-/obj/machinery/atmospherics/components/binary/crystallizer/Initialize(mapload)
+/obj/machinery/atmospherics/components/binary/crystallizer/Initialize()
 	. = ..()
 	internal = new
 

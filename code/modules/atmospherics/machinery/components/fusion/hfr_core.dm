@@ -151,7 +151,7 @@
 	///Var used in the meltdown phase
 	var/final_countdown = FALSE
 
-/obj/machinery/atmospherics/components/unary/hypertorus/core/Initialize(mapload)
+/obj/machinery/atmospherics/components/unary/hypertorus/core/Initialize()
 	. = ..()
 	internal_fusion = new
 	internal_fusion.volume = 5000

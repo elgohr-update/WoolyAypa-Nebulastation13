@@ -98,7 +98,7 @@
 	var/static/gid = 0
 	var/id = 0
 
-/obj/machinery/satellite/Initialize(mapload)
+/obj/machinery/satellite/Initialize()
 	. = ..()
 	id = gid++
 

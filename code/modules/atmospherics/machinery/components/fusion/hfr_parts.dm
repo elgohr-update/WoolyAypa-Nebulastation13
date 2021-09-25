@@ -25,7 +25,7 @@
 	///Check if the machine is cracked open
 	var/cracked = FALSE
 
-/obj/machinery/atmospherics/components/unary/hypertorus/Initialize(mapload)
+/obj/machinery/atmospherics/components/unary/hypertorus/Initialize()
 	. = ..()
 	initialize_directions = dir
 

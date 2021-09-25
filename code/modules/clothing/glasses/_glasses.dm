@@ -202,7 +202,7 @@
 	inhand_icon_state = "glasses"
 	vision_correction = TRUE //corrects nearsightedness
 
-/obj/item/clothing/glasses/regular/Initialize(mapload)
+/obj/item/clothing/glasses/regular/Initialize()
 	. = ..()
 	AddComponent(/datum/component/knockoff,25,list(BODY_ZONE_PRECISE_EYES),list(ITEM_SLOT_EYES))
 	var/static/list/loc_connections = list(
@@ -436,7 +436,7 @@
 
 	var/datum/action/item_action/chameleon/change/chameleon_action
 
-/obj/item/clothing/glasses/thermal/syndi/Initialize(mapload)
+/obj/item/clothing/glasses/thermal/syndi/Initialize()
 	. = ..()
 	chameleon_action = new(src)
 	chameleon_action.chameleon_type = /obj/item/clothing/glasses

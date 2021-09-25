@@ -124,7 +124,7 @@
 	GLOB.pai_list -= src
 	return ..()
 
-/mob/living/silicon/pai/Initialize(mapload)
+/mob/living/silicon/pai/Initialize()
 	var/obj/item/paicard/P = loc
 	START_PROCESSING(SSfastprocess, src)
 	GLOB.pai_list += src

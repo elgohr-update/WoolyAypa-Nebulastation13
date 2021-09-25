@@ -144,7 +144,7 @@
 	/// Mobtype of last user. Typecast to [/mob/living] for initial() usage
 	var/mob/living/last_user_mobtype
 
-/obj/machinery/Initialize(mapload)
+/obj/machinery/Initialize()
 	if(!armor)
 		armor = list(MELEE = 25, BULLET = 10, LASER = 10, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 50, ACID = 70)
 	. = ..()
@@ -567,7 +567,6 @@
 	var/datum/bank_account/department_account = SSeconomy.get_dep_account(payment_department)
 	if(department_account)
 		department_account.adjust_money(fair_market_price)
-	return TRUE
 
 /obj/machinery/proc/nap_violation(mob/violator)
 	return
@@ -631,8 +630,6 @@
 	if(user_unbuckle_mob(unbuckled,user))
 		return TRUE
 
-	return _try_interact(user)
-
 /obj/machinery/attack_ai(mob/user)
 	if(!(interaction_flags_machine & INTERACT_MACHINE_ALLOW_SILICON) && !isAdminGhostAI(user))
 		return FALSE
@@ -691,16 +688,15 @@
 
 /obj/machinery/deconstruct(disassembled = TRUE)
 	if(flags_1 & NODECONSTRUCT_1)
-		return ..() //Just delete us, no need to call anything else.
+		return..()
 
 	on_deconstruction()
 	if(!LAZYLEN(component_parts))
-		return ..() //we don't have any parts.
+		return
 	spawn_frame(disassembled)
 	for(var/obj/item/part in component_parts)
 		part.forceMove(loc)
 	LAZYCLEARLIST(component_parts)
-	return ..()
 
 /**
  * Spawns a frame where this machine is. If the machine was not disassmbled, the

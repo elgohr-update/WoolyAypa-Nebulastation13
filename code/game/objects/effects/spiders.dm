@@ -50,7 +50,7 @@
 	var/obj/item/stack/sheet/cloth/woven_cloth = new /obj/item/stack/sheet/cloth
 	user.put_in_hands(woven_cloth)
 
-/obj/structure/spider/stickyweb/Initialize(mapload)
+/obj/structure/spider/stickyweb/Initialize()
 	if(!sealed && prob(50))
 		icon_state = "stickyweb2"
 	. = ..()
@@ -107,7 +107,7 @@
 	/// Mob spawner handling the actual spawn of the spider
 	var/obj/effect/mob_spawn/spider/spawner
 
-/obj/structure/spider/eggcluster/Initialize(mapload)
+/obj/structure/spider/eggcluster/Initialize()
 	pixel_x = base_pixel_x + rand(3,-3)
 	pixel_y = base_pixel_y + rand(3,-3)
 	return ..()
@@ -287,7 +287,7 @@
 	new/obj/item/food/spiderling(get_turf(src))
 	. = ..()
 
-/obj/structure/spider/spiderling/Initialize(mapload)
+/obj/structure/spider/spiderling/Initialize()
 	. = ..()
 	pixel_x = rand(6,-6)
 	pixel_y = rand(6,-6)
@@ -401,7 +401,7 @@
 	icon_state = "cocoon1"
 	max_integrity = 60
 
-/obj/structure/spider/cocoon/Initialize(mapload)
+/obj/structure/spider/cocoon/Initialize()
 	icon_state = pick("cocoon1","cocoon2","cocoon3")
 	. = ..()
 

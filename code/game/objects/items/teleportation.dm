@@ -126,7 +126,7 @@
 	*/
 	var/last_portal_location
 
-/obj/item/hand_tele/Initialize(mapload)
+/obj/item/hand_tele/Initialize()
 	. = ..()
 	active_portal_pairs = list()
 

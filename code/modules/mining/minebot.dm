@@ -41,7 +41,7 @@
 	var/mode = MINEDRONE_COLLECT
 	var/obj/item/gun/energy/kinetic_accelerator/minebot/stored_gun
 
-/mob/living/simple_animal/hostile/mining_drone/Initialize(mapload)
+/mob/living/simple_animal/hostile/mining_drone/Initialize()
 	. = ..()
 
 	AddElement(/datum/element/footstep, FOOTSTEP_OBJ_ROBOT, 1, -6, sound_vary = TRUE)

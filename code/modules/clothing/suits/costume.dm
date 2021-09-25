@@ -130,7 +130,7 @@
 	body_parts_covered = ARMS|CHEST
 	actions_types = list(/datum/action/item_action/toggle_wings)
 
-/obj/item/clothing/suit/toggle/owlwings/Initialize(mapload)
+/obj/item/clothing/suit/toggle/owlwings/Initialize()
 	. = ..()
 	allowed = GLOB.security_vest_allowed
 
@@ -201,7 +201,7 @@
 	icon_state = "ponchoshame"
 	inhand_icon_state = "ponchoshame"
 
-/obj/item/clothing/suit/poncho/ponchoshame/Initialize(mapload)
+/obj/item/clothing/suit/poncho/ponchoshame/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, SHAMEBRERO_TRAIT)
 

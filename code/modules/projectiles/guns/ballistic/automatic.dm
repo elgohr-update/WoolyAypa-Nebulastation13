@@ -60,7 +60,7 @@
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
 
-/obj/item/gun/ballistic/automatic/proto/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/proto/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
 
@@ -92,7 +92,7 @@
 /obj/item/gun/ballistic/automatic/c20r/unrestricted
 	pin = /obj/item/firing_pin
 
-/obj/item/gun/ballistic/automatic/c20r/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/c20r/Initialize()
 	. = ..()
 	update_appearance()
 
@@ -114,7 +114,7 @@
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
 
-/obj/item/gun/ballistic/automatic/wt550/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/wt550/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
 
@@ -162,7 +162,7 @@
 	empty_indicator = TRUE
 	fire_sound = 'sound/weapons/gun/smg/shot_alt.ogg'
 
-/obj/item/gun/ballistic/automatic/m90/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/m90/Initialize()
 	. = ..()
 	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher(src)
 	update_appearance()
@@ -170,7 +170,7 @@
 /obj/item/gun/ballistic/automatic/m90/unrestricted
 	pin = /obj/item/firing_pin
 
-/obj/item/gun/ballistic/automatic/m90/unrestricted/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/m90/unrestricted/Initialize()
 	. = ..()
 	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/unrestricted(src)
 	update_appearance()
@@ -229,7 +229,7 @@
 	empty_indicator = TRUE
 	show_bolt_icon = FALSE
 
-/obj/item/gun/ballistic/automatic/tommygun/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/tommygun/Initialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
 
@@ -275,7 +275,7 @@
 /obj/item/gun/ballistic/automatic/l6_saw/unrestricted
 	pin = /obj/item/firing_pin
 
-/obj/item/gun/ballistic/automatic/l6_saw/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/l6_saw/Initialize()
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
 	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)

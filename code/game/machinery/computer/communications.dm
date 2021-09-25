@@ -50,7 +50,7 @@
 	///when was emergency access last toggled
 	var/last_toggled
 
-/obj/machinery/computer/communications/Initialize(mapload)
+/obj/machinery/computer/communications/Initialize()
 	. = ..()
 	GLOB.shuttle_caller_list += src
 	AddComponent(/datum/component/gps, "Secured Communications Signal")

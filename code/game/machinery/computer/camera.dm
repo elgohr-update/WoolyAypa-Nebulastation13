@@ -23,7 +23,7 @@
 
 	interaction_flags_machine = INTERACT_MACHINE_ALLOW_SILICON | INTERACT_MACHINE_SET_MACHINE | INTERACT_MACHINE_REQUIRES_SIGHT
 
-/obj/machinery/computer/security/Initialize(mapload)
+/obj/machinery/computer/security/Initialize()
 	. = ..()
 	// Map name has to start and end with an A-Z character,
 	// and definitely NOT with a square bracket or even a number.
@@ -293,7 +293,7 @@
 	dir = EAST
 	pixel_x = -32
 
-/obj/machinery/computer/security/telescreen/entertainment/Initialize(mapload)
+/obj/machinery/computer/security/telescreen/entertainment/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_CLICK, .proc/BigClick)
 

@@ -429,7 +429,7 @@ GENE SCANNER
 			render_list += "<span class='notice ml-1'>Detected cybernetic modifications:</span>\n"
 			render_list += "<span class='notice ml-2'>[cyberimp_detect]</span>\n"
 
-	to_chat(user, examine_block(jointext(render_list, "")), trailing_newline = FALSE) // we handled the last <br> so we don't need handholding //SKYRAT EDIT CHANGE
+	to_chat(user, jointext(render_list, ""), trailing_newline = FALSE) // we handled the last <br> so we don't need handholding
 
 /proc/chemscan(mob/living/user, mob/living/M)
 	if(user.incapacitated())
@@ -477,7 +477,7 @@ GENE SCANNER
 		if(M.has_status_effect(/datum/status_effect/eigenstasium))
 			render_list += "<span class='notice ml-1'>Subject is temporally unstable. Stabilising agent is recommended to reduce disturbances.</span>\n"
 
-		to_chat(user, examine_block(jointext(render_list, "")), trailing_newline = FALSE) // we handled the last <br> so we don't need handholding //SKYRAT EDIT CHANGE
+		to_chat(user, jointext(render_list, ""), trailing_newline = FALSE) // we handled the last <br> so we don't need handholding
 
 /obj/item/healthanalyzer/verb/toggle_mode()
 	set name = "Switch Verbosity"
@@ -522,7 +522,7 @@ GENE SCANNER
 		else
 			to_chat(user, "<span class='notice ml-1'>No wounds detected in subject.</span>")
 	else
-		to_chat(user, examine_block(jointext(render_list, ""))) //SKYRAT EDIT CHANGE
+		to_chat(user, jointext(render_list, ""))
 
 /obj/item/healthanalyzer/wound
 	name = "first aid analyzer"
@@ -642,7 +642,7 @@ GENE SCANNER
 			var/gas_concentration = env_gases[id][MOLES]/total_moles
 			render_list += "[span_alert("[env_gases[id][GAS_META][META_GAS_NAME]]: [round(gas_concentration*100, 0.01)] % ([round(env_gases[id][MOLES], 0.01)] mol)")]\n"
 		render_list += "[span_info("Temperature: [round(environment.temperature-T0C, 0.01)] &deg;C ([round(environment.temperature, 0.01)] K)")]\n"
-	to_chat(user, examine_block(jointext(render_list, "")), trailing_newline = FALSE) // we handled the last <br> so we don't need handholding //SKYRAT EDIT CHANGE
+	to_chat(user, jointext(render_list, ""), trailing_newline = FALSE) // we handled the last <br> so we don't need handholding
 
 /obj/item/analyzer/AltClick(mob/user) //Barometer output for measuring when the next storm happens
 	..()
@@ -660,8 +660,6 @@ GENE SCANNER
 		if(!T)
 			return
 
-		var/datum/weather_controller/weather_controller = SSmapping.GetLevelWeatherController(T.z) //SKYRAT EDIT ADDITION
-
 		playsound(src, 'sound/effects/pop.ogg', 100)
 		var/area/user_area = T.loc
 		var/datum/weather/ongoing_weather = null
@@ -669,13 +667,12 @@ GENE SCANNER
 		if(!user_area.outdoors)
 			to_chat(user, span_warning("[src]'s barometer function won't work indoors!"))
 			return
-		//SKYRAT EDIT CHANGE
-		if(weather_controller.current_weathers)
-			for(var/datum/weather/iterating_weather in weather_controller.current_weathers)
-				if(iterating_weather.barometer_predictable && (T.z in iterating_weather.impacted_z_levels) && iterating_weather.area_type == user_area.type && !(iterating_weather.stage == END_STAGE))
-					ongoing_weather = iterating_weather
-					break
-		//SKYRAT EDIT END
+
+		for(var/V in SSweather.processing)
+			var/datum/weather/W = V
+			if(W.barometer_predictable && (T.z in W.impacted_z_levels) && W.area_type == user_area.type && !(W.stage == END_STAGE))
+				ongoing_weather = W
+				break
 
 		if(ongoing_weather)
 			if((ongoing_weather.stage == MAIN_STAGE) || (ongoing_weather.stage == WIND_DOWN_STAGE))
@@ -686,7 +683,7 @@ GENE SCANNER
 			if(ongoing_weather.aesthetic)
 				to_chat(user, span_warning("[src]'s barometer function says that the next storm will breeze on by."))
 		else
-			var/next_hit = weather_controller.next_weather //SKYRAT EDIT CHANGE
+			var/next_hit = SSweather.next_hit_by_zlevel["[T.z]"]
 			var/fixed = next_hit ? timeleft(next_hit) : -1
 			if(fixed < 0)
 				to_chat(user, span_warning("[src]'s barometer function was unable to trace any weather patterns."))
@@ -753,7 +750,7 @@ GENE SCANNER
 			render_list += "[span_boldnotice("Large amounts of free neutrons detected in the air indicate that a fusion reaction took place.")]\
 						\n[span_notice("Instability of the last fusion reaction: [round(cached_scan_results["fusion"], 0.01)].")]"
 
-	to_chat(user, examine_block(jointext(render_list, "\n"))) // we let the join apply newlines so we do need handholding //SKYRAT EDIT CHANGE
+	to_chat(user, jointext(render_list, "\n")) // we let the join apply newlines so we do need handholding
 	return TRUE
 
 //slime scanner
@@ -823,7 +820,7 @@ GENE SCANNER
 	if(T.effectmod)
 		to_render += "\n[span_notice("Core mutation in progress: [T.effectmod]")]\
 					  \n[span_notice("Progress in core mutation: [T.applied] / [SLIME_EXTRACT_CROSSING_REQUIRED]")]"
-	to_chat(user, examine_block(to_render + "\n========================")) //SKYRAT EDIT CHANGE
+	to_chat(user, to_render + "\n========================")
 
 /obj/item/sequence_scanner//SKYRAT EDIT - ICON OVERRIDEN BY AESTHETICS - SEE MODUL
 	name = "genetic sequence scanner"

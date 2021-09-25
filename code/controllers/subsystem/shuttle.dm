@@ -85,15 +85,6 @@ SUBSYSTEM_DEF(shuttle)
 
 	var/shuttle_loading
 
-	//SKYRAT EDIT ADDITION
-	/// List of all transit instances
-	var/list/transit_instances = list()
-	/// List of all sold shuttles for consoles to buy them
-	var/list/sold_shuttles = list()
-	/// Assoc list of "[dock_id]-[shuttle_types]" to a list of possible sold shuttles for those
-	var/list/sold_shuttles_cache = list()
-	//SKYRAT EDIT END
-
 /datum/controller/subsystem/shuttle/Initialize(timeofday)
 	ordernum = rand(1, 9000)
 
@@ -125,8 +116,6 @@ SUBSYSTEM_DEF(shuttle)
 		WARNING("No /obj/docking_port/mobile/emergency/backup placed on the map!")
 	if(!supply)
 		WARNING("No /obj/docking_port/mobile/supply placed on the map!")
-
-	init_sold_shuttles()//SKYRAT EDIT ADDITON
 	return ..()
 
 /datum/controller/subsystem/shuttle/proc/initial_load()
@@ -568,7 +557,6 @@ SUBSYSTEM_DEF(shuttle)
 	new_transit_dock.setDir(angle2dir(dock_angle))
 
 	M.assigned_transit = new_transit_dock
-	new /datum/transit_instance(proposal, new_transit_dock) //SKYRAT EDIT ADDITION
 	return new_transit_dock
 
 /datum/controller/subsystem/shuttle/Recover()
@@ -991,4 +979,3 @@ SUBSYSTEM_DEF(shuttle)
 			has_purchase_shuttle_access |= shuttle_template.who_can_purchase
 
 	return has_purchase_shuttle_access
-

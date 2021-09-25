@@ -30,7 +30,7 @@
 	/// The last time we did say_requirements(), because someone will inevitably click spam this.
 	var/last_requirements_say = 0
 
-/obj/machinery/research/explosive_compressor/Initialize(mapload)
+/obj/machinery/research/explosive_compressor/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_ATOM_INTERNAL_EXPLOSION, .proc/check_test)
 

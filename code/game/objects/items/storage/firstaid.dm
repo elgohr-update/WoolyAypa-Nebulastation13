@@ -499,7 +499,7 @@
 	name = "bottle of maintenance pills"
 	desc = "An old pill bottle. It smells musty."
 
-/obj/item/storage/pill_bottle/maintenance_pill/Initialize(mapload)
+/obj/item/storage/pill_bottle/maintenance_pill/Initialize()
 	. = ..()
 	var/obj/item/reagent_containers/pill/P = locate() in src
 	name = "bottle of [P.name]s"
@@ -561,7 +561,7 @@
 		/obj/item/food/icecream
 		))
 
-/obj/item/storage/organbox/Initialize(mapload)
+/obj/item/storage/organbox/Initialize()
 	. = ..()
 	create_reagents(100, TRANSPARENT)
 	RegisterSignal(src, COMSIG_ATOM_ENTERED, .proc/freeze)

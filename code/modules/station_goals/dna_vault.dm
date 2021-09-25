@@ -145,7 +145,7 @@
 
 	var/list/obj/structure/fillers = list()
 
-/obj/machinery/dna_vault/Initialize(mapload)
+/obj/machinery/dna_vault/Initialize()
 	//TODO: Replace this,bsa and gravgen with some big machinery datum
 	var/list/occupied = list()
 	for(var/direct in list(EAST,WEST,SOUTHEAST,SOUTHWEST))

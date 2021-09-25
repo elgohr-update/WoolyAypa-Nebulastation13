@@ -98,7 +98,7 @@
 		if(ascended && user.stat == CONSCIOUS && user.client)
 			user.client.give_award(/datum/award/achievement/misc/cleanboss, user)
 
-/mob/living/simple_animal/bot/cleanbot/Initialize(mapload)
+/mob/living/simple_animal/bot/cleanbot/Initialize()
 	. = ..()
 
 	chosen_name = name

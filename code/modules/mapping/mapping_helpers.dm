@@ -12,7 +12,7 @@
 
 	plane = POINT_PLANE
 
-/obj/effect/baseturf_helper/Initialize(mapload)
+/obj/effect/baseturf_helper/Initialize()
 	. = ..()
 	return INITIALIZE_HINT_LATELOAD
 
@@ -93,7 +93,7 @@
 	icon_state = ""
 	var/late = FALSE
 
-/obj/effect/mapping_helpers/Initialize(mapload)
+/obj/effect/mapping_helpers/Initialize()
 	..()
 	return late ? INITIALIZE_HINT_LATELOAD : INITIALIZE_HINT_QDEL
 
@@ -181,7 +181,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/mapping_helpers/no_lava)
 /obj/effect/mapping_helpers/no_lava
 	icon_state = "no_lava"
 
-/obj/effect/mapping_helpers/no_lava/Initialize(mapload)
+/obj/effect/mapping_helpers/no_lava/Initialize()
 	. = ..()
 	var/turf/T = get_turf(src)
 	T.turf_flags |= NO_LAVA_GEN

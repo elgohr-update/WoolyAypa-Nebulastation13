@@ -123,6 +123,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron/dark,
 /area/centcom/control)
+"cq" = (
+/mob/living/basic/cow,
+/turf/open/floor/grass,
+/area/centcom/holding)
 "da" = (
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/tile/neutral{
@@ -13700,10 +13704,6 @@
 	},
 /turf/open/floor/grass,
 /area/centcom/holding)
-"MH" = (
-/obj/effect/spawner/random/entertainment/arcade,
-/turf/open/floor/wood,
-/area/centcom/holding)
 "MI" = (
 /obj/machinery/light/directional/north,
 /obj/structure/table/wood,
@@ -14657,6 +14657,10 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/holding)
+"UV" = (
+/obj/effect/spawner/randomarcade,
+/turf/open/floor/wood,
+/area/centcom/holding)
 "Vc" = (
 /obj/effect/decal/cleanable/vomit/old,
 /turf/open/floor/iron/dark,
@@ -15044,10 +15048,6 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/supplypod/loading/four)
-"ZT" = (
-/mob/living/basic/cow,
-/turf/open/floor/grass,
-/area/centcom/holding)
 "ZU" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -39430,7 +39430,7 @@ CT
 CT
 XM
 NT
-MH
+UV
 CV
 CT
 NT
@@ -39944,7 +39944,7 @@ CT
 CT
 GY
 NT
-MH
+UV
 CV
 CT
 NT
@@ -41726,7 +41726,7 @@ Nd
 CT
 CT
 Rh
-ZT
+cq
 Nd
 Pr
 Fh

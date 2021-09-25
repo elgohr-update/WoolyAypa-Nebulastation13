@@ -23,7 +23,7 @@
 	stored_money += to_add
 	SEND_SIGNAL(src, COMSIG_MONEYBOT_ADD_MONEY, to_add)
 
-/obj/structure/money_bot/Initialize(mapload)
+/obj/structure/money_bot/Initialize()
 	. = ..()
 	AddComponent(/datum/component/shell, list(
 		new /obj/item/circuit_component/money_bot(),

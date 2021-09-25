@@ -30,7 +30,7 @@
 	///Power used to say an error message
 	var/power_to_speak = 1
 
-/obj/item/inspector/Initialize(mapload)
+/obj/item/inspector/Initialize()
 	. = ..()
 	if(ispath(cell))
 		cell = new cell(src)
@@ -283,7 +283,7 @@
 		paper_charges = min(paper_charges + charges_per_paper, max_paper_charges)
 		qdel(I)
 
-/obj/item/inspector/clown/bananium/Initialize(mapload)
+/obj/item/inspector/clown/bananium/Initialize()
 	. = ..()
 	playsound(src, 'sound/effects/angryboat.ogg', 150, FALSE)
 

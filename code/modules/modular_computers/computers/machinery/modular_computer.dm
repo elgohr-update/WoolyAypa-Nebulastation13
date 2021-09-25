@@ -40,7 +40,7 @@
 	///CPU that handles most logic while this type only handles power and other specific things.
 	var/obj/item/modular_computer/processor/cpu = null
 
-/obj/machinery/modular_computer/Initialize(mapload)
+/obj/machinery/modular_computer/Initialize()
 	. = ..()
 	cpu = new(src)
 	cpu.physical = src

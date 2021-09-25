@@ -18,7 +18,7 @@
 
 	var/scented_type //SKYRAT EDIT ADDITION /// Pollutant type for scented candles
 
-/obj/item/candle/Initialize(mapload)
+/obj/item/candle/Initialize()
 	. = ..()
 	if(start_lit)
 		light()

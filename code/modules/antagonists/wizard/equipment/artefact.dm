@@ -365,6 +365,6 @@
 	duration = 40
 	pixel_x = 500
 
-/obj/effect/temp_visual/tornado/Initialize(mapload)
+/obj/effect/temp_visual/tornado/Initialize()
 	. = ..()
 	animate(src, pixel_x = -500, time = 40)

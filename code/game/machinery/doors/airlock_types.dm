@@ -460,7 +460,7 @@
 	var/friendly = FALSE
 	var/stealthy = FALSE
 
-/obj/machinery/door/airlock/cult/Initialize(mapload)
+/obj/machinery/door/airlock/cult/Initialize()
 	. = ..()
 	new openingoverlaytype(loc)
 

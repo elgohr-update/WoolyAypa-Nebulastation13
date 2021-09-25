@@ -36,10 +36,10 @@
 	var/souls = 0
 	var/resolved = FALSE
 
-/obj/narsie/Initialize(mapload)
+/obj/narsie/Initialize()
 	. = ..()
 
-	SSpoints_of_interest.make_point_of_interest(src)
+	AddElement(/datum/element/point_of_interest)
 
 	singularity = WEAKREF(AddComponent(
 		/datum/component/singularity, \

@@ -383,7 +383,7 @@
 		/datum/language/calcic
 	))
 
-/obj/item/organ/tongue/bone/Initialize(mapload)
+/obj/item/organ/tongue/bone/Initialize()
 	. = ..()
 	phomeme_type = pick(phomeme_types)
 	languages_possible = languages_possible_skeleton

@@ -79,7 +79,7 @@
 	user.visible_message(span_suicide("[user] is jamming [src] up [user.p_their()] nose and into [user.p_their()] brain. It looks like [user.p_theyre()] trying to commit suicide!"))
 	return (BRUTELOSS|OXYLOSS)
 
-/obj/item/toy/crayon/Initialize(mapload)
+/obj/item/toy/crayon/Initialize()
 	. = ..()
 
 	dye_color = crayon_color
@@ -606,7 +606,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/cardboard = 2000)
 
-/obj/item/storage/crayons/Initialize(mapload)
+/obj/item/storage/crayons/Initialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 7
@@ -708,7 +708,7 @@
 
 		return (OXYLOSS)
 
-/obj/item/toy/crayon/spraycan/Initialize(mapload)
+/obj/item/toy/crayon/spraycan/Initialize()
 	. = ..()
 	// If default crayon red colour, pick a more fun spraycan colour
 	if(!paint_color)

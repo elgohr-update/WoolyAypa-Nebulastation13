@@ -43,7 +43,7 @@
 	var/acti_sound = 'sound/items/welderactivate.ogg'
 	var/deac_sound = 'sound/items/welderdeactivate.ogg'
 
-/obj/item/weldingtool/Initialize(mapload)
+/obj/item/weldingtool/Initialize()
 	. = ..()
 	create_reagents(max_fuel)
 	reagents.add_reagent(/datum/reagent/fuel, max_fuel)

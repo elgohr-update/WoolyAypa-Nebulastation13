@@ -49,7 +49,7 @@
 	var/on = TRUE
 	var/last_spin = 13
 
-/obj/machinery/roulette/Initialize(mapload)
+/obj/machinery/roulette/Initialize()
 	. = ..()
 	jackpot_loop = new(src, FALSE)
 	wires = new /datum/wires/roulette(src)

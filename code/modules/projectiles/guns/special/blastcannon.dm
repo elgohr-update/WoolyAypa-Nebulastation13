@@ -45,7 +45,7 @@
 	var/debug_power = 0
 
 
-/obj/item/gun/blastcannon/Initialize(mapload)
+/obj/item/gun/blastcannon/Initialize()
 	. = ..()
 	if(!pin)
 		pin = new

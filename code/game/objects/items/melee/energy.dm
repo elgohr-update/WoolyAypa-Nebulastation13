@@ -30,7 +30,7 @@
 	/// The heat given off when active.
 	var/active_heat = 3500
 
-/obj/item/melee/energy/Initialize(mapload)
+/obj/item/melee/energy/Initialize()
 	. = ..()
 	make_transformable()
 	AddComponent(/datum/component/butchering, _speed = 5 SECONDS, _butcher_sound = active_hitsound)
@@ -293,7 +293,7 @@
 	var/datum/effect_system/spark_spread/spark_system
 
 //Most of the other special functions are handled in their own files. aka special snowflake code so kewl
-/obj/item/melee/energy/blade/Initialize(mapload)
+/obj/item/melee/energy/blade/Initialize()
 	. = ..()
 	spark_system = new /datum/effect_system/spark_spread()
 	spark_system.set_up(5, 0, src)

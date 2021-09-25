@@ -478,7 +478,7 @@
 	light_power = 2.5
 	light_color = COLOR_WHITE
 
-/obj/effect/dummy/luminescent_glow/Initialize(mapload)
+/obj/effect/dummy/luminescent_glow/Initialize()
 	. = ..()
 	if(!isliving(loc))
 		return INITIALIZE_HINT_QDEL

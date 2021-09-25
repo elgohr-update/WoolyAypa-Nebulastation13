@@ -116,7 +116,7 @@
 	///What is the cap on our misfire probability? Do not set this to 100.
 	var/misfire_probability_cap = 25
 
-/obj/item/gun/ballistic/Initialize(mapload)
+/obj/item/gun/ballistic/Initialize()
 	. = ..()
 	if (!spawnwithmagazine)
 		bolt_locked = TRUE

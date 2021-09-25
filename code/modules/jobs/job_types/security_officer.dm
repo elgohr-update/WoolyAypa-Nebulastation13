@@ -223,7 +223,7 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 
 	id_trim = /datum/id_trim/job/security_officer
 
-/obj/item/radio/headset/headset_sec/alt/department/Initialize(mapload)
+/obj/item/radio/headset/headset_sec/alt/department/Initialize()
 	. = ..()
 	wires = new/datum/wires/radio(src)
 	secure_radio_connections = new

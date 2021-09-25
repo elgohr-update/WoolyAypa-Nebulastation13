@@ -28,7 +28,7 @@
 	var/succrange = 4 //SKYRAT EDIT ADDITION - SEC_HAUL
 	var/binrange = 7 //SKYRAT EDIT ADDITION - SEC_HAUL
 
-/obj/machinery/dish_drive/Initialize(mapload)
+/obj/machinery/dish_drive/Initialize()
 	. = ..()
 	RefreshParts()
 

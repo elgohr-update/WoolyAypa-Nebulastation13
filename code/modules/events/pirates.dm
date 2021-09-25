@@ -319,7 +319,7 @@
 	var/sending_timer
 	var/cargo_hold_id
 
-/obj/machinery/computer/piratepad_control/Initialize(mapload)
+/obj/machinery/computer/piratepad_control/Initialize()
 	..()
 	return INITIALIZE_HINT_LATELOAD
 

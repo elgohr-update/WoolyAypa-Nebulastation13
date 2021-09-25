@@ -7,7 +7,7 @@
 	///Alternative mode for hiding the hood, instead of storing the hood in the suit it qdels it, useful for when you deal with hooded suit with storage.
 	var/alternative_mode = FALSE
 
-/obj/item/clothing/suit/hooded/Initialize(mapload)
+/obj/item/clothing/suit/hooded/Initialize()
 	. = ..()
 	if(!alternative_mode)
 		MakeHood()
@@ -135,7 +135,7 @@
 	. += "Alt-click on [src] to toggle the [togglename]."
 
 //Hardsuit toggle code
-/obj/item/clothing/suit/space/hardsuit/Initialize(mapload)
+/obj/item/clothing/suit/space/hardsuit/Initialize()
 	MakeHelmet()
 	. = ..()
 

@@ -47,7 +47,7 @@
 	else
 		return ..()
 
-/obj/structure/reagent_dispensers/Initialize(mapload)
+/obj/structure/reagent_dispensers/Initialize()
 	create_reagents(tank_volume, DRAINABLE | AMOUNT_VISIBLE)
 	if(reagent_id)
 		reagents.add_reagent(reagent_id, tank_volume)
@@ -177,7 +177,7 @@
 	dir = EAST
 	pixel_x = -30
 
-/obj/structure/reagent_dispensers/peppertank/Initialize(mapload)
+/obj/structure/reagent_dispensers/peppertank/Initialize()
 	. = ..()
 	if(prob(1))
 		desc = "IT'S PEPPER TIME, BITCH!"

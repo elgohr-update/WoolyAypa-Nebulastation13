@@ -55,7 +55,7 @@
 
 //SKYRAT EDIT REMOVAL BEGIN - CUSTOMIZATION
 /*
-/obj/item/organ/tail/lizard/Initialize(mapload)
+/obj/item/organ/tail/lizard/Initialize()
 	..()
 	color = "#"+ random_color()
 

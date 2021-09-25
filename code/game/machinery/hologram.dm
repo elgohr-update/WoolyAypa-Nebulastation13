@@ -79,7 +79,7 @@ Possible to do for anyone motivated enough:
 	/// If we are currently calling another holopad
 	var/calling = FALSE
 
-/obj/machinery/holopad/Initialize(mapload)
+/obj/machinery/holopad/Initialize()
 	. = ..()
 	become_hearing_sensitive()
 
@@ -88,7 +88,7 @@ Possible to do for anyone motivated enough:
 	desc = "It's a floor-mounted device for projecting holographic images. This one will refuse to auto-connect incoming calls."
 	secure = TRUE
 
-/obj/machinery/holopad/secure/Initialize(mapload)
+/obj/machinery/holopad/secure/Initialize()
 	. = ..()
 	var/obj/item/circuitboard/machine/holopad/board = circuit
 	board.secure = TRUE
@@ -147,7 +147,7 @@ Possible to do for anyone motivated enough:
 	if(!replay_mode && (disk?.record))
 		replay_start()
 
-/obj/machinery/holopad/Initialize(mapload)
+/obj/machinery/holopad/Initialize()
 	. = ..()
 	if(on_network)
 		holopads += src

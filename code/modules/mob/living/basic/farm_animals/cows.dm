@@ -29,7 +29,7 @@
 	blood_volume = BLOOD_VOLUME_NORMAL
 	ai_controller = /datum/ai_controller/basic_controller/cow
 
-/mob/living/basic/cow/Initialize(mapload)
+/mob/living/basic/cow/Initialize()
 	AddComponent(/datum/component/tippable, \
 		tip_time = 0.5 SECONDS, \
 		untip_time = 0.5 SECONDS, \
@@ -133,7 +133,7 @@
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	ai_controller = /datum/ai_controller/basic_controller/cow/moonicorn
 
-/mob/living/basic/cow/moonicorn/Initialize(mapload)
+/mob/living/basic/cow/moonicorn/Initialize()
 	. = ..()
 	AddElement(/datum/element/venomous, /datum/reagent/pax, 5)
 	AddElement(/datum/element/movement_turf_changer, /turf/open/floor/grass/fairy)
