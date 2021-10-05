@@ -20,7 +20,7 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 
 /obj/item/melee/SecMuramasa/get_belt_overlay()
-	return mutable_appearance('nebula_modular/icons/obj/muramasa/SeMuramasa(Cinto_1).dmi', "muramasa")
+	return . += mutable_appearance('nebula_modular/icons/obj/muramasa/SeMuramasa(Cinto_1).dmi', "muramasa")
 
 /obj/item/melee/SecMuramasa/attack(mob/living/victim, obj/katana, params)
 	var/list/modifiers = params2list(params)
