@@ -8,7 +8,9 @@
 	path = /obj/item/book/granter/martial/cqc/plus
 	name = "Dante's CQC"
 
+/*
 /datum/loadout_item/backpack/binaryloadout
 	ckeywhitelist = list("fidgetybacchus", "dantesousa")
 	path = /obj/item/katana/binarykatana
 	name = "Binary Sword"
+*/

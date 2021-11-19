@@ -6,7 +6,7 @@
 /*/obj/item/paper/prison/
 	name =
 	info =*/
-
+/*
 /obj/item/paper/fluff/awaymissions/prison/welcome
 	name = "Instructions for Booth Guards"
 	info = {"If you're reading this, congrats! You've been assigned a post at the welcome booths near the docks. If that's the case, you either fucked up hard or you're new. Whichever case it may be, here's the deal.
@@ -422,12 +422,12 @@
 	attack_sound = 'sound/hallucinations/growl1.ogg'
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	minbodytemp = 0
-	loot = list(/obj/effect/spawner/random/prison/prison_doc)
+	loot = list(/obj/effect/spawner/lootdrop/prison/prisoner)
 	del_on_death = 1
 
 //loot
 
-/obj/effect/spawner/random/prison/prisoner
+/obj/effect/spawner/lootdrop/prison/prisoner
 	name = "Prisoner Loot"
 	loot = list(
 				/obj/item/melee/baseball_bat = 5,
@@ -763,3 +763,4 @@
 
 /obj/machinery/door/poddoor/shutters/indestructible/prison/stage7
 	id = "stage7"
+*/
